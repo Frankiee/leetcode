@@ -17,3 +17,22 @@
 # Output: 2
 
 
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        majority_so_far = nums[0]
+        majority_count = 0
+
+        for n in nums:
+            if n == majority_so_far:
+                majority_count += 1
+            elif majority_count > 0:
+                majority_count -= 1
+            else:
+                majority_so_far = n
+                majority_count = 1
+
+        return majority_so_far
