@@ -27,34 +27,34 @@ class Solution(object):
             return True
 
         if r > 0 and board[r - 1][c] == word[word_index] and (
-        r - 1, c) not in used_indices:
+                r - 1, c) not in used_indices:
             used_indices.add((r - 1, c))
-            if self.exist_neighbour(board, word, r - 1, c, word_index + 1,
-                                    used_indices):
+            if self.exist_neighbour(
+                    board, word, r - 1, c, word_index + 1, used_indices):
                 return True
             used_indices.remove((r - 1, c))
 
         if c > 0 and board[r][c - 1] == word[word_index] and (
-        r, c - 1) not in used_indices:
+                r, c - 1) not in used_indices:
             used_indices.add((r, c - 1))
-            if self.exist_neighbour(board, word, r, c - 1, word_index + 1,
-                                    used_indices):
+            if self.exist_neighbour(
+                    board, word, r, c - 1, word_index + 1, used_indices):
                 return True
             used_indices.remove((r, c - 1))
 
         if r < len(board) - 1 and board[r + 1][c] == word[word_index] and (
-        r + 1, c) not in used_indices:
+                r + 1, c) not in used_indices:
             used_indices.add((r + 1, c))
-            if self.exist_neighbour(board, word, r + 1, c, word_index + 1,
-                                    used_indices):
+            if self.exist_neighbour(
+                    board, word, r + 1, c, word_index + 1, used_indices):
                 return True
             used_indices.remove((r + 1, c))
 
         if c < len(board[0]) - 1 and board[r][c + 1] == word[word_index] and (
-        r, c + 1) not in used_indices:
+                r, c + 1) not in used_indices:
             used_indices.add((r, c + 1))
-            if self.exist_neighbour(board, word, r, c + 1, word_index + 1,
-                                    used_indices):
+            if self.exist_neighbour(
+                    board, word, r, c + 1, word_index + 1, used_indices):
                 return True
             used_indices.remove((r, c + 1))
 
