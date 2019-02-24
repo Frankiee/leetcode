@@ -17,6 +17,7 @@
 # k = 8,
 #
 # return 13.
+import bisect
 
 
 class Solution(object):
