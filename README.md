@@ -66,21 +66,21 @@
 ## Quick Sort
 * 378 - Kth Smallest Element in a Sorted Matrix
 
-# Stack
+## Stack
 * 225 - Implement Stack using Queues
 * 915 - Partition Array into Disjoint Intervals
 * 962 - Maximum Width Ramp
 
-# String Pair
+## String Pair
 * 678 - Valid Parenthesis String
 
-# Tree Traversal
+## Tree Traversal
 * 538 - Convert BST to Greater Tree
 * 897 - Increasing Order Search Tree
 
-# Trie
+## Trie
 * 648 - Replace Words
 * 677 - Map Sum Pairs
 
-# Two Pointers
+## Two Pointers
 * 42 - Trapping Rain Water
