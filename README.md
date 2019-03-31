@@ -21,17 +21,17 @@
 ## Binary Search
 * 35 - Search Insert Position
 
-# Bitwise
+## Bitwise
 * 231 - Power of Two
 
-# Bucket Sort
+## Bucket Sort
 * 539 - Minimum Time Difference
 
-# DFS
+## DFS
 * 39 - Combination Sum
 * 40 - Combination Sum II
 
-# DP
+## DP
 * 45 - Jump Game II
 * 72 - Edit Distance
 * 91 - Decode Ways
@@ -43,27 +43,27 @@
 * 581 - Shortest Unsorted Continuous Subarray
 * 718 - Maximum Length of Repeated Subarray
 
-# Greedy
+## Greedy
 * 122 - Best Time to Buy and Sell Stock II
 
-# HashMap
+## HashMap
 * 706 - Design HashMap
 
-# Insertion Sort
+## Insertion Sort
 * 147 - Insertion Sort List
 
-# Math
+## Math
 * 29 - Divide Two Integers
 * 172 - Factorial Trailing Zeroes
 
-# Merge Sort
+## Merge Sort
 * 148 - Sort List
 
-# Ordered Dict
+## Ordered Dict
 * 387 - First Unique Character in a String
 * 460 - LFU Cache
 
-# Quick Sort
+## Quick Sort
 * 378 - Kth Smallest Element in a Sorted Matrix
 
 # Stack
