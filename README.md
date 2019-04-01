@@ -74,6 +74,9 @@
 * 215 - Kth Largest Element in an Array
 * 378 - Kth Smallest Element in a Sorted Matrix
 
+## Quick Sort
+* 23 - Merge k Sorted Lists
+
 ## Stack
 * 225 - Implement Stack using Queues
 * 915 - Partition Array into Disjoint Intervals
