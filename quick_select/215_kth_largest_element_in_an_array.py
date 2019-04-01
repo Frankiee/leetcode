@@ -18,6 +18,7 @@
 
 # Quick Select
 # Also refer to the Min Heap solution
+# https://www.youtube.com/watch?v=zyskis1Gw0c
 import random
 
 
