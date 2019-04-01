@@ -59,11 +59,15 @@
 ## Merge Sort
 * 148 - Sort List
 
+## Min Heap
+* 215 - Kth Largest Element in an Array
+
 ## Ordered Dict
 * 387 - First Unique Character in a String
 * 460 - LFU Cache
 
-## Quick Sort
+## Quick Select
+* 215 - Kth Largest Element in an Array
 * 378 - Kth Smallest Element in a Sorted Matrix
 
 ## Stack
