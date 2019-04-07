@@ -77,6 +77,9 @@
 ## Quick Sort
 * 23 - Merge k Sorted Lists
 
+## Rolling Hash
+* 187 - Repeated DNA Sequences
+
 ## Stack
 * 225 - Implement Stack using Queues
 * 915 - Partition Array into Disjoint Intervals
