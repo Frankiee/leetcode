@@ -80,6 +80,9 @@
 ## Quick Sort
 * 23 - Merge k Sorted Lists
 
+## Repeated Numbers
+* 961 - N-Repeated Element in Size 2N Array
+
 ## Rolling Hash
 * 187 - Repeated DNA Sequences
 
