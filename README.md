@@ -80,7 +80,8 @@
 ## Quick Sort
 * 23 - Merge k Sorted Lists
 
-## Repeated Numbers
+## Repeated Value
+* 389 - Find the Difference
 * 961 - N-Repeated Element in Size 2N Array
 
 ## Rolling Hash
