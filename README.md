@@ -25,6 +25,7 @@
 * 35 - Search Insert Position
 
 ## Bitwise
+* 190 - Revert Bits
 * 231 - Power of Two
 
 ## Bucket Sort
