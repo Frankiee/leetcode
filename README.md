@@ -28,6 +28,7 @@
 * 190 - Revert Bits
 * 191 - Number of 1 Bits
 * 231 - Power of Two
+* 693 - Binary Number with Alternating Bits
 
 ## Bucket Sort
 * 539 - Minimum Time Difference
