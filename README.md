@@ -37,6 +37,9 @@
 * 39 - Combination Sum
 * 40 - Combination Sum II
 
+## DFS Grid
+* 695 - Max Area of Island
+
 ## Divide and Conquer
 * 241 - Different Ways to Add Parentheses
 
