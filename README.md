@@ -26,6 +26,7 @@
 
 ## Bitwise
 * 190 - Revert Bits
+* 191 - Number of 1 Bits
 * 231 - Power of Two
 
 ## Bucket Sort
