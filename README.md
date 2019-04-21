@@ -75,6 +75,9 @@
 ## Min Heap
 * 215 - Kth Largest Element in an Array
 
+## Minimax
+* 292 - Nim Game
+
 ## Ordered Dict
 * 387 - First Unique Character in a String
 * 460 - LFU Cache
