@@ -93,6 +93,10 @@
 ## Rolling Hash
 * 187 - Repeated DNA Sequences
 
+## Sliding Window
+* 42 - Trapping Rain Water
+* 76 - Minimum Window Substring
+
 ## Stack
 * 225 - Implement Stack using Queues
 * 915 - Partition Array into Disjoint Intervals
@@ -109,6 +113,3 @@
 ## Trie
 * 648 - Replace Words
 * 677 - Map Sum Pairs
-
-## Two Pointers
-* 42 - Trapping Rain Water
