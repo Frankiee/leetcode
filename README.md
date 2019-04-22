@@ -30,6 +30,9 @@
 * 231 - Power of Two
 * 693 - Binary Number with Alternating Bits
 
+# BST
+* 315 - Count of Smaller Numbers After Self
+
 ## Bucket Sort
 * 539 - Minimum Time Difference
 
