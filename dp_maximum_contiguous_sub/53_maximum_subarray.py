@@ -21,11 +21,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        current_dp = float('-inf')
+        dp = float('-inf')
         max_so_far = float('-inf')
 
         for i in nums:
-            current_dp = i if current_dp < 0 else current_dp + i
-            max_so_far = max(max_so_far, current_dp)
+            dp = i if dp < 0 else dp + i
+            max_so_far = max(max_so_far, dp)
 
         return max_so_far
