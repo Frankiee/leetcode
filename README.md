@@ -82,6 +82,9 @@
 ## Minimax
 * 292 - Nim Game
 
+## Order of Operations
+* 20 - Valid Parentheses
+
 ## Ordered Dict
 * 387 - First Unique Character in a String
 * 460 - LFU Cache
