@@ -56,6 +56,9 @@
 * 581 - Shortest Unsorted Continuous Subarray
 * 718 - Maximum Length of Repeated Subarray
 
+## DP Maximum Contiguous Sub
+* 53 - Maximum Subarray
+
 ## Greedy
 * 122 - Best Time to Buy and Sell Stock II
 
