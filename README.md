@@ -117,6 +117,7 @@
 ## Stack
 * 173 - Binary Search Tree Iterator
 * 225 - Implement Stack using Queues
+* 895 - Maximum Frequency Stack
 * 915 - Partition Array into Disjoint Intervals
 * 962 - Maximum Width Ramp
 
