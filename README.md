@@ -106,6 +106,9 @@
 ## Rolling Hash
 * 187 - Repeated DNA Sequences
 
+## Segment Tree
+* 307 - Range Sum Query - Mutable
+
 ## Sliding Window
 * 42 - Trapping Rain Water
 * 76 - Minimum Window Substring
