@@ -115,10 +115,10 @@
 * 76 - Minimum Window Substring
 
 ## Stack
+* 173 - Binary Search Tree Iterator
 * 225 - Implement Stack using Queues
 * 915 - Partition Array into Disjoint Intervals
 * 962 - Maximum Width Ramp
-* 173 - Binary Search Tree Iterator
 
 ## String Pair
 * 678 - Valid Parenthesis String
