@@ -131,3 +131,6 @@
 ## Trie
 * 648 - Replace Words
 * 677 - Map Sum Pairs
+
+## Union Find
+* 547 - Friend Circles
