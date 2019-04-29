@@ -30,7 +30,7 @@
 * 231 - Power of Two
 * 693 - Binary Number with Alternating Bits
 
-# BST
+## BST
 * 315 - Count of Smaller Numbers After Self
 
 ## Bucket Sort
@@ -82,6 +82,7 @@
 
 ## Min Heap
 * 215 - Kth Largest Element in an Array
+* 692 - Top K Frequent Words
 
 ## Minimax
 * 292 - Nim Game
