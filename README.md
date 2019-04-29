@@ -134,3 +134,4 @@
 
 ## Union Find
 * 547 - Friend Circles
+* 684 - Redundant Connection

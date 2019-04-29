@@ -21,6 +21,7 @@
 # Explanation:The 0th and 1st students are direct friends, so they are in a
 # friend circle.
 # The 2nd student himself is in a friend circle. So return 2.
+#
 # Example 2:
 # Input:
 # [[1,1,0],
@@ -31,6 +32,7 @@
 # students are direct friends,
 # so the 0th and 2nd students are indirect friends. All of them are in the
 # same friend circle, so return 1.
+#
 # Note:
 # N is in range [1,200].
 # M[i][i] = 1 for all students.
