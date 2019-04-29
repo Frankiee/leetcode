@@ -82,6 +82,7 @@
 
 ## Min Heap
 * 215 - Kth Largest Element in an Array
+* 347 - Top K Frequent Elements
 * 692 - Top K Frequent Words
 
 ## Minimax
