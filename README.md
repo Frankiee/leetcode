@@ -133,6 +133,7 @@
 ## Trie
 * 648 - Replace Words
 * 677 - Map Sum Pairs
+* 745 - Prefix and Suffix Search
 
 ## Union Find
 * 547 - Friend Circles
