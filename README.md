@@ -20,6 +20,7 @@
 
 ## BFS
 * 133 - Clone Graph
+* 773 - Sliding Puzzle
 
 ## Binary Search
 * 35 - Search Insert Position

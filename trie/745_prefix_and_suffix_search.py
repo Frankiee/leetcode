@@ -31,7 +31,7 @@ class TrieNode(object):
         self.children = {}
 
 
-class PrefixSurffixTrie(object):
+class PrefixSuffixTrie(object):
     def __init__(self):
         self.trie = TrieNode()
 
@@ -71,7 +71,7 @@ class WordFilter(object):
         """
         :type words: List[str]
         """
-        self.trie = PrefixSurffixTrie()
+        self.trie = PrefixSuffixTrie()
 
         for idx, w in enumerate(words):
             self.trie.insert_combo(w, idx)
