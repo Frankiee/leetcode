@@ -24,6 +24,7 @@
 
 ## Binary Search
 * 35 - Search Insert Position
+* 222 - Count Complete Tree Nodes
 
 ## Bitwise
 * 190 - Revert Bits
