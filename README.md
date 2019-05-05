@@ -57,6 +57,7 @@
 * 115 - Distinct Subsequences
 * 121 - Best Time to Buy and Sell Stock
 * 139 - Word Break
+* 152 - Maximum Product Subarray
 * 300 - Longest Increasing Subsequence
 * 368 - Largest Divisible Subset
 * 581 - Shortest Unsorted Continuous Subarray
