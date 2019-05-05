@@ -70,7 +70,6 @@
 
 ## Greedy
 * 122 - Best Time to Buy and Sell Stock II
-* 321 - Create Maximum Number
 * 435 - Non-overlapping Intervals
 * XXX - Deliveries on a One Way Street
 
@@ -126,6 +125,8 @@
 ## Stack
 * 173 - Binary Search Tree Iterator
 * 225 - Implement Stack using Queues
+* 321 - Create Maximum Number
+* 402 - Remove K Digits
 * 895 - Maximum Frequency Stack
 * 915 - Partition Array into Disjoint Intervals
 * 962 - Maximum Width Ramp
