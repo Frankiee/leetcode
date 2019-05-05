@@ -59,6 +59,7 @@
 * 139 - Word Break
 * 152 - Maximum Product Subarray
 * 300 - Longest Increasing Subsequence
+* 312 - Burst Balloons
 * 368 - Largest Divisible Subset
 * 581 - Shortest Unsorted Continuous Subarray
 * 718 - Maximum Length of Repeated Subarray
