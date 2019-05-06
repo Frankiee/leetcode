@@ -25,6 +25,7 @@
 ## Binary Search
 * 35 - Search Insert Position
 * 69 - Sqrt(x)
+* 162 - Find Peak Element
 * 222 - Count Complete Tree Nodes
 * 704 - Binary Search
 
