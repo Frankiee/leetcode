@@ -23,6 +23,7 @@
 * 773 - Sliding Puzzle
 
 ## Binary Search
+* 34 - Find First and Last Position of Element in Sorted Array
 * 35 - Search Insert Position
 * 69 - Sqrt(x)
 * 162 - Find Peak Element
