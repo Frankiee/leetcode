@@ -29,6 +29,7 @@
 * 162 - Find Peak Element
 * 222 - Count Complete Tree Nodes
 * 704 - Binary Search
+* 744 - Find Smallest Letter Greater Than Target
 
 ## Bitwise
 * 190 - Revert Bits

@@ -33,10 +33,10 @@ class Solution(object):
         while l < r:
             m = l + (r - l) / 2
 
-            m_sqare = m * m
-            if m_sqare == x:
+            m_square = m * m
+            if m_square == x:
                 return m
-            if m_sqare > x:
+            if m_square > x:
                 r = m
             else:
                 l = m + 1
