@@ -35,6 +35,7 @@
 * 190 - Revert Bits
 * 191 - Number of 1 Bits
 * 231 - Power of Two
+* 476 - Number Complement
 * 693 - Binary Number with Alternating Bits
 
 ## BST
