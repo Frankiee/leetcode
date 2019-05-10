@@ -120,6 +120,7 @@
 
 ## Rolling Hash
 * 187 - Repeated DNA Sequences
+* 438 - Find All Anagrams in a String
 
 ## Segment Tree
 * 307 - Range Sum Query - Mutable
