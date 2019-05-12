@@ -26,10 +26,16 @@ class Solution(object):
             if n in cache:
                 continue
 
-            lower_length, ll_idx = cache.get(n - 1) if cache.get(n - 1) else (
-            None, None)
-            higher_length, hh_idx = cache.get(n + 1) if cache.get(n + 1) else (
-            None, None)
+            lower_length, ll_idx = (
+                cache.get(n - 1)
+                if cache.get(n - 1) else
+                (None, None)
+            )
+            higher_length, hh_idx = (
+                cache.get(n + 1)
+                if cache.get(n + 1) else
+                (None, None)
+            )
 
             if not lower_length and not higher_length:
                 new_length = 1
