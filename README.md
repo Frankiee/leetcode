@@ -150,6 +150,7 @@
 
 ## Trie
 * 648 - Replace Words
+* 676 - Implement Magic Dictionary
 * 677 - Map Sum Pairs
 * 745 - Prefix and Suffix Search
 
