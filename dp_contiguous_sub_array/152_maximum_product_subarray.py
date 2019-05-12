@@ -33,15 +33,15 @@ class Solution(object):
             else:
                 if not current:
                     current = (n, float('inf')) if n > 0 else (
-                    float('-inf'), n)
+                        float('-inf'), n)
                 else:
                     if n > 0:
                         max_so_far = max(max_so_far, n * current[0])
                         current = (
-                        max(current[0] * n, n), min(current[1] * n, n))
+                            max(current[0] * n, n), min(current[1] * n, n))
                     else:
                         max_so_far = max(max_so_far, n * current[1])
                         current = (
-                        max(current[1] * n, n), min(current[0] * n, n))
+                            max(current[1] * n, n), min(current[0] * n, n))
 
         return max_so_far

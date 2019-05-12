@@ -63,16 +63,19 @@
 * 115 - Distinct Subsequences
 * 121 - Best Time to Buy and Sell Stock
 * 139 - Word Break
-* 152 - Maximum Product Subarray
-* 300 - Longest Increasing Subsequence
 * 312 - Burst Balloons
 * 368 - Largest Divisible Subset
 * 581 - Shortest Unsorted Continuous Subarray
 * 718 - Maximum Length of Repeated Subarray
 
-## DP Maximum Contiguous Sub
+## DP Contiguous Sub Array
 * 53 - Maximum Subarray
+* 152 - Maximum Product Subarray
 * XXX - Maximum Sum Rectangle in a 2D Matrix
+
+## DP Non-Contiguous Sub Array
+* 300 - Longest Increasing Subsequence
+* 673 - Number of Longest Increasing Subsequence
 
 ## Greedy
 * 122 - Best Time to Buy and Sell Stock II
