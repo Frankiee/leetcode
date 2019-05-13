@@ -80,6 +80,7 @@
 * 198 - House Robber
 * 312 - Burst Balloons
 * 740 - Delete and Earn
+* 746 - Min Cost Climbing Stairs
 
 ## Greedy
 * 122 - Best Time to Buy and Sell Stock II
