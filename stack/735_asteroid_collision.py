@@ -17,18 +17,21 @@
 # Output: [5, 10]
 # Explanation:
 # The 10 and -5 collide resulting in 10.  The 5 and 10 never collide.
+#
 # Example 2:
 # Input:
 # asteroids = [8, -8]
 # Output: []
 # Explanation:
 # The 8 and -8 collide exploding each other.
+#
 # Example 3:
 # Input:
 # asteroids = [10, 2, -5]
 # Output: [10]
 # Explanation:
 # The 2 and -5 collide resulting in -5.  The 10 and -5 collide resulting in 10.
+#
 # Example 4:
 # Input:
 # asteroids = [-2, -1, 1, 2]
