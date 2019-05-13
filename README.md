@@ -77,6 +77,7 @@
 * 673 - Number of Longest Increasing Subsequence
 
 # DP Sequence Action
+* 198 - House Robber
 * 312 - Burst Balloons
 
 ## Greedy
