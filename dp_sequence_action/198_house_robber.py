@@ -2,6 +2,7 @@
 # 198. House Robber
 
 # https://www.youtube.com/watch?v=H75Qp7ExCwo
+# Related: 740. Delete and Earn
 
 # You are a professional robber planning to rob houses along a street. Each
 # house has a certain amount of money stashed, the only constraint stopping
