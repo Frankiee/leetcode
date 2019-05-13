@@ -76,11 +76,14 @@
 * 300 - Longest Increasing Subsequence
 * 673 - Number of Longest Increasing Subsequence
 
-# DP Sequence Action
+## DP Sequence Action
 * 198 - House Robber
 * 312 - Burst Balloons
 * 740 - Delete and Earn
 * 746 - Min Cost Climbing Stairs
+
+## Graph Bellman Ford
+* 787 - Cheapest Flights Within K Stops
 
 ## Greedy
 * 122 - Best Time to Buy and Sell Stock II
