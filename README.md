@@ -18,10 +18,6 @@
 ## Base Convert
 * 168 - Excel Sheet Column Title
 
-## BFS
-* 133 - Clone Graph
-* 773 - Sliding Puzzle
-
 ## Binary Search
 * 34 - Find First and Last Position of Element in Sorted Array
 * 35 - Search Insert Position
@@ -43,14 +39,6 @@
 
 ## Bucket Sort
 * 539 - Minimum Time Difference
-
-## DFS
-* 39 - Combination Sum
-* 40 - Combination Sum II
-
-## DFS Grid
-* 130 - Surrounded Regions
-* 695 - Max Area of Island
 
 ## Divide and Conquer
 * 241 - Different Ways to Add Parentheses
@@ -84,6 +72,18 @@
 
 ## Graph Bellman Ford
 * 787 - Cheapest Flights Within K Stops
+
+## Graph BFS
+* 133 - Clone Graph
+* 773 - Sliding Puzzle
+
+## Graph DFS
+* 39 - Combination Sum
+* 40 - Combination Sum II
+
+## Graph DFS Grid
+* 130 - Surrounded Regions
+* 695 - Max Area of Island
 
 ## Greedy
 * 122 - Best Time to Buy and Sell Stock II

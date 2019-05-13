@@ -64,7 +64,7 @@ class Board(object):
         return self.__hash__() == other.__hash__()
 
     def _move_lambda(
-        self, seen, ret, empty_r, empty_c, new_empty_r, new_empty_c, move):
+            self, seen, ret, empty_r, empty_c, new_empty_r, new_empty_c, move):
         new_board = self._deep_copy_board()
         zero_idx = empty_c + empty_r * 3
         new_board.board[zero_idx], new_board.board[move(zero_idx)] = (
