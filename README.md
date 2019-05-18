@@ -129,10 +129,6 @@
 * 389 - Find the Difference
 * 961 - N-Repeated Element in Size 2N Array
 
-## Rolling Hash
-* 187 - Repeated DNA Sequences
-* 438 - Find All Anagrams in a String
-
 ## Segment Tree
 * 307 - Range Sum Query - Mutable
 
@@ -156,6 +152,10 @@
 
 ## String Pair
 * 678 - Valid Parenthesis String
+
+## String Search - Rolling Hash
+* 187 - Repeated DNA Sequences
+* 438 - Find All Anagrams in a String
 
 ## Tree Traversal
 * 538 - Convert BST to Greater Tree
