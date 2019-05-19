@@ -55,6 +55,9 @@
 * 581 - Shortest Unsorted Continuous Subarray
 * 718 - Maximum Length of Repeated Subarray
 
+# DP - 0/1 Knapsack
+* 416 - Partition Equal Subset Sum
+
 ## DP Contiguous Sub Array
 * 53 - Maximum Subarray
 * 152 - Maximum Product Subarray
