@@ -73,6 +73,9 @@
 * 740 - Delete and Earn
 * 746 - Min Cost Climbing Stairs
 
+## DP Sequence Action Group
+* 813 - Largest Sum of Averages
+
 ## Graph Bellman Ford
 * 787 - Cheapest Flights Within K Stops
 
