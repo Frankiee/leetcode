@@ -179,3 +179,6 @@
 ## Union Find
 * 547 - Friend Circles
 * 684 - Redundant Connection
+
+## Others - SQL
+* 196 - Delete Duplicate Emails
