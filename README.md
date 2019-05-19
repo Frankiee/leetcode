@@ -73,7 +73,7 @@
 * 740 - Delete and Earn
 * 746 - Min Cost Climbing Stairs
 
-## DP Sequence Action Group
+## DP Sequence Action Groups Division
 * 813 - Largest Sum of Averages
 
 ## Graph Bellman Ford
