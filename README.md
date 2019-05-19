@@ -153,6 +153,9 @@
 ## String Pair
 * 678 - Valid Parenthesis String
 
+## String Search - Knuth–Morris–Pratt
+* 28 - Implement strStr()
+
 ## String Search - Rolling Hash
 * 187 - Repeated DNA Sequences
 * 438 - Find All Anagrams in a String
