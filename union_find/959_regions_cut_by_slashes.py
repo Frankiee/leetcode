@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/regions-cut-by-slashes/
 # 959. Regions Cut By Slashes
 
+# https://www.youtube.com/watch?v=n3s9Q7GtfB4&t=133s
+
 # In a N x N grid composed of 1 x 1 squares, each 1 x 1 square consists of a
 # /, \, or blank space.  These characters divide the square into contiguous
 # regions.
@@ -76,9 +78,12 @@
 class UnionFindSet(object):
     def __init__(self, n):
         self.roots = range(n)
+        self.ranks = [0] * n
 
     def find_root(self, i):
+        # Path compression
         if i != self.roots[i]:
+            # If i is not root
             self.roots[i] = self.find_root(self.roots[i])
 
         return self.roots[i]
@@ -87,7 +92,13 @@ class UnionFindSet(object):
         i_root = self.find_root(i)
         j_root = self.find_root(j)
 
-        self.roots[i_root] = j_root
+        if self.ranks[i_root] > self.ranks[j_root]:
+            self.roots[i_root] = j_root
+        elif self.ranks[j_root] > self.ranks[i_root]:
+            self.roots[j_root] = i_root
+        else:   # Equal
+            self.roots[i_root] = j_root
+            self.ranks[i_root] += 1
 
     def union(self, lst):
         fst = lst[0]

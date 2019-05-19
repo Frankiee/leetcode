@@ -177,6 +177,7 @@
 * 745 - Prefix and Suffix Search
 
 ## Union Find
+* 000 - [Algorithm] Union Find
 * 547 - Friend Circles
 * 684 - Redundant Connection
 * 959 - Regions Cut By Slashes
