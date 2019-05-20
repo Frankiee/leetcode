@@ -52,6 +52,7 @@
 * 121 - Best Time to Buy and Sell Stock
 * 139 - Word Break
 * 368 - Largest Divisible Subset
+* 494 - Target Sum
 * 581 - Shortest Unsorted Continuous Subarray
 * 718 - Maximum Length of Repeated Subarray
 
@@ -187,3 +188,6 @@
 
 ## Others - SQL
 * 196 - Delete Duplicate Emails
+
+## View - Array Arithmetic Operators
+* 494 - Target Sum
