@@ -126,6 +126,9 @@
 * 387 - First Unique Character in a String
 * 460 - LFU Cache
 
+## Queue
+* 225 - Implement Stack using Queues
+
 ## Quick Select
 * 215 - Kth Largest Element in an Array
 * 378 - Kth Smallest Element in a Sorted Matrix
@@ -190,8 +193,9 @@
 ## Others - SQL
 * 196 - Delete Duplicate Emails
 
-## View - Array Arithmetic Operators
+## View - Array Arithmetic Operatorsg
 * 494 - Target Sum
 
 ## View - Stack Queue Conversion
+* 225 - Implement Stack using Queues
 * 232 - Implement Queue using Stacks
