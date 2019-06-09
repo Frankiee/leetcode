@@ -174,7 +174,10 @@
 * 187 - Repeated DNA Sequences
 * 438 - Find All Anagrams in a String
 
-## Tree Traversal
+## Tree DFS Iteration
+* 173 - Binary Search Tree Iterator
+
+## Tree DFS Recursion
 * 538 - Convert BST to Greater Tree
 * 897 - Increasing Order Search Tree
 
