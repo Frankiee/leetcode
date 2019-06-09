@@ -176,6 +176,7 @@
 
 ## Tree DFS Iteration
 * 173 - Binary Search Tree Iterator
+* 230 - Kth Smallest Element in a BST
 
 ## Tree DFS Recursion
 * 538 - Convert BST to Greater Tree
