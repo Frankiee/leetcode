@@ -85,13 +85,19 @@
 * 133 - Clone Graph
 * 773 - Sliding Puzzle
 
-## Graph DFS
-* 39 - Combination Sum
-* 40 - Combination Sum II
-
 ## Graph DFS Grid
 * 130 - Surrounded Regions
 * 695 - Max Area of Island
+
+## Tree DFS Iteration
+* 173 - Binary Search Tree Iterator
+* 230 - Kth Smallest Element in a BST
+
+## Graph DFS Recursion
+* 39 - Combination Sum
+* 40 - Combination Sum II
+* 538 - Convert BST to Greater Tree
+* 897 - Increasing Order Search Tree
 
 ## Greedy
 * 122 - Best Time to Buy and Sell Stock II
@@ -173,14 +179,6 @@
 ## String Search - Rolling Hash
 * 187 - Repeated DNA Sequences
 * 438 - Find All Anagrams in a String
-
-## Tree DFS Iteration
-* 173 - Binary Search Tree Iterator
-* 230 - Kth Smallest Element in a BST
-
-## Tree DFS Recursion
-* 538 - Convert BST to Greater Tree
-* 897 - Increasing Order Search Tree
 
 ## Trie
 * 648 - Replace Words
