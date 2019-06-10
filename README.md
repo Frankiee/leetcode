@@ -92,6 +92,7 @@
 ## Tree DFS Iteration
 * 173 - Binary Search Tree Iterator
 * 230 - Kth Smallest Element in a BST
+* 886 - Possible Bipartition
 
 ## Graph DFS Recursion
 * 39 - Combination Sum
