@@ -140,6 +140,7 @@
 ## Quick Select
 * 215 - Kth Largest Element in an Array
 * 378 - Kth Smallest Element in a Sorted Matrix
+* 973 - K Closest Points to Origin
 
 ## Quick Sort
 * 23 - Merge k Sorted Lists
