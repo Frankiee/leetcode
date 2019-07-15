@@ -117,6 +117,7 @@
 * 172 - Factorial Trailing Zeroes
 
 ## Merge Sort
+* 23 - Merge k Sorted Lists
 * 148 - Sort List
 
 ## Min Heap
