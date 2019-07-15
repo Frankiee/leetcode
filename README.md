@@ -125,6 +125,7 @@
 * 215 - Kth Largest Element in an Array
 * 347 - Top K Frequent Elements
 * 692 - Top K Frequent Words
+* 1046 - Last Stone Weight
 
 ## Minimax
 * 292 - Nim Game
