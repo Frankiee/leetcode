@@ -131,6 +131,7 @@
 
 ## Minimax
 * 292 - Nim Game
+* 486 - Predict the Winner
 
 ## Multithreading
 * 1114 - Print in Order
