@@ -42,6 +42,8 @@
 # board will be a 2 x 3 array as described above.
 # board[i][j] will be a permutation of [0, 1, 2, 3, 4, 5].
 
+import copy
+
 
 class Board(object):
     def __init__(self, board, empty_idx):
