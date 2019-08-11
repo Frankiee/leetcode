@@ -85,6 +85,7 @@
 ## Graph BFS
 * 133 - Clone Graph
 * 773 - Sliding Puzzle
+* 1129 - Shortest Path with Alternating Colors
 
 ## Graph DFS Grid
 * 130 - Surrounded Regions
