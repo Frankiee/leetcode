@@ -177,6 +177,7 @@
 * 895 - Maximum Frequency Stack
 * 915 - Partition Array into Disjoint Intervals
 * 962 - Maximum Width Ramp
+* 1019 - Next Greater Node In Linked List
 
 ## String
 * 680 - Valid Palindrome II
