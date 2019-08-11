@@ -132,6 +132,7 @@
 
 ## Multithreading
 * 1114 - Print in Order
+* 1115 - Print FooBar Alternately
 
 ## Order of Operations
 * 20 - Valid Parentheses
