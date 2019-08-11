@@ -130,6 +130,9 @@
 ## Minimax
 * 292 - Nim Game
 
+## Multithreading
+* 1114 - Print in Order
+
 ## Order of Operations
 * 20 - Valid Parentheses
 
