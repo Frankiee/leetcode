@@ -21,7 +21,24 @@
 #   []
 # ]
 
+
 # Iteration
+class Solution(object):
+    def subsets(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        ret = [[]]
+
+        for n in nums:
+            current_added = [s + [n] for s in ret]
+            ret.extend(current_added)
+
+        return ret
+
+
+# Recursion 1
 import copy
 
 
@@ -49,7 +66,7 @@ class Solution1(object):
         return result
 
 
-# Recursion
+# Recursion 2
 class Solution2(object):
     def dfs(self, ret, nums, start, prefix):
         ret.append(prefix)
