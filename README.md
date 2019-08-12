@@ -11,6 +11,7 @@
 * 1124 - Longest Well-Performing Interval
 
 ## Backtracking
+* 46 - Permutations
 * 77 - Combinations
 * 78 - Subsets
 * 79 - Word Search

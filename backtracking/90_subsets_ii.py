@@ -63,4 +63,3 @@ class Solution2(object):
         self.dfs(ret, nums, 0, [])
 
         return ret
-
