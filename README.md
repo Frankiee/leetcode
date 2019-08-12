@@ -12,6 +12,7 @@
 
 ## Backtracking
 * 39 - Combination Sum
+* 40 - Combination Sum II
 * 46 - Permutations
 * 47 - Permutations II
 * 77 - Combinations
