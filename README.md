@@ -8,6 +8,7 @@
 * 442 - Find All Duplicates in an Array
 * 459 - Repeated Substring Pattern
 * 525 - Contiguous Array
+* 792 - Number of Matching Subsequences
 * 1124 - Longest Well-Performing Interval
 
 ## Backtracking
