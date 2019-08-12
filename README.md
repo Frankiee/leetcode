@@ -117,7 +117,8 @@
 * 452 - Minimum Number of Arrows to Burst Balloons
 * XXX - Deliveries on a One Way Street
 
-## HashMap
+## HashMap/HashSet
+* 705 - Design HashSet
 * 706 - Design HashMap
 
 ## Insertion Sort
