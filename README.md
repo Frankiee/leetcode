@@ -12,6 +12,7 @@
 
 ## Backtracking
 * 46 - Permutations
+* 47 - Permutations II
 * 77 - Combinations
 * 78 - Subsets
 * 79 - Word Search
