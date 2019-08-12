@@ -11,6 +11,7 @@
 * 1124 - Longest Well-Performing Interval
 
 ## Backtracking
+* 39 - Combination Sum
 * 46 - Permutations
 * 47 - Permutations II
 * 77 - Combinations
