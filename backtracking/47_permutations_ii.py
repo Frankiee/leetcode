@@ -14,8 +14,9 @@
 #   [2,1,1]
 # ]
 
+
 # Recursion
-class Solution2(object):
+class Solution(object):
     def dfs(self, ret, nums, used, prefix):
         if len(prefix) == len(nums):
             ret.append(prefix)
