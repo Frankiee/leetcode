@@ -55,8 +55,8 @@ class Solution(object):
                 else:
                     if dp[num_idx - 1][s]:
                         dp[num_idx][s] = True
-                    elif s - nums[num_idx] >= 0 and dp[num_idx - 1][
-                        s - nums[num_idx]]:
+                    elif (s - nums[num_idx] >= 0 and
+                          dp[num_idx - 1][s - nums[num_idx]]):
                         dp[num_idx][s] = True
 
         return dp[len(nums) - 1][goal]
