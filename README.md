@@ -64,6 +64,7 @@
 * 494 - Target Sum
 * 581 - Shortest Unsorted Continuous Subarray
 * 718 - Maximum Length of Repeated Subarray
+* 801 - Minimum Swaps To Make Sequences Increasing
 
 ## DP - 0/1 Knapsack
 * 416 - Partition Equal Subset Sum
