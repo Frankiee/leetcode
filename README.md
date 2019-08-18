@@ -16,6 +16,7 @@
 * 57 - Insert Interval
 
 ## Backtracking
+* 37 - Sudoku Solver
 * 39 - Combination Sum
 * 40 - Combination Sum II
 * 46 - Permutations
