@@ -191,6 +191,7 @@
 * 234 - Palindrome Linked List
 * 321 - Create Maximum Number
 * 402 - Remove K Digits
+* 726 - Number of Atoms
 * 735 - Asteroid Collision
 * 739 - Daily Temperatures
 * 895 - Maximum Frequency Stack
