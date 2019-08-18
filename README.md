@@ -11,6 +11,9 @@
 * 792 - Number of Matching Subsequences
 * 1124 - Longest Well-Performing Interval
 
+# Array Interval
+* 56 - Merge Intervals
+
 ## Backtracking
 * 39 - Combination Sum
 * 40 - Combination Sum II
