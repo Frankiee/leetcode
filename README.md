@@ -3,6 +3,7 @@
 ## Array
 * 26 - Remove Duplicates from Sorted Array
 * `Important` 54 - Spiral Matrix
+* `Important` 56 - Merge Intervals
 * `Important` 59 - Spiral Matrix II
 * `Important` 90 - Subsets II
 * `Important` 128 - Longest Consecutive Sequence
@@ -13,10 +14,6 @@
 * `Important` 525 - Contiguous Array
 * `Important` 792 - Number of Matching Subsequences
 * `Important` 1124 - Longest Well-Performing Interval
-
-## Array Interval
-* `Important` 56 - Merge Intervals
-* `Important` `bisect` 57 - Insert Interval
 
 ## Backtracking
 * `Important` 37 - Sudoku Solver
@@ -40,6 +37,7 @@
 ## Binary Search
 * `Important` 34 - Find First and Last Position of Element in Sorted Array
 * `Important` 35 - Search Insert Position
+* `Important` `bisect` 57 - Insert Interval
 * `Important` 69 - Sqrt(x)
 * `Important` 162 - Find Peak Element
 * `Important` 222 - Count Complete Tree Nodes
