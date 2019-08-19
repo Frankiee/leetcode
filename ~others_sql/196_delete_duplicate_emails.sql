@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/delete-duplicate-emails/
 # 196. Delete Duplicate Emails
 

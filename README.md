@@ -117,6 +117,7 @@
 * `Important` 40 - Combination Sum II
 * `Important` 105 - Construct Binary Tree from Preorder and Inorder Traversal
 * `Important` 538 - Convert BST to Greater Tree
+* `Important` 889 - Construct Binary Tree from Preorder and Postorder Traversal
 * `Important` 897 - Increasing Order Search Tree
 * `Important` 979 - Distribute Coins in Binary Tree
 
@@ -235,7 +236,7 @@
 * `Important` 959 - Regions Cut By Slashes
 
 ## Others - SQL
-* `Important` 196 - Delete Duplicate Emails
+* 196 - Delete Duplicate Emails
 
 ## View - Array Arithmetic Operatorsg
 * `Important` 494 - Target Sum
