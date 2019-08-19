@@ -22,6 +22,7 @@
 * `Important` 46 - Permutations
 * `Important` 47 - Permutations II
 * `Important` 51 - N-Queens
+* `Important` 52 - N-Queens II
 * `Important` 77 - Combinations
 * `Important` 78 - Subsets
 * `Important` 79 - Word Search
