@@ -1,6 +1,7 @@
 # leetcode
 
 ## Array
+* 26 - Remove Duplicates from Sorted Array
 * 59 - Spiral Matrix II
 * `Important` 90 - Subsets II
 * `Important` 128 - Longest Consecutive Sequence
@@ -23,7 +24,7 @@
 * `Important` 46 - Permutations
 * `Important` 47 - Permutations II
 * `Important` 51 - N-Queens
-* `Important` 52 - N-Queens II
+* 52 - N-Queens II
 * `Important` 77 - Combinations
 * `Important` 78 - Subsets
 * `Important` 79 - Word Search
