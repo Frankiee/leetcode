@@ -39,6 +39,7 @@
 * `Important` 35 - Search Insert Position
 * `Important` `bisect` 57 - Insert Interval
 * `Important` 69 - Sqrt(x)
+* `Important` `bisect` 74. Search a 2D Matrix
 * `Important` 162 - Find Peak Element
 * `Important` 222 - Count Complete Tree Nodes
 * `Important` 704 - Binary Search
