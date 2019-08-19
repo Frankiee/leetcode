@@ -1,4 +1,4 @@
-# [Important, DymmyNode]
+# [Important, DummyNode]
 # https://leetcode.com/problems/partition-list/
 # 86. Partition List
 
