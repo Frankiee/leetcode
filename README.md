@@ -132,6 +132,7 @@
 
 ## Linked List
 * `Important` `DummyNode` 24 - Swap Nodes in Pairs
+* `Important` `DummyNode` 86 - Partition List
 
 ## Math
 * `Important` 29 - Divide Two Integers
