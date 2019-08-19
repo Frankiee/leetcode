@@ -1,235 +1,235 @@
 # leetcode
 
 ## Array
-* 90 - Subsets II
-* 128 - Longest Consecutive Sequence
-* 169 - Majority Element
-* 239 - Sliding Window Maximum
-* 442 - Find All Duplicates in an Array
-* 459 - Repeated Substring Pattern
-* 525 - Contiguous Array
-* 792 - Number of Matching Subsequences
-* 1124 - Longest Well-Performing Interval
+* [Important] 90 - Subsets II
+* [Important] 128 - Longest Consecutive Sequence
+* [Important] 169 - Majority Element
+* [Important] 239 - Sliding Window Maximum
+* [Important] 442 - Find All Duplicates in an Array
+* [Important] 459 - Repeated Substring Pattern
+* [Important] 525 - Contiguous Array
+* [Important] 792 - Number of Matching Subsequences
+* [Important] 1124 - Longest Well-Performing Interval
 
 ## Array Interval
-* 56 - Merge Intervals
-* 57 - Insert Interval
+* [Important] 56 - Merge Intervals
+* [Important] 57 - Insert Interval
 
 ## Backtracking
-* 37 - Sudoku Solver
-* 39 - Combination Sum
-* 40 - Combination Sum II
-* 46 - Permutations
-* 47 - Permutations II
-* 77 - Combinations
-* 78 - Subsets
-* 79 - Word Search
-* 90 - Subsets II
-* 131 - Palindrome Partitioning
-* 306 - Additive Number
-* 1079 - Letter Tile Possibilities
+* [Important] 37 - Sudoku Solver
+* [Important] 39 - Combination Sum
+* [Important] 40 - Combination Sum II
+* [Important] 46 - Permutations
+* [Important] 47 - Permutations II
+* [Important] 77 - Combinations
+* [Important] 78 - Subsets
+* [Important] 79 - Word Search
+* [Important] 90 - Subsets II
+* [Important] 131 - Palindrome Partitioning
+* [Important] 306 - Additive Number
+* [Important] 1079 - Letter Tile Possibilities
 
 ## Base Convert
-* 168 - Excel Sheet Column Title
+* [Important] 168 - Excel Sheet Column Title
 
 ## Binary Search
-* 34 - Find First and Last Position of Element in Sorted Array
-* 35 - Search Insert Position
-* 69 - Sqrt(x)
-* 162 - Find Peak Element
-* 222 - Count Complete Tree Nodes
-* 704 - Binary Search
-* 744 - Find Smallest Letter Greater Than Target
+* [Important] 34 - Find First and Last Position of Element in Sorted Array
+* [Important] 35 - Search Insert Position
+* [Important] 69 - Sqrt(x)
+* [Important] 162 - Find Peak Element
+* [Important] 222 - Count Complete Tree Nodes
+* [Important] 704 - Binary Search
+* [Important] 744 - Find Smallest Letter Greater Than Target
 
 ## Bitwise
-* 190 - Revert Bits
-* 191 - Number of 1 Bits
-* 231 - Power of Two
-* 476 - Number Complement
-* 693 - Binary Number with Alternating Bits
+* [Important] 190 - Revert Bits
+* [Important] 191 - Number of 1 Bits
+* [Important] 231 - Power of Two
+* [Important] 476 - Number Complement
+* [Important] 693 - Binary Number with Alternating Bits
 
 ## BST
-* 315 - Count of Smaller Numbers After Self
+* [Important] 315 - Count of Smaller Numbers After Self
 
 ## Bucket Sort
-* 539 - Minimum Time Difference
+* [Important] 539 - Minimum Time Difference
 
 ## Divide and Conquer
-* 241 - Different Ways to Add Parentheses
+* [Important] 241 - Different Ways to Add Parentheses
 
 ## DP
-* 45 - Jump Game II
-* 72 - Edit Distance
-* 91 - Decode Ways
-* 97 - Interleaving String
-* 115 - Distinct Subsequences
-* 121 - Best Time to Buy and Sell Stock
-* 139 - Word Break
-* 368 - Largest Divisible Subset
-* 494 - Target Sum
-* 581 - Shortest Unsorted Continuous Subarray
-* 718 - Maximum Length of Repeated Subarray
-* 801 - Minimum Swaps To Make Sequences Increasing
+* [Important] 45 - Jump Game II
+* [Important] 72 - Edit Distance
+* [Important] 91 - Decode Ways
+* [Important] 97 - Interleaving String
+* [Important] 115 - Distinct Subsequences
+* [Important] 121 - Best Time to Buy and Sell Stock
+* [Important] 139 - Word Break
+* [Important] 368 - Largest Divisible Subset
+* [Important] 494 - Target Sum
+* [Important] 581 - Shortest Unsorted Continuous Subarray
+* [Important] 718 - Maximum Length of Repeated Subarray
+* [Important] 801 - Minimum Swaps To Make Sequences Increasing
 
 ## DP - 0/1 Knapsack
-* 416 - Partition Equal Subset Sum
+* [Important] 416 - Partition Equal Subset Sum
 
 ## DP Contiguous Sub Array
-* 53 - Maximum Subarray
-* 152 - Maximum Product Subarray
-* XXX - Maximum Sum Rectangle in a 2D Matrix
+* [Important] 53 - Maximum Subarray
+* [Important] 152 - Maximum Product Subarray
+* [Important] XXX - Maximum Sum Rectangle in a 2D Matrix
 
 ## DP Non-Contiguous Sub Array
-* 300 - Longest Increasing Subsequence
-* 673 - Number of Longest Increasing Subsequence
+* [Important] 300 - Longest Increasing Subsequence
+* [Important] 673 - Number of Longest Increasing Subsequence
 
 ## DP Sequence Action
-* 198 - House Robber
-* 312 - Burst Balloons
-* 740 - Delete and Earn
-* 746 - Min Cost Climbing Stairs
+* [Important] 198 - House Robber
+* [Important] 312 - Burst Balloons
+* [Important] 740 - Delete and Earn
+* [Important] 746 - Min Cost Climbing Stairs
 
 ## DP Sequence Action Groups
-* 279 - Perfect Squares
-* 813 - Largest Sum of Averages
+* [Important] 279 - Perfect Squares
+* [Important] 813 - Largest Sum of Averages
 
 ## Graph Bellman Ford
-* 787 - Cheapest Flights Within K Stops
+* [Important] 787 - Cheapest Flights Within K Stops
 
 ## Graph BFS
-* 133 - Clone Graph
-* 773 - Sliding Puzzle
-* 1129 - Shortest Path with Alternating Colors
+* [Important] 133 - Clone Graph
+* [Important] 773 - Sliding Puzzle
+* [Important] 1129 - Shortest Path with Alternating Colors
 
 ## Graph DFS Grid
-* 130 - Surrounded Regions
-* 695 - Max Area of Island
+* [Important] 130 - Surrounded Regions
+* [Important] 695 - Max Area of Island
 
 ## Tree DFS Iteration
-* 173 - Binary Search Tree Iterator
-* 230 - Kth Smallest Element in a BST
-* 886 - Possible Bipartition
+* [Important] 173 - Binary Search Tree Iterator
+* [Important] 230 - Kth Smallest Element in a BST
+* [Important] 886 - Possible Bipartition
 
 ## Graph DFS Recursion
-* 39 - Combination Sum
-* 40 - Combination Sum II
-* 538 - Convert BST to Greater Tree
-* 897 - Increasing Order Search Tree
-* 979 - Distribute Coins in Binary Tree
+* [Important] 39 - Combination Sum
+* [Important] 40 - Combination Sum II
+* [Important] 538 - Convert BST to Greater Tree
+* [Important] 897 - Increasing Order Search Tree
+* [Important] 979 - Distribute Coins in Binary Tree
 
 ## Greedy
-* 122 - Best Time to Buy and Sell Stock II
-* 435 - Non-overlapping Intervals
-* 452 - Minimum Number of Arrows to Burst Balloons
-* XXX - Deliveries on a One Way Street
+* [Important] 122 - Best Time to Buy and Sell Stock II
+* [Important] 435 - Non-overlapping Intervals
+* [Important] 452 - Minimum Number of Arrows to Burst Balloons
+* [Important] XXX - Deliveries on a One Way Street
 
 ## HashMap/HashSet
-* 560 - Subarray Sum Equals K
-* 705 - Design HashSet
-* 706 - Design HashMap
+* [Important] 560 - Subarray Sum Equals K
+* [Important] 705 - Design HashSet
+* [Important] 706 - Design HashMap
 
 ## Insertion Sort
-* 147 - Insertion Sort List
+* [Important] 147 - Insertion Sort List
 
 ## Math
-* 29 - Divide Two Integers
-* 172 - Factorial Trailing Zeroes
+* [Important] 29 - Divide Two Integers
+* [Important] 172 - Factorial Trailing Zeroes
 
 ## Merge Sort
-* 23 - Merge k Sorted Lists
-* 148 - Sort List
+* [Important] 23 - Merge k Sorted Lists
+* [Important] 148 - Sort List
 
 ## Min Heap
-* 215 - Kth Largest Element in an Array
-* 347 - Top K Frequent Elements
-* 692 - Top K Frequent Words
-* 1046 - Last Stone Weight
+* [Important] 215 - Kth Largest Element in an Array
+* [Important] 347 - Top K Frequent Elements
+* [Important] 692 - Top K Frequent Words
+* [Important] 1046 - Last Stone Weight
 
 ## Minimax
-* 292 - Nim Game
-* 486 - Predict the Winner
+* [Important] 292 - Nim Game
+* [Important] 486 - Predict the Winner
 
 ## Multithreading
-* 1114 - Print in Order
-* 1115 - Print FooBar Alternately
-* 1116 - Print Zero Even Odd
+* [Important] 1114 - Print in Order
+* [Important] 1115 - Print FooBar Alternately
+* [Important] 1116 - Print Zero Even Odd
 
 ## Order of Operations
-* 20 - Valid Parentheses
+* [Important] 20 - Valid Parentheses
 
 ## Ordered Dict
-* 387 - First Unique Character in a String
-* 460 - LFU Cache
+* [Important] 387 - First Unique Character in a String
+* [Important] 460 - LFU Cache
 
 ## Queue
-* 225 - Implement Stack using Queues
+* [Important] 225 - Implement Stack using Queues
 
 ## Quick Select
-* 215 - Kth Largest Element in an Array
-* 378 - Kth Smallest Element in a Sorted Matrix
-* 973 - K Closest Points to Origin
+* [Important] 215 - Kth Largest Element in an Array
+* [Important] 378 - Kth Smallest Element in a Sorted Matrix
+* [Important] 973 - K Closest Points to Origin
 
 ## Quick Sort
-* 23 - Merge k Sorted Lists
+* [Important] 23 - Merge k Sorted Lists
 
 ## Repeated Value
-* 389 - Find the Difference
-* 961 - N-Repeated Element in Size 2N Array
+* [Important] 389 - Find the Difference
+* [Important] 961 - N-Repeated Element in Size 2N Array
 
 ## Segment Tree
-* 307 - Range Sum Query - Mutable
+* [Important] 307 - Range Sum Query - Mutable
 
 ## Sliding Window
-* 42 - Trapping Rain Water
-* 76 - Minimum Window Substring
+* [Important] 42 - Trapping Rain Water
+* [Important] 76 - Minimum Window Substring
 
 ## Stack
-* 155 - Min Stack
-* 173 - Binary Search Tree Iterator
-* 225 - Implement Stack using Queues
-* 232 - Implement Queue using Stacks
-* 234 - Palindrome Linked List
-* 321 - Create Maximum Number
-* 402 - Remove K Digits
-* 726 - Number of Atoms
-* 735 - Asteroid Collision
-* 739 - Daily Temperatures
-* 895 - Maximum Frequency Stack
-* 915 - Partition Array into Disjoint Intervals
-* 962 - Maximum Width Ramp
-* 1019 - Next Greater Node In Linked List
+* [Important] 155 - Min Stack
+* [Important] 173 - Binary Search Tree Iterator
+* [Important] 225 - Implement Stack using Queues
+* [Important] 232 - Implement Queue using Stacks
+* [Important] 234 - Palindrome Linked List
+* [Important] 321 - Create Maximum Number
+* [Important] 402 - Remove K Digits
+* [Important] 726 - Number of Atoms
+* [Important] 735 - Asteroid Collision
+* [Important] 739 - Daily Temperatures
+* [Important] 895 - Maximum Frequency Stack
+* [Important] 915 - Partition Array into Disjoint Intervals
+* [Important] 962 - Maximum Width Ramp
+* [Important] 1019 - Next Greater Node In Linked List
 
 ## String
-* 680 - Valid Palindrome II
+* [Important] 680 - Valid Palindrome II
 
 ## String Pair
-* 678 - Valid Parenthesis String
+* [Important] 678 - Valid Parenthesis String
 
 ## String Search - Knuth–Morris–Pratt
-* 28 - Implement strStr()
+* [Important] 28 - Implement strStr()
 
 ## String Search - Rolling Hash
-* 187 - Repeated DNA Sequences
-* 438 - Find All Anagrams in a String
+* [Important] 187 - Repeated DNA Sequences
+* [Important] 438 - Find All Anagrams in a String
 
 ## Trie
-* 648 - Replace Words
-* 676 - Implement Magic Dictionary
-* 677 - Map Sum Pairs
-* 745 - Prefix and Suffix Search
+* [Important] 648 - Replace Words
+* [Important] 676 - Implement Magic Dictionary
+* [Important] 677 - Map Sum Pairs
+* [Important] 745 - Prefix and Suffix Search
 
 ## Union Find
-* 000 - [Algorithm] Union Find
-* 547 - Friend Circles
-* 684 - Redundant Connection
-* 959 - Regions Cut By Slashes
+* [Important] 000 - [Algorithm] Union Find
+* [Important] 547 - Friend Circles
+* [Important] 684 - Redundant Connection
+* [Important] 959 - Regions Cut By Slashes
 
 ## Others - SQL
-* 196 - Delete Duplicate Emails
+* [Important] 196 - Delete Duplicate Emails
 
 ## View - Array Arithmetic Operatorsg
-* 494 - Target Sum
+* [Important] 494 - Target Sum
 
 ## View - Stack Queue Conversion
-* 225 - Implement Stack using Queues
-* 232 - Implement Queue using Stacks
+* [Important] 225 - Implement Stack using Queues
+* [Important] 232 - Implement Queue using Stacks

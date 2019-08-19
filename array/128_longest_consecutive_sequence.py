@@ -1,3 +1,4 @@
+# [Important]
 # https://leetcode.com/problems/longest-consecutive-sequence/description/
 # 128. Longest Consecutive Sequence
 

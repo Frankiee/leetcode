@@ -1,3 +1,4 @@
+# [Important]
 # https://leetcode.com/problems/repeated-substring-pattern/description/
 # 459. Repeated Substring Pattern
 

@@ -1,3 +1,4 @@
+# [Important]
 # https://leetcode.com/problems/min-cost-climbing-stairs/
 # 746. Min Cost Climbing Stairs
 

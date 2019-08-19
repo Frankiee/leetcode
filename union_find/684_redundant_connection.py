@@ -1,3 +1,4 @@
+# [Important]
 # https://leetcode.com/problems/redundant-connection/
 # 684. Redundant Connection
 

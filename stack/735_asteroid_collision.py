@@ -1,3 +1,4 @@
+# [Important]
 # https://leetcode.com/problems/asteroid-collision/
 # 735. Asteroid Collision
 

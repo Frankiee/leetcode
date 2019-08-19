@@ -1,3 +1,4 @@
+# [Important]
 # https://leetcode.com/problems/contiguous-array/description/
 # 525. Contiguous Array
 

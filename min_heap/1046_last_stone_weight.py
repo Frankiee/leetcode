@@ -1,3 +1,4 @@
+# [Important]
 # https://leetcode.com/problems/last-stone-weight/
 # 1046. Last Stone Weight
 
