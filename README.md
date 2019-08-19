@@ -13,6 +13,7 @@
 * `Important` 459 - Repeated Substring Pattern
 * `Important` 525 - Contiguous Array
 * `Important` 792 - Number of Matching Subsequences
+* 849 - Maximize Distance to Closest Person
 * `Important` 1124 - Longest Well-Performing Interval
 
 ## Backtracking
