@@ -2,8 +2,8 @@
 
 ## Array
 * 26 - Remove Duplicates from Sorted Array
-* 54 - Spiral Matrix
-* 59 - Spiral Matrix II
+* `Important` 54 - Spiral Matrix
+* `Important` 59 - Spiral Matrix II
 * `Important` 90 - Subsets II
 * `Important` 128 - Longest Consecutive Sequence
 * `Important` 169 - Majority Element
