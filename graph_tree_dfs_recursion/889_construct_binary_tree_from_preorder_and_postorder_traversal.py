@@ -1,4 +1,4 @@
-# [Import]
+# [Import, MultiTraversalSequence]
 # https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/
 # 889. Construct Binary Tree from Preorder and Postorder Traversal
 
