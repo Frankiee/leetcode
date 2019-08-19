@@ -2,6 +2,8 @@
 # https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 # 105. Construct Binary Tree from Preorder and Inorder Traversal
 
+# https://www.youtube.com/watch?v=53aOi0Drp9I&t=323s
+
 # Given preorder and inorder traversal of a tree, construct the binary tree.
 #
 # Note:
