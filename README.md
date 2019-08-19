@@ -98,21 +98,21 @@
 ## Graph Bellman Ford
 * `Important` 787 - Cheapest Flights Within K Stops
 
-## Graph BFS
-* `Important` 133 - Clone Graph
-* `Important` 773 - Sliding Puzzle
-* `Important` 1129 - Shortest Path with Alternating Colors
-
 ## Graph DFS Grid
 * `Important` 130 - Surrounded Regions
 * `Important` 695 - Max Area of Island
 
-## Tree DFS Iteration
+## Graph/Tree BFS
+* `Important` 133 - Clone Graph
+* `Important` 773 - Sliding Puzzle
+* `Important` 1129 - Shortest Path with Alternating Colors
+
+## Graph/Tree DFS Iteration
 * `Important` 173 - Binary Search Tree Iterator
 * `Important` 230 - Kth Smallest Element in a BST
 * `Important` 886 - Possible Bipartition
 
-## Graph DFS Recursion
+## Graph/Tree DFS Recursion
 * `Important` 39 - Combination Sum
 * `Important` 40 - Combination Sum II
 * `Important` 538 - Convert BST to Greater Tree
