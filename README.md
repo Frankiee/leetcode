@@ -236,6 +236,7 @@
 * `Important` 959 - Regions Cut By Slashes
 
 ## Others - SQL
+* 184 - Department Highest Salary
 * 196 - Delete Duplicate Emails
 
 ## View - Array Arithmetic Operatorsg
