@@ -16,7 +16,7 @@
 
 ## Array Interval
 * `Important` 56 - Merge Intervals
-* `Important` 57 - Insert Interval
+* `Important` `bisect` 57 - Insert Interval
 
 ## Backtracking
 * `Important` 37 - Sudoku Solver
