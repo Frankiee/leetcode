@@ -130,6 +130,9 @@
 * `Important` 705 - Design HashSet
 * `Important` 706 - Design HashMap
 
+## Linked List
+* `Important` `DummyNode` 24 - Swap Nodes in Pairs
+
 ## Math
 * `Important` 29 - Divide Two Integers
 * `Important` 172 - Factorial Trailing Zeroes
