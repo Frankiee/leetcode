@@ -55,9 +55,6 @@
 ## BST
 * `Important` 315 - Count of Smaller Numbers After Self
 
-## Bucket Sort
-* `Important` 539 - Minimum Time Difference
-
 ## Divide and Conquer
 * `Important` 241 - Different Ways to Add Parentheses
 
@@ -133,16 +130,9 @@
 * `Important` 705 - Design HashSet
 * `Important` 706 - Design HashMap
 
-## Insertion Sort
-* `Important` 147 - Insertion Sort List
-
 ## Math
 * `Important` 29 - Divide Two Integers
 * `Important` 172 - Factorial Trailing Zeroes
-
-## Merge Sort
-* `Important` 23 - Merge k Sorted Lists
-* `Important` 148 - Sort List
 
 ## Min Heap
 * `Important` 215 - Kth Largest Element in an Array
@@ -174,9 +164,6 @@
 * `Important` 378 - Kth Smallest Element in a Sorted Matrix
 * `Important` 973 - K Closest Points to Origin
 
-## Quick Sort
-* `Important` 23 - Merge k Sorted Lists
-
 ## Repeated Value
 * `Important` 389 - Find the Difference
 * `Important` 961 - N-Repeated Element in Size 2N Array
@@ -187,6 +174,19 @@
 ## Sliding Window
 * `Important` 42 - Trapping Rain Water
 * `Important` 76 - Minimum Window Substring
+
+## [Sort] Bucket Sort
+* `Important` 539 - Minimum Time Difference
+
+## [Sort] Insertion Sort
+* `Important` 147 - Insertion Sort List
+
+## [Sort] Merge Sort
+* `Important` 23 - Merge k Sorted Lists
+* `Important` 148 - Sort List
+
+## [Sort] Quick Sort
+* `Important` 23 - Merge k Sorted Lists
 
 ## Stack
 * `Important` 155 - Min Stack
