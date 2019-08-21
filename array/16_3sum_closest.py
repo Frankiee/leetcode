@@ -16,16 +16,16 @@
 
 class Solution(object):
     def __init__(self, ):
-        self.cloest_sum = None
+        self.closest_sum = None
 
-    def assign_cloest_sum(self, new_sum, target):
+    def assign_closest_sum(self, new_sum, target):
         if new_sum == target:
             return True
 
-        if self.cloest_sum is None:
-            self.cloest_sum = new_sum
-        elif abs(self.cloest_sum - target) > abs(new_sum - target):
-            self.cloest_sum = new_sum
+        if self.closest_sum is None:
+            self.closest_sum = new_sum
+        elif abs(self.closest_sum - target) > abs(new_sum - target):
+            self.closest_sum = new_sum
 
         return False
 
@@ -39,12 +39,12 @@ class Solution(object):
         for i in range(len(nums) - 2):
             first_three_sum = nums[i] + nums[i + 1] + nums[i + 2]
             if first_three_sum > target:
-                if self.assign_cloest_sum(first_three_sum, target) is True:
+                if self.assign_closest_sum(first_three_sum, target) is True:
                     return target
                 break
             first_last_two_sum = nums[i] + nums[-1] + nums[-2]
             if first_last_two_sum < target:
-                if self.assign_cloest_sum(first_last_two_sum, target) is True:
+                if self.assign_closest_sum(first_last_two_sum, target) is True:
                     return target
                 continue
             if i > 0 and nums[i] == nums[i - 1]:
@@ -54,11 +54,11 @@ class Solution(object):
 
             while l < r:
                 current_sum = nums[i] + nums[l] + nums[r]
-                if self.assign_cloest_sum(current_sum, target) is True:
+                if self.assign_closest_sum(current_sum, target) is True:
                     return target
                 elif current_sum > target:
                     r -= 1
                 else:
                     l += 1
 
-        return self.cloest_sum
+        return self.closest_sum
