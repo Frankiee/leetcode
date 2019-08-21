@@ -1,6 +1,7 @@
 # leetcode
 
 ## Array
+* `Important` `2Sum` 16 - 3Sum Closest
 * 26 - Remove Duplicates from Sorted Array
 * `Important` 54 - Spiral Matrix
 * `Important` 56 - Merge Intervals
