@@ -217,6 +217,7 @@
 
 ## String
 * `Important` 680 - Valid Palindrome II
+* `Archived` 830 - Positions of Large Groups
 
 ## String Pair
 * `Important` 678 - Valid Parenthesis String
