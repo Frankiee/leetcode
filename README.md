@@ -234,6 +234,7 @@
 * `Important` 676 - Implement Magic Dictionary
 * `Important` 677 - Map Sum Pairs
 * `Important` 745 - Prefix and Suffix Search
+* `Important` 820 - Short Encoding of Words
 
 ## Union Find
 * `Important` 000 - [Algorithm] Union Find
