@@ -1,3 +1,4 @@
+# [Archived]
 # https://leetcode.com/problems/maximize-distance-to-closest-person/
 # 849. Maximize Distance to Closest Person
 

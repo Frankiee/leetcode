@@ -1,9 +1,10 @@
 # leetcode
 
 ## Array
+* `Archived` 1 - Two Sum
 * `Important` `2Sum` 15 - 3Sum
 * `Important` `2Sum` 16 - 3Sum Closest
-* 26 - Remove Duplicates from Sorted Array
+* `Archived` 26 - Remove Duplicates from Sorted Array
 * `Important` 54 - Spiral Matrix
 * `Important` 56 - Merge Intervals
 * `Important` 59 - Spiral Matrix II
@@ -15,8 +16,8 @@
 * `Important` 459 - Repeated Substring Pattern
 * `Important` 525 - Contiguous Array
 * `Important` 792 - Number of Matching Subsequences
-* 819 - Most Common Word
-* 849 - Maximize Distance to Closest Person
+* `Archived` 819 - Most Common Word
+* `Archived` 849 - Maximize Distance to Closest Person
 * `Important` 1124 - Longest Well-Performing Interval
 
 ## Backtracking

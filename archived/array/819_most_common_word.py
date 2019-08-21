@@ -1,3 +1,4 @@
+# [Archived]
 # https://leetcode.com/problems/most-common-word/
 # 819. Most Common Word
 
