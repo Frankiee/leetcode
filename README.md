@@ -12,6 +12,7 @@
 * `Important` 128 - Longest Consecutive Sequence
 * `Important` 169 - Majority Element
 * `Important` 239 - Sliding Window Maximum
+* `Archived` 350 - Intersection of Two Arrays II
 * `Important` 442 - Find All Duplicates in an Array
 * `Important` 459 - Repeated Substring Pattern
 * `Important` 525 - Contiguous Array
