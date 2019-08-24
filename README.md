@@ -74,14 +74,12 @@
 * `Important` 139 - Word Break
 * `Important` 322 - Coin Change
 * `Important` 368 - Largest Divisible Subset
+* `Important` `Hard` `0-1-Knapsack` 416 - Partition Equal Subset Sum
 * `Important` 494 - Target Sum
 * `Important` 581 - Shortest Unsorted Continuous Subarray
 * `Important` 718 - Maximum Length of Repeated Subarray
 * `Important` 801 - Minimum Swaps To Make Sequences Increasing
 * `Important` 983 - Minimum Cost For Tickets
-
-## DP - 0/1 Knapsack
-* `Important` 416 - Partition Equal Subset Sum
 
 ## DP Contiguous Sub Array
 * `Important` 53 - Maximum Subarray
