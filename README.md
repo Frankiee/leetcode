@@ -78,6 +78,7 @@
 * `Important` 581 - Shortest Unsorted Continuous Subarray
 * `Important` 718 - Maximum Length of Repeated Subarray
 * `Important` 801 - Minimum Swaps To Make Sequences Increasing
+* `Important` 983 - Minimum Cost For Tickets
 
 ## DP - 0/1 Knapsack
 * `Important` 416 - Partition Equal Subset Sum
