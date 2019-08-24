@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/longest-well-performing-interval/
 # 1124. Longest Well-Performing Interval
 

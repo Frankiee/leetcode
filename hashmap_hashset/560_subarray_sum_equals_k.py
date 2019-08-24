@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/subarray-sum-equals-k/
 # 560. Subarray Sum Equals K
 

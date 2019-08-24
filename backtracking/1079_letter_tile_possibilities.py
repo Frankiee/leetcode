@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/letter-tile-possibilities/
 # 1079. Letter Tile Possibilities
 

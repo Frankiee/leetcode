@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/short-encoding-of-words/
 # 820. Short Encoding of Words
 

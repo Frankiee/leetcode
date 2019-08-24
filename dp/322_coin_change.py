@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/coin-change/
 # 322. Coin Change
 

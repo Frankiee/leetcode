@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/permutations-ii/
 # 47. Permutations II
 

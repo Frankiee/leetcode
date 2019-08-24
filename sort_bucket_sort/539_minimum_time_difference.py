@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/minimum-time-difference/
 # 539. Minimum Time Difference
 

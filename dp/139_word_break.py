@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/word-break/description/
 # 139. Word Break
 

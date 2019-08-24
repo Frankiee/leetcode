@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/implement-magic-dictionary/
 # 676. Implement Magic Dictionary
 

@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/nim-game/
 # 292. Nim Game
 

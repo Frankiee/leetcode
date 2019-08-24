@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/interleaving-string/
 # 97. Interleaving String
 

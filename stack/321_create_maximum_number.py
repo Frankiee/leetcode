@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/create-maximum-number/
 # 321. Create Maximum Number
 

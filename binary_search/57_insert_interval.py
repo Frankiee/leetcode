@@ -1,4 +1,4 @@
-# [Important, bisect]
+# [bisect]
 # https://leetcode.com/problems/insert-interval/
 # 57. Insert Interval
 

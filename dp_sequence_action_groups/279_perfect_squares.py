@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/perfect-squares/
 # 279. Perfect Squares
 

@@ -1,4 +1,3 @@
-# [Important]
 # https://docs.google.com/spreadsheets/d/1MDAhN1RX6W6XhHbB-A62vmYma9FwcR3wwqzlT5ieV0g/edit#gid=0
 # 187. Repeated DNA Sequences
 

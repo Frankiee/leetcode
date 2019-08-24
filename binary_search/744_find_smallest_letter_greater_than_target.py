@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/find-smallest-letter-greater-than-target/
 # 744. Find Smallest Letter Greater Than Target
 

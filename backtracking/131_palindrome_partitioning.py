@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/palindrome-partitioning/description/
 # 131. Palindrome Partitioning
 

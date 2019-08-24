@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/partition-array-into-disjoint-intervals/description/    # noqa
 # 915. Partition Array into Disjoint Intervals
 

@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/majority-element/description/
 # 169. Majority Element
 

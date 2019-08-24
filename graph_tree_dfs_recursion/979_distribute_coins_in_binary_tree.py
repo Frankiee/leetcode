@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/distribute-coins-in-binary-tree/
 # 979. Distribute Coins in Binary Tree
 

@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/lfu-cache/
 # 460. LFU Cache
 

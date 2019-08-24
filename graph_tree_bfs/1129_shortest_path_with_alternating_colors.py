@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/shortest-path-with-alternating-colors/
 # 1129. Shortest Path with Alternating Colors
 

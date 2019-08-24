@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/find-the-difference/
 # 389. Find the Difference
 

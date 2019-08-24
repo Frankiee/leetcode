@@ -1,4 +1,3 @@
-# [Important]
 # https://github.com/postmates/interview/blob/master/backend/onsite/section_a/one_way_street.md  # noqa
 # Deliveries on a One Way Street
 

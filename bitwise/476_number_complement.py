@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/number-complement/
 # 476. Number Complement
 

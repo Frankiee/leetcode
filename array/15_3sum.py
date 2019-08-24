@@ -1,4 +1,4 @@
-# [Important, 2Sum]
+# [2Sum]
 # https://leetcode.com/problems/3sum/
 # 15. 3Sum
 

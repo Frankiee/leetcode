@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/daily-temperatures/
 # 739. Daily Temperatures
 

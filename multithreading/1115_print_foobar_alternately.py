@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/print-foobar-alternately/
 # 1115. Print FooBar Alternately
 

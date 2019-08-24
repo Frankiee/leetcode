@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/burst-balloons/
 # 312. Burst Balloons
 

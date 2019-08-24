@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/sliding-puzzle/
 # 773. Sliding Puzzle
 

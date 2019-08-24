@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/distinct-subsequences/description/
 # 115. Distinct Subsequences
 

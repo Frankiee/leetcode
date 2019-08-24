@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/power-of-two/
 # 231. Power of Two
 

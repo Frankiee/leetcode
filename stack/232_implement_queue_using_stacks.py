@@ -1,4 +1,3 @@
-# [Important]
 # https://leetcode.com/problems/implement-queue-using-stacks/
 # 232. Implement Queue using Stacks
 
