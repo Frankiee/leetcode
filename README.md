@@ -154,6 +154,7 @@
 
 ## Minimax
 * `Important` 292 - Nim Game
+* `Archived` 326 - Power of Three
 * `Important` 486 - Predict the Winner
 
 ## Multithreading
