@@ -43,6 +43,7 @@ class Solution(object):
 
         goal = total / 2
 
+        # dp[i][j] represents if we can sum to j using first i numbers
         dp = [None] * len(nums)
 
         for num_idx in range(len(nums)):
