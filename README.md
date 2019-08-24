@@ -70,7 +70,7 @@
 * `Important` 91 - Decode Ways
 * `Important` 97 - Interleaving String
 * `Important` 115 - Distinct Subsequences
-* `Important` 121 - Best Time to Buy and Sell Stock
+* `Important` `BuyAndSellStock` 121 - Best Time to Buy and Sell Stock
 * `Important` 139 - Word Break
 * `Important` 322 - Coin Change
 * `Important` 368 - Largest Divisible Subset
