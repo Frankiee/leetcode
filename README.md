@@ -52,6 +52,7 @@
 * 744 - Find Smallest Letter Greater Than Target
 
 ## Bitwise
+* `XOR` 136 - Single Number
 * 190 - Revert Bits
 * 191 - Number of 1 Bits
 * 231 - Power of Two
