@@ -58,6 +58,7 @@ class Solution(object):
             # Left
             if board[r][0] == 'O':
                 self._mark_edge(board, r, 0)
+            # Right
             if board[r][len(board[0]) - 1]:
                 self._mark_edge(board, r, len(board[0]) - 1)
 

@@ -29,8 +29,11 @@
 
 class Solution(object):
     def calculat_area(self, grid, r, c):
-        if r < 0 or r >= len(grid) or c < 0 or c >= len(grid[0]) or grid[r][
-            c] == 0:
+        if (r < 0 or
+                r >= len(grid) or
+                c < 0 or
+                c >= len(grid[0]) or
+                grid[r][c]) == 0:
             return 0
 
         grid[r][c] = 0
