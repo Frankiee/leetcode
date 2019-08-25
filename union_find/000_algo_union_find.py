@@ -2,7 +2,26 @@
 # https://www.youtube.com/watch?v=VJnUwsE4fWA&t=397s
 
 
+# Basic UnionFind
 class UnionFindSet(object):
+    def __init__(self, n):
+        self.parent = range(n)
+
+    def find_root(self, i):
+        if i != self.parent[i]:
+            self.parent[i] = self.find_root(self.parent[i])
+
+        return self.parent[i]
+
+    def union(self, i, j):
+        i_root = self.find_root(i)
+        j_root = self.find_root(j)
+
+        self.parent[i_root] = j_root
+
+
+# UnionFind with More Balanced Tree
+class UnionFindSetWithRanks(object):
     def __init__(self, n):
         self.roots = range(n)
         self.ranks = [0] * n
