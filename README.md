@@ -21,6 +21,7 @@
 * 792 - Number of Matching Subsequences
 * `Archived` 819 - Most Common Word
 * `Archived` 849 - Maximize Distance to Closest Person
+* `InPlaceSwap` 905 - Sort Array By Parity
 * 1124 - Longest Well-Performing Interval
 
 ## Backtracking
@@ -121,7 +122,7 @@
 * 773 - Sliding Puzzle
 * 1129 - Shortest Path with Alternating Colors
 
-## Graph/Tree DFS Iteration
+## Graph/Tree DFS Iteration Stack
 * 173 - Binary Search Tree Iterator
 * 230 - Kth Smallest Element in a BST
 * 886 - Possible Bipartition
