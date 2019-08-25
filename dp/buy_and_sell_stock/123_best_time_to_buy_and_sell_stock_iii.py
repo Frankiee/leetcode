@@ -2,6 +2,8 @@
 # https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/
 # 123. Best Time to Buy and Sell Stock III
 
+# https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/discuss/149383/Easy-DP-solution-using-state-machine-O(n)-time-complexity-O(1)-space-complexity
+
 # Say you have an array for which the ith element is the price of a given
 # stock on day i.
 #
@@ -46,9 +48,9 @@ class Solution(object):
         sell1_state = sell2_state = 0
 
         for p in prices:
-            sell2_state = max(sell2_state, buy2_state + p)
-            buy2_state = max(buy2_state, sell1_state - p)
-            sell1_state = max(sell1_state, buy1_state + p)
             buy1_state = max(buy1_state, -p)
+            sell1_state = max(sell1_state, buy1_state + p)
+            buy2_state = max(buy2_state, sell1_state - p)
+            sell2_state = max(sell2_state, buy2_state + p)
 
         return sell2_state
