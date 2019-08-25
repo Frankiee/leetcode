@@ -14,6 +14,7 @@
 * 239 - Sliding Window Maximum
 * `Archived` 345 - Reverse Vowels of a String
 * `Archived` 350 - Intersection of Two Arrays II
+* `Archived` 392 - Is Subsequence
 * 442 - Find All Duplicates in an Array
 * 459 - Repeated Substring Pattern
 * 525 - Contiguous Array
