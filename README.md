@@ -12,6 +12,7 @@
 * 128 - Longest Consecutive Sequence
 * 169 - Majority Element
 * 239 - Sliding Window Maximum
+* `Archived` 345 - Reverse Vowels of a String
 * `Archived` 350 - Intersection of Two Arrays II
 * 442 - Find All Duplicates in an Array
 * 459 - Repeated Substring Pattern
