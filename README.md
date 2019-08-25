@@ -53,9 +53,11 @@
 
 ## Bitwise
 * `XOR` 136 - Single Number
+* 137 - Single Number II
 * 190 - Revert Bits
 * 191 - Number of 1 Bits
 * 231 - Power of Two
+* `Hard` `XOR` 260 - Single Number III
 * 476 - Number Complement
 * 693 - Binary Number with Alternating Bits
 
@@ -146,7 +148,6 @@
 
 ## Math
 * 29 - Divide Two Integers
-* 137 - Single Number II
 * 172 - Factorial Trailing Zeroes
 
 ## Min Heap
