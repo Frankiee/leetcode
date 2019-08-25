@@ -227,6 +227,7 @@
 * 1019 - Next Greater Node In Linked List
 
 ## String
+* `Archived` 383 - Ransom Note
 * 680 - Valid Palindrome II
 * `Archived` 830 - Positions of Large Groups
 
