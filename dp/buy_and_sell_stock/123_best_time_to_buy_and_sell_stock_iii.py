@@ -44,8 +44,9 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        buy1_state = buy2_state = float('-inf')
-        sell1_state = sell2_state = 0
+        if not prices:
+            return 0
+        buy1_state = buy2_state = sell1_state = sell2_state = float('-inf')
 
         for p in prices:
             buy1_state = max(buy1_state, -p)
