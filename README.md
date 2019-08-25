@@ -66,6 +66,7 @@
 
 ## BST
 * 315 - Count of Smaller Numbers After Self
+* `Archived` 938 - Range Sum of BST
 
 ## Divide and Conquer
 * 241 - Different Ways to Add Parentheses
