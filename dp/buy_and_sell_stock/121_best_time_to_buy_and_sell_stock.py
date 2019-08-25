@@ -25,17 +25,34 @@
 # Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 
-class Solution(object):
+class Solution1(object):
     def maxProfit(self, prices):
         """
         :type prices: List[int]
         :rtype: int
         """
         min_price = float('inf')
-        max_profit = 0
+        profit = 0
 
         for p in prices:
             min_price = min(min_price, p)
-            max_profit = max(max_profit, p - min_price)
+            profit = max(profit, p - min_price)
 
-        return max_profit
+        return profit
+
+
+# Think as finite state machine
+class Solution2(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        buy_state = float('-inf')
+        sell_state = 0
+
+        for p in prices:
+            buy_state = max(buy_state, -p)
+            sell_state = max(sell_state, p + buy_state)
+
+        return sell_state
