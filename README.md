@@ -200,18 +200,12 @@
 * 42 - Trapping Rain Water
 * 76 - Minimum Window Substring
 
-## [Sort] Bucket Sort
-* 539 - Minimum Time Difference
-
-## [Sort] Insertion Sort
-* 147 - Insertion Sort List
-
-## [Sort] Merge Sort
-* 23 - Merge k Sorted Lists
-* 148 - Sort List
-
-## [Sort] Quick Sort
-* 23 - Merge k Sorted Lists
+## Sort
+* `BucketSort` 539 - Minimum Time Difference
+* `InsertionSort` 147 - Insertion Sort List
+* `MergeSort` 23 - Merge k Sorted Lists
+* `MergeSort` 148 - Sort List
+* `QuickSort` 23 - Merge k Sorted Lists
 
 ## Stack
 * 155 - Min Stack
