@@ -78,7 +78,7 @@
 * `Hard` `BuyAndSellStock` 123 - Best Time to Buy and Sell Stock III
 * 139 - Word Break
 * `Hard` `BuyAndSellStock` 188 - Best Time to Buy and Sell Stock IV
-* `Hard` `CrackedIt` `BuyAndSellStock` 309 - Best Time to Buy and Sell Stock with Cooldown
+* `Hard` `BuyAndSellStock` 309 - Best Time to Buy and Sell Stock with Cooldown
 * 322 - Coin Change
 * 368 - Largest Divisible Subset
 * `Hard` `0-1-Knapsack` 416 - Partition Equal Subset Sum
@@ -214,6 +214,7 @@
 * 225 - Implement Stack using Queues
 * 232 - Implement Queue using Stacks
 * 234 - Palindrome Linked List
+* `Hard` 316 - Remove Duplicate Letters
 * 321 - Create Maximum Number
 * 402 - Remove K Digits
 * 726 - Number of Atoms
