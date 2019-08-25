@@ -123,18 +123,17 @@
 ## Graph/Tree BFS
 * 133 - Clone Graph
 * 773 - Sliding Puzzle
+* `Hard` `Queue` `BFS` 847 - Shortest Path Visiting All Nodes
 * 1129 - Shortest Path with Alternating Colors
 
-## Graph/Tree DFS Iteration Stack
-* 173 - Binary Search Tree Iterator
-* 230 - Kth Smallest Element in a BST
-* 886 - Possible Bipartition
-
-## Graph/Tree DFS Recursion
+## Graph/Tree DFS
 * 39 - Combination Sum
 * 40 - Combination Sum II
 * `MultiTraversalSequence` 105 - Construct Binary Tree from Preorder and Inorder Traversal
+* `DFS` `Stack` 173 - Binary Search Tree Iterator
+* `DFS` `Stack` 230 - Kth Smallest Element in a BST
 * 538 - Convert BST to Greater Tree
+* `DFS` `Stack` 886 - Possible Bipartition
 * `MultiTraversalSequence` 889 - Construct Binary Tree from Preorder and Postorder Traversal
 * 897 - Increasing Order Search Tree
 * 979 - Distribute Coins in Binary Tree
