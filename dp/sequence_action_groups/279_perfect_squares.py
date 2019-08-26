@@ -1,4 +1,4 @@
-# [DpSequenceActionGroups]
+# [DP-Sequence-Action-Groups]
 # https://leetcode.com/problems/perfect-squares/
 # 279. Perfect Squares
 

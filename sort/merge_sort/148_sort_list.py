@@ -1,4 +1,4 @@
-# [MergeSort]
+# [Merge-Sort]
 # https://leetcode.com/problems/sort-list/
 # 148. Sort List
 

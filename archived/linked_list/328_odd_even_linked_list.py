@@ -1,4 +1,4 @@
-# [Archived, DummyNode]
+# [Archived, Dummy-Node]
 # https://leetcode.com/problems/odd-even-linked-list/
 # 328. Odd Even Linked List
 

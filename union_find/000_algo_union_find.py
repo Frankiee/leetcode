@@ -1,4 +1,4 @@
-# [UnionFind]
+# [Union-Find]
 # https://www.youtube.com/watch?v=VJnUwsE4fWA&t=397s
 
 

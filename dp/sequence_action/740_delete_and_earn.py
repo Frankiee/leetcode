@@ -1,4 +1,4 @@
-# [DpSequenceAction]
+# [DP-Sequence-Action]
 # https://leetcode.com/problems/delete-and-earn/
 # 740. Delete and Earn
 

@@ -1,6 +1,8 @@
-# [Hard, DpSequenceAction]
+# [Hard, DP-Sequence-Action]
 # https://leetcode.com/problems/domino-and-tromino-tiling/
 # 790. Domino and Tromino Tiling
+
+# https://www.youtube.com/watch?v=S-fUTfqrdq8
 
 # We have two types of tiles: a 2x1 domino shape, and an "L" tromino shape.
 # These shapes may be rotated.

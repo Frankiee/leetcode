@@ -21,8 +21,8 @@
 * 792 - Number of Matching Subsequences
 * `Archived` 819 - Most Common Word
 * `Archived` 849 - Maximize Distance to Closest Person
-* `InPlaceSwap` 905 - Sort Array By Parity
-* `InPlaceSwap` 922 - Sort Array By Parity II
+* `In-Place-Swap` 905 - Sort Array By Parity
+* `In-Place-Swap` 922 - Sort Array By Parity II
 * 1124 - Longest Well-Performing Interval
 
 ## Backtracking
@@ -47,9 +47,9 @@
 ## Binary Search
 * 34 - Find First and Last Position of Element in Sorted Array
 * 35 - Search Insert Position
-* `bisect` 57 - Insert Interval
+* `Bisect` 57 - Insert Interval
 * 69 - Sqrt(x)
-* `bisect` 74. Search a 2D Matrix
+* `Bisect` 74. Search a 2D Matrix
 * 162 - Find Peak Element
 * 222 - Count Complete Tree Nodes
 * 704 - Binary Search
@@ -74,36 +74,36 @@
 
 ## DP
 * 45 - Jump Game II
-* `DpContiguousSubarray` 53 - Maximum Subarray
+* `DP-Contiguous-Subarray` 53 - Maximum Subarray
 * 72 - Edit Distance
 * 91 - Decode Ways
 * 97 - Interleaving String
 * 115 - Distinct Subsequences
-* `BuyAndSellStock` 121 - Best Time to Buy and Sell Stock
-* `BuyAndSellStock` 122 - Best Time to Buy and Sell Stock II
-* `Hard` `BuyAndSellStock` 123 - Best Time to Buy and Sell Stock III
+* `Buy-And-Sell-Stock` 121 - Best Time to Buy and Sell Stock
+* `Buy-And-Sell-Stock` 122 - Best Time to Buy and Sell Stock II
+* `Hard` `Buy-And-Sell-Stock` 123 - Best Time to Buy and Sell Stock III
 * 139 - Word Break
-* `DpContiguousSubarray` 152 - Maximum Product Subarray
-* `Hard` `BuyAndSellStock` 188 - Best Time to Buy and Sell Stock IV
-* `DpSequenceAction` 198 - House Robber
-* `DpSequenceActionGroups` 279 - Perfect Squares
-* `DpNonContiguousSubarray` 300 - Longest Increasing Subsequence
-* `Hard` `BuyAndSellStock` 309 - Best Time to Buy and Sell Stock with Cooldown
-* `DpSequenceAction` 312 - Burst Balloons
+* `DP-Contiguous-Subarray` 152 - Maximum Product Subarray
+* `Hard` `Buy-And-Sell-Stock` 188 - Best Time to Buy and Sell Stock IV
+* `DP-Sequence-Action` 198 - House Robber
+* `DP-Sequence-Action-Groups` 279 - Perfect Squares
+* `DP-Non-Contiguous-Subarray` 300 - Longest Increasing Subsequence
+* `Hard` `Buy-And-Sell-Stock` 309 - Best Time to Buy and Sell Stock with Cooldown
+* `DP-Sequence-Action` 312 - Burst Balloons
 * 322 - Coin Change
 * 368 - Largest Divisible Subset
 * `Hard` `0-1-Knapsack` 416 - Partition Equal Subset Sum
 * 494 - Target Sum
 * 581 - Shortest Unsorted Continuous Subarray
-* `DpNonContiguousSubarray` 673 - Number of Longest Increasing Subsequence
+* `DP-Non-Contiguous-Subarray` 673 - Number of Longest Increasing Subsequence
 * 718 - Maximum Length of Repeated Subarray
-* `DpSequenceAction` 740 - Delete and Earn
-* `DpSequenceAction` 746 - Min Cost Climbing Stairs
-* `Hard` `DpSequenceAction` 790 - Domino and Tromino Tiling
+* `DP-Sequence-Action` 740 - Delete and Earn
+* `DP-Sequence-Action` 746 - Min Cost Climbing Stairs
+* `Hard` `DP-Sequence-Action` 790 - Domino and Tromino Tiling
 * 801 - Minimum Swaps To Make Sequences Increasing
-* `DpSequenceActionGroups` 813 - Largest Sum of Averages
+* `DP-Sequence-Action-Groups` 813 - Largest Sum of Averages
 * 983 - Minimum Cost For Tickets
-* `DpContiguousSubarray` XXX - Maximum Sum Rectangle in a 2D Matrix
+* `DP-Contiguous-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix
 
 ## Graph Bellman Ford
 * 787 - Cheapest Flights Within K Stops
@@ -123,12 +123,12 @@
 ## Graph/Tree DFS
 * 39 - Combination Sum
 * 40 - Combination Sum II
-* `MultiTraversalSequence` 105 - Construct Binary Tree from Preorder and Inorder Traversal
+* `Multi-Traversal-Sequence` 105 - Construct Binary Tree from Preorder and Inorder Traversal
 * `DFS` `Stack` 173 - Binary Search Tree Iterator
 * `DFS` `Stack` 230 - Kth Smallest Element in a BST
 * 538 - Convert BST to Greater Tree
 * `DFS` `Stack` 886 - Possible Bipartition
-* `MultiTraversalSequence` 889 - Construct Binary Tree from Preorder and Postorder Traversal
+* `Multi-Traversal-Sequence` 889 - Construct Binary Tree from Preorder and Postorder Traversal
 * 897 - Increasing Order Search Tree
 * 979 - Distribute Coins in Binary Tree
 
@@ -144,9 +144,9 @@
 * 706 - Design HashMap
 
 ## Linked List
-* `Archived` `DummyNode` 24 - Swap Nodes in Pairs
-* `Archived` `DummyNode` 86 - Partition List
-* `Archived` `DummyNode` 328 - Odd Even Linked List
+* `Archived` `Dummy-Node` 24 - Swap Nodes in Pairs
+* `Archived` `Dummy-Node` 86 - Partition List
+* `Archived` `Dummy-Node` 328 - Odd Even Linked List
 
 ## Math
 * 29 - Divide Two Integers
@@ -195,11 +195,11 @@
 * 76 - Minimum Window Substring
 
 ## Sort
-* `BucketSort` 539 - Minimum Time Difference
-* `InsertionSort` 147 - Insertion Sort List
-* `MergeSort` 23 - Merge k Sorted Lists
-* `MergeSort` 148 - Sort List
-* `QuickSort` 23 - Merge k Sorted Lists
+* `Bucket-Sort` 539 - Minimum Time Difference
+* `Insertion-Sort` 147 - Insertion Sort List
+* `Merge-Sort` 23 - Merge k Sorted Lists
+* `Merge-Sort` 148 - Sort List
+* `Quick-Sort` 23 - Merge k Sorted Lists
 
 ## Stack
 * 155 - Min Stack
@@ -219,19 +219,13 @@
 * 1019 - Next Greater Node In Linked List
 
 ## String
+* `Knuth–Morris–Pratt` 28 - Implement strStr()
+* `Rolling-Hash` 187 - Repeated DNA Sequences
 * `Archived` 383 - Ransom Note
+* `Rolling-Hash` 438 - Find All Anagrams in a String
+* `String-Pair` 678 - Valid Parenthesis String
 * 680 - Valid Palindrome II
 * `Archived` 830 - Positions of Large Groups
-
-## String Pair
-* 678 - Valid Parenthesis String
-
-## String Search - Knuth–Morris–Pratt
-* 28 - Implement strStr()
-
-## String Search - Rolling Hash
-* 187 - Repeated DNA Sequences
-* 438 - Find All Anagrams in a String
 
 ## Trie
 * 648 - Replace Words
@@ -241,10 +235,10 @@
 * 820 - Short Encoding of Words
 
 ## Union Find
-* `UnionFind` 000 - [Algorithm] Union Find
-* `UnionFind` 547 - Friend Circles
-* `UnionFind` 684 - Redundant Connection
-* `UnionFind` 959 - Regions Cut By Slashes
+* `Union-Find` 000 - [Algorithm] Union Find
+* `Union-Find` 547 - Friend Circles
+* `Union-Find` 684 - Redundant Connection
+* `Union-Find` 959 - Regions Cut By Slashes
 
 ## Others - SQL
 * 184 - Department Highest Salary

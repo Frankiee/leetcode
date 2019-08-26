@@ -1,4 +1,4 @@
-# [InPlaceSwap]
+# [In-Place-Swap]
 # https://leetcode.com/problems/sort-array-by-parity/
 # 905. Sort Array By Parity
 

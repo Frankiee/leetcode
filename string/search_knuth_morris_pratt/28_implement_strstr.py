@@ -1,3 +1,4 @@
+# [Knuth–Morris–Pratt]
 # https://leetcode.com/problems/implement-strstr/
 # 28. Implement strStr()
 
