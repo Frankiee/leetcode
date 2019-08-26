@@ -99,6 +99,7 @@
 * 718 - Maximum Length of Repeated Subarray
 * `DpSequenceAction` 740 - Delete and Earn
 * `DpSequenceAction` 746 - Min Cost Climbing Stairs
+* `Hard` `DpSequenceAction` 790 - Domino and Tromino Tiling
 * 801 - Minimum Swaps To Make Sequences Increasing
 * `DpSequenceActionGroups` 813 - Largest Sum of Averages
 * 983 - Minimum Cost For Tickets
