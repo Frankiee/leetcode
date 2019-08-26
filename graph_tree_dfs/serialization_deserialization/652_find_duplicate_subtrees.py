@@ -28,6 +28,9 @@
 # Therefore, you need to return above trees' root in the form of a list.
 
 
+from collections import defaultdict
+
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -36,23 +39,19 @@
 #         self.right = None
 
 class Solution(object):
-    def generate_serialized(self, root, ret, serialized, ret_serialized):
+    def generate_serialized(self, root, ret, serialized):
         if not root:
             return "#"
 
         ser = (
             str(root.val) + ',' +
-            self.generate_serialized(root.left, ret, serialized,
-                                     ret_serialized) + ',' +
-            self.generate_serialized(root.right, ret, serialized,
-                                     ret_serialized)
+            self.generate_serialized(root.left, ret, serialized) + ',' +
+            self.generate_serialized(root.right, ret, serialized)
         )
 
-        if ser in serialized and ser not in ret_serialized:
+        serialized[ser] += 1
+        if serialized[ser] == 2:
             ret.append(root)
-            ret_serialized.add(ser)
-
-        serialized.add(ser)
 
         return ser
 
@@ -62,9 +61,8 @@ class Solution(object):
         :rtype: List[TreeNode]
         """
         ret = []
-        ret_serialized = set()
-        serialized = set()
+        serialized = defaultdict(int)
 
-        self.generate_serialized(root, ret, serialized, ret_serialized)
+        self.generate_serialized(root, ret, serialized)
 
         return ret

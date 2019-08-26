@@ -123,13 +123,13 @@
 ## Graph/Tree DFS
 * 39 - Combination Sum
 * 40 - Combination Sum II
-* `Multi-Traversal-Sequence` 105 - Construct Binary Tree from Preorder and Inorder Traversal
+* `Tree-Serialization-Deserialization` 105 - Construct Binary Tree from Preorder and Inorder Traversal
 * `DFS` `Stack` 173 - Binary Search Tree Iterator
 * `DFS` `Stack` 230 - Kth Smallest Element in a BST
 * 538 - Convert BST to Greater Tree
 * `Tree-Serialization-Deserialization` 652 - Find Duplicate Subtrees
 * `DFS` `Stack` 886 - Possible Bipartition
-* `Multi-Traversal-Sequence` 889 - Construct Binary Tree from Preorder and Postorder Traversal
+* `Tree-Serialization-Deserialization` 889 - Construct Binary Tree from Preorder and Postorder Traversal
 * 897 - Increasing Order Search Tree
 * 979 - Distribute Coins in Binary Tree
 
