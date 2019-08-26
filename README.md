@@ -74,6 +74,7 @@
 
 ## DP
 * 45 - Jump Game II
+* `DpContiguousSubarray` 53 - Maximum Subarray
 * 72 - Edit Distance
 * 91 - Decode Ways
 * 97 - Interleaving String
@@ -82,35 +83,26 @@
 * `BuyAndSellStock` 122 - Best Time to Buy and Sell Stock II
 * `Hard` `BuyAndSellStock` 123 - Best Time to Buy and Sell Stock III
 * 139 - Word Break
+* `DpContiguousSubarray` 152 - Maximum Product Subarray
 * `Hard` `BuyAndSellStock` 188 - Best Time to Buy and Sell Stock IV
+* `DpSequenceAction` 198 - House Robber
+* `DpSequenceActionGroups` 279 - Perfect Squares
+* `DpNonContiguousSubarray` 300 - Longest Increasing Subsequence
 * `Hard` `BuyAndSellStock` 309 - Best Time to Buy and Sell Stock with Cooldown
+* `DpSequenceAction` 312 - Burst Balloons
 * 322 - Coin Change
 * 368 - Largest Divisible Subset
 * `Hard` `0-1-Knapsack` 416 - Partition Equal Subset Sum
 * 494 - Target Sum
 * 581 - Shortest Unsorted Continuous Subarray
+* `DpNonContiguousSubarray` 673 - Number of Longest Increasing Subsequence
 * 718 - Maximum Length of Repeated Subarray
+* `DpSequenceAction` 740 - Delete and Earn
+* `DpSequenceAction` 746 - Min Cost Climbing Stairs
 * 801 - Minimum Swaps To Make Sequences Increasing
+* `DpSequenceActionGroups` 813 - Largest Sum of Averages
 * 983 - Minimum Cost For Tickets
-
-## DP Contiguous Sub Array
-* 53 - Maximum Subarray
-* 152 - Maximum Product Subarray
-* XXX - Maximum Sum Rectangle in a 2D Matrix
-
-## DP Non-Contiguous Sub Array
-* 300 - Longest Increasing Subsequence
-* 673 - Number of Longest Increasing Subsequence
-
-## DP Sequence Action
-* 198 - House Robber
-* 312 - Burst Balloons
-* 740 - Delete and Earn
-* 746 - Min Cost Climbing Stairs
-
-## DP Sequence Action Groups
-* 279 - Perfect Squares
-* 813 - Largest Sum of Averages
+* `DpContiguousSubarray` XXX - Maximum Sum Rectangle in a 2D Matrix
 
 ## Graph Bellman Ford
 * 787 - Cheapest Flights Within K Stops
