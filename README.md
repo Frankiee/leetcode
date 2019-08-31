@@ -102,6 +102,7 @@
 * `Hard` `DP-Sequence-Action` 790 - Domino and Tromino Tiling
 * 801 - Minimum Swaps To Make Sequences Increasing
 * `DP-Sequence-Action-Groups` 813 - Largest Sum of Averages
+* 894 - All Possible Full Binary Trees
 * 983 - Minimum Cost For Tickets
 * `DP-Contiguous-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix
 
