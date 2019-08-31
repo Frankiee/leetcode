@@ -116,6 +116,7 @@
 * 994 - Rotting Oranges
 
 ## Graph/Tree BFS
+* 116 - Populating Next Right Pointers in Each Node
 * 133 - Clone Graph
 * 773 - Sliding Puzzle
 * `Hard` `Queue` `BFS` 847 - Shortest Path Visiting All Nodes
