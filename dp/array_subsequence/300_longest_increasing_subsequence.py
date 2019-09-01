@@ -1,4 +1,4 @@
-# [DP-Non-Contiguous-Subarray]
+# [DP-Array-Subsequence]
 # https://leetcode.com/problems/longest-increasing-subsequence/
 # 300. Longest Increasing Subsequence
 

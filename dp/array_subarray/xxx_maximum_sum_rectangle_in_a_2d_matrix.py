@@ -1,4 +1,4 @@
-# [DP-Non-Contiguous-Subarray]
+# [DP-Array-Subsequence]
 # https://www.geeksforgeeks.org/maximum-sum-rectangle-in-a-2d-matrix-dp-27/
 # Maximum Sum Rectangle in a 2D Matrix
 

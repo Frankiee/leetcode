@@ -74,7 +74,7 @@
 
 ## DP
 * 45 - Jump Game II
-* `DP-Contiguous-Subarray` 53 - Maximum Subarray
+* `DP-Array-Subarray` 53 - Maximum Subarray
 * 72 - Edit Distance
 * 91 - Decode Ways
 * 97 - Interleaving String
@@ -83,11 +83,11 @@
 * `Buy-And-Sell-Stock` 122 - Best Time to Buy and Sell Stock II
 * `Hard` `Buy-And-Sell-Stock` 123 - Best Time to Buy and Sell Stock III
 * 139 - Word Break
-* `DP-Contiguous-Subarray` 152 - Maximum Product Subarray
+* `DP-Array-Subarray` 152 - Maximum Product Subarray
 * `Hard` `Buy-And-Sell-Stock` 188 - Best Time to Buy and Sell Stock IV
 * `DP-Sequence-Action` 198 - House Robber
 * `DP-Sequence-Action-Groups` 279 - Perfect Squares
-* `DP-Non-Contiguous-Subarray` 300 - Longest Increasing Subsequence
+* `DP-Array-Subsequence` 300 - Longest Increasing Subsequence
 * `Hard` `Buy-And-Sell-Stock` 309 - Best Time to Buy and Sell Stock with Cooldown
 * `DP-Sequence-Action` 312 - Burst Balloons
 * 322 - Coin Change
@@ -95,7 +95,7 @@
 * `Hard` `0-1-Knapsack` 416 - Partition Equal Subset Sum
 * 494 - Target Sum
 * 581 - Shortest Unsorted Continuous Subarray
-* `DP-Non-Contiguous-Subarray` 673 - Number of Longest Increasing Subsequence
+* `DP-Array-Subsequence` 673 - Number of Longest Increasing Subsequence
 * 718 - Maximum Length of Repeated Subarray
 * `DP-Sequence-Action` 740 - Delete and Earn
 * `DP-Sequence-Action` 746 - Min Cost Climbing Stairs
@@ -105,7 +105,7 @@
 * 894 - All Possible Full Binary Trees
 * 983 - Minimum Cost For Tickets
 * 1155 - Number of Dice Rolls With Target Sum
-* `DP-Contiguous-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix
+* `DP-Array-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix
 
 ## Graph Bellman Ford
 * 787 - Cheapest Flights Within K Stops
