@@ -241,6 +241,7 @@
 * `String-Pair` 678 - Valid Parenthesis String
 * 680 - Valid Palindrome II
 * `Archived` 830 - Positions of Large Groups
+* 1156 - Swap For Longest Repeated Character Substring
 
 ## Trie
 * 648 - Replace Words
