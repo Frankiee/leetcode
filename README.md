@@ -107,9 +107,9 @@
 * `DP-Sequence-Action-Groups` 813 - Largest Sum of Averages
 * 894 - All Possible Full Binary Trees
 * 983 - Minimum Cost For Tickets
-* `DP-Array-Subsequence` 1092 - Shortest Common Supersequence
+* `Hard` `DP-Array-Subsequence` 1092 - Shortest Common Supersequence
 * `Archived` 1137 - N-th Tribonacci Number
-* `DP-Array-Subsequence` 1143 - Longest Common Subsequence
+* `Hard` `DP-Array-Subsequence` 1143 - Longest Common Subsequence
 * 1155 - Number of Dice Rolls With Target Sum
 * `DP-Array-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix
 
@@ -130,6 +130,8 @@
 * `Queue` `BFS` 815 - Bus Routes
 * `Archived` 958 - Check Completeness of a Binary Tree
 * 1129 - Shortest Path with Alternating Colors
+* `Archived` 1161 - Maximum Level Sum of a Binary Tree
+* `Queue` `BFS` 1162 - As Far from Land as Possible
 
 ## Graph/Tree DFS
 * 39 - Combination Sum
