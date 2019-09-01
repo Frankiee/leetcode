@@ -133,6 +133,7 @@
 * `Tree-Serialization-Deserialization` 105 - Construct Binary Tree from Preorder and Inorder Traversal
 * `DFS` `Stack` 173 - Binary Search Tree Iterator
 * `DFS` `Stack` 230 - Kth Smallest Element in a BST
+* `Common-Ancestor` 235 - Lowest Common Ancestor of a Binary Search Tree
 * `Tree-Serialization-Deserialization` 297 - Serialize and Deserialize Binary Tree
 * 538 - Convert BST to Greater Tree
 * `Tree-Serialization-Deserialization` 652 - Find Duplicate Subtrees
