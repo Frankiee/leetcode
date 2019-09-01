@@ -258,6 +258,7 @@
 * `Union-Find` 000 - [Algorithm] Union Find
 * `Union-Find` 547 - Friend Circles
 * `Union-Find` 684 - Redundant Connection
+* `Union-Find` `Prime-Factor` 952 - Largest Component Size by Common Factor
 * `Union-Find` 959 - Regions Cut By Slashes
 
 ## Others - SQL
