@@ -104,6 +104,7 @@
 * `DP-Sequence-Action-Groups` 813 - Largest Sum of Averages
 * 894 - All Possible Full Binary Trees
 * 983 - Minimum Cost For Tickets
+* `DP-Array-Subsequence` 1092 - Shortest Common Supersequence
 * `DP-Array-Subsequence` 1143 - Longest Common Subsequence
 * 1155 - Number of Dice Rolls With Target Sum
 * `DP-Array-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix

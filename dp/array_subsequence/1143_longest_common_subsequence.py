@@ -2,6 +2,9 @@
 # https://leetcode.com/problems/longest-common-subsequence/
 # 1143. Longest Common Subsequence
 
+# Related:
+# 1092. Shortest Common Supersequence
+
 # Given two strings text1 and text2, return the length of their longest
 # common subsequence.
 #
