@@ -134,6 +134,7 @@
 * `DFS` `Stack` 173 - Binary Search Tree Iterator
 * `DFS` `Stack` 230 - Kth Smallest Element in a BST
 * `Common-Ancestor` 235 - Lowest Common Ancestor of a Binary Search Tree
+* `Common-Ancestor` 236 - Lowest Common Ancestor of a Binary Tree
 * `Tree-Serialization-Deserialization` 297 - Serialize and Deserialize Binary Tree
 * 538 - Convert BST to Greater Tree
 * `Tree-Serialization-Deserialization` 652 - Find Duplicate Subtrees
