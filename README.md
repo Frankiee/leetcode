@@ -26,6 +26,7 @@
 * `Archived` 1002 - Find Common Characters
 * `Archived` 1122 - Relative Sort Array
 * 1124 - Longest Well-Performing Interval
+* `Archived` 1138 - Alphabet Board Path
 
 ## Backtracking
 * 37 - Sudoku Solver
