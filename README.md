@@ -169,6 +169,7 @@
 ## Math
 * 29 - Divide Two Integers
 * 172 - Factorial Trailing Zeroes
+* `Prime-Factor` 263 - Ugly Number
 
 ## Min Heap
 * 215 - Kth Largest Element in an Array
