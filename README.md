@@ -127,6 +127,7 @@
 * `Hard` `Queue` `BFS` 847 - Shortest Path Visiting All Nodes
 * `Queue` `BFS` 399 - Evaluate Division
 * `Queue` `BFS` 815 - Bus Routes
+* `Archived` 958 - Check Completeness of a Binary Tree
 * 1129 - Shortest Path with Alternating Colors
 
 ## Graph/Tree DFS
