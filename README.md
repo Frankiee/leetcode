@@ -106,6 +106,7 @@
 * `Hard` `DP-Sequence-Action` 790 - Domino and Tromino Tiling
 * 801 - Minimum Swaps To Make Sequences Increasing
 * `DP-Sequence-Action-Groups` 813 - Largest Sum of Averages
+* `DP-Array-Subsequence` `Hard` 873 - Length of Longest Fibonacci Subsequence
 * 894 - All Possible Full Binary Trees
 * 926 - Flip String to Monotone Increasing
 * 983 - Minimum Cost For Tickets
