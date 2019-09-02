@@ -172,6 +172,7 @@
 * `Prime-Factor` `Ugly-Number` 263 - Ugly Number
 * `Prime-Factor` `Ugly-Number` 264 - Ugly Number II
 * `Prime-Factor` `Ugly-Number` 313 - Super Ugly Number
+* `gcd` 914 - X of a Kind in a Deck of Cards
 
 ## Min Heap
 * 215 - Kth Largest Element in an Array
