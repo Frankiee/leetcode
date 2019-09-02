@@ -1,4 +1,4 @@
-# [Prime-Factor]
+# [Prime-Factor, Ugly-Number]
 # https://leetcode.com/problems/ugly-number/
 # 263. Ugly Number
 

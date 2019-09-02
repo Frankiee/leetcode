@@ -169,7 +169,8 @@
 ## Math
 * 29 - Divide Two Integers
 * 172 - Factorial Trailing Zeroes
-* `Prime-Factor` 263 - Ugly Number
+* `Prime-Factor` `Ugly-Number` 263 - Ugly Number
+* `Prime-Factor` `Ugly-Number` 264 - Ugly Number II
 
 ## Min Heap
 * 215 - Kth Largest Element in an Array
@@ -258,7 +259,7 @@
 * `Union-Find` 000 - [Algorithm] Union Find
 * `Union-Find` 547 - Friend Circles
 * `Union-Find` 684 - Redundant Connection
-* `Union-Find` `Prime-Factor` 952 - Largest Component Size by Common Factor
+* `Hard` `Union-Find` `Prime-Factor` 952 - Largest Component Size by Common Factor
 * `Union-Find` 959 - Regions Cut By Slashes
 
 ## Others - SQL
