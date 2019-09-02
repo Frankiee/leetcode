@@ -11,6 +11,7 @@
 * 90 - Subsets II
 * 128 - Longest Consecutive Sequence
 * 169 - Majority Element
+* `Archived` 228 - Summary Ranges
 * 239 - Sliding Window Maximum
 * `Archived` 345 - Reverse Vowels of a String
 * `Archived` 350 - Intersection of Two Arrays II
