@@ -24,10 +24,8 @@ class Solution(object):
         for i in range(2, int(n ** 0.5 + 1)):
             if dp[i]:
                 # set times of i to False starting from i^2
-                time = i
-                while i * time < n:
-                    dp[i * time] = False
-                    time += 1
+                for time in range(i * i, n, i):
+                    dp[time] = False
 
         return len([1 for i in range(2, n) if dp[i] == True])
 
