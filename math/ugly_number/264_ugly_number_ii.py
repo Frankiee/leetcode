@@ -1,4 +1,4 @@
-# [Prime-Factor, Ugly-Number]
+# [Prime-Factor, Ugly-Number, Hard]
 # https://leetcode.com/problems/ugly-number-ii/
 # 264. Ugly Number II
 

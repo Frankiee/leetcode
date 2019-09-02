@@ -173,8 +173,9 @@
 ## Math
 * 29 - Divide Two Integers
 * 172 - Factorial Trailing Zeroes
+* `Prime-Factor` `Hard` 204. Count Primes
 * `Prime-Factor` `Ugly-Number` 263 - Ugly Number
-* `Prime-Factor` `Ugly-Number` 264 - Ugly Number II
+* `Prime-Factor` `Ugly-Number` `Hard` 264 - Ugly Number II
 * `Prime-Factor` `Ugly-Number` 313 - Super Ugly Number
 * `gcd` 914 - X of a Kind in a Deck of Cards
 
