@@ -2,6 +2,8 @@
 # https://leetcode.com/problems/count-primes/
 # 204. Count Primes
 
+# https://www.youtube.com/watch?v=Kwo2jkHOyPY
+
 # Count the number of prime numbers less than a non-negative number, n.
 #
 # Example:
@@ -12,13 +14,6 @@
 
 
 class Solution(object):
-    def is_prime(self, n):
-        for i in range(2, int(n ** 0.5 + 2)):
-            if i < n and n % i == 0:
-                return False
-
-        return True
-
     def countPrimes(self, n):
         """
         :type n: int
@@ -26,11 +21,21 @@ class Solution(object):
         """
         dp = [True] * n
 
-        for i in range(2, int(n ** 0.5 + 2)):
-            if self.is_prime(i):
-                time = 2
+        for i in range(2, int(n ** 0.5 + 1)):
+            if dp[i]:
+                # set times of i to False starting from i^2
+                time = i
                 while i * time < n:
                     dp[i * time] = False
                     time += 1
 
         return len([1 for i in range(2, n) if dp[i] == True])
+
+
+# Appendix: is_prime implementation
+def is_prime(n):
+    for i in range(2, int(n ** 0.5 + 2)):
+        if i < n and n % i == 0:
+            return False
+
+    return True
