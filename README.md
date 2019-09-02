@@ -155,6 +155,7 @@
 * 122 - Best Time to Buy and Sell Stock II
 * 435 - Non-overlapping Intervals
 * 452 - Minimum Number of Arrows to Burst Balloons
+* 621 - Task Scheduler
 * XXX - Deliveries on a One Way Street
 
 ## HashMap/HashSet
