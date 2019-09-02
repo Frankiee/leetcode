@@ -205,6 +205,7 @@
 
 ## Queue
 * 225 - Implement Stack using Queues
+* `Archived` 933 - Number of Recent Calls
 
 ## Quick Select
 * 215 - Kth Largest Element in an Array
