@@ -19,6 +19,7 @@
 * 442 - Find All Duplicates in an Array
 * 459 - Repeated Substring Pattern
 * 525 - Contiguous Array
+* `Archived` 643 - Maximum Average Subarray I
 * 731 - My Calendar II
 * 792 - Number of Matching Subsequences
 * `Archived` 819 - Most Common Word
