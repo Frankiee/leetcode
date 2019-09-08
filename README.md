@@ -183,6 +183,7 @@
 * `Prime-Factor` `Ugly-Number` 313 - Super Ugly Number
 * `gcd` 914 - X of a Kind in a Deck of Cards
 * `Archived` 970 - Powerful Integers
+* `Combination` 1180 - Count Substrings with Only One Distinct Letter
 
 ## Min Heap
 * 215 - Kth Largest Element in an Array
