@@ -62,6 +62,7 @@
 * 704 - Binary Search
 * `Bisect` 729 - My Calendar I
 * 744 - Find Smallest Letter Greater Than Target
+* `Bisect` 1146 - Snapshot Array
 
 ## Bitwise
 * `XOR` 136 - Single Number
