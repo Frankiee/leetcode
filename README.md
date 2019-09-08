@@ -265,6 +265,7 @@
 * 680 - Valid Palindrome II
 * `Archived` 796 - Rotate String
 * `Archived` 830 - Positions of Large Groups
+* `Rolling-Hash` `Hard` 1147 - Longest Chunked Palindrome Decomposition
 * 1156 - Swap For Longest Repeated Character Substring
 
 ## Trie
