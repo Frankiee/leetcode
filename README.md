@@ -279,6 +279,7 @@
 ## Others - SQL
 * 184 - Department Highest Salary
 * 196 - Delete Duplicate Emails
+* `SQL-Case-When-Then` 1179 - Reformat Department Table
 
 ## View - Array Arithmetic Operatorsg
 * 494 - Target Sum
