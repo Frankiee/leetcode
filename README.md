@@ -156,6 +156,7 @@
 * 538 - Convert BST to Greater Tree
 * `Tree-Serialization-Deserialization` 652 - Find Duplicate Subtrees
 * 671 - Second Minimum Node In a Binary Tree
+* 698 - Partition to K Equal Sum Subsets
 * `DFS` `Stack` 886 - Possible Bipartition
 * `Tree-Serialization-Deserialization` 889 - Construct Binary Tree from Preorder and Postorder Traversal
 * 897 - Increasing Order Search Tree

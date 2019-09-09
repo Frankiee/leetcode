@@ -2,6 +2,9 @@
 # https://leetcode.com/problems/partition-equal-subset-sum/
 # 416. Partition Equal Subset Sum
 
+# Related:
+# 698. Partition to K Equal Sum Subsets
+
 # Given a non-empty array containing only positive integers, find if the
 # array can be partitioned into two subsets such that the sum of elements in
 # both subsets is equal.
