@@ -116,6 +116,7 @@
 * 926 - Flip String to Monotone Increasing
 * 983 - Minimum Cost For Tickets
 * `Hard` `DP-Array-Subsequence` 1092 - Shortest Common Supersequence
+* `DP-Sequence-Action` 1130 - Minimum Cost Tree From Leaf Values
 * `Archived` 1137 - N-th Tribonacci Number
 * `Hard` `DP-Array-Subsequence` 1143 - Longest Common Subsequence
 * 1155 - Number of Dice Rolls With Target Sum
