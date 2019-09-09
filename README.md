@@ -250,6 +250,7 @@
 * `Hard` 316 - Remove Duplicate Letters
 * 321 - Create Maximum Number
 * 402 - Remove K Digits
+* 503 - Next Greater Element II
 * 726 - Number of Atoms
 * 735 - Asteroid Collision
 * 739 - Daily Temperatures
