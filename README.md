@@ -174,6 +174,7 @@
 ## Linked List
 * `Archived` `Dummy-Node` 24 - Swap Nodes in Pairs
 * `Archived` `Dummy-Node` 86 - Partition List
+* 160 - Intersection of Two Linked Lists
 * `Archived` `Dummy-Node` 328 - Odd Even Linked List
 * `Archived` 876 - Middle of the Linked List
 
