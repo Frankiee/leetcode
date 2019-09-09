@@ -9,6 +9,7 @@
 * 56 - Merge Intervals
 * 59 - Spiral Matrix II
 * 90 - Subsets II
+* `Archived` 118 - Pascal's Triangle
 * 128 - Longest Consecutive Sequence
 * 169 - Majority Element
 * `Archived` 228 - Summary Ranges
