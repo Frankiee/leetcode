@@ -34,22 +34,6 @@
 * `Archived` 1138 - Alphabet Board Path
 * `Archived` 1184 - Distance Between Bus Stops
 
-## Backtracking
-* 37 - Sudoku Solver
-* 39 - Combination Sum
-* 40 - Combination Sum II
-* 46 - Permutations
-* 47 - Permutations II
-* 51 - N-Queens
-* 52 - N-Queens II
-* 77 - Combinations
-* 78 - Subsets
-* 79 - Word Search
-* 90 - Subsets II
-* 131 - Palindrome Partitioning
-* 306 - Additive Number
-* 1079 - Letter Tile Possibilities
-
 ## Base Convert
 * 168 - Excel Sheet Column Title
 
@@ -147,6 +131,22 @@
 * 1129 - Shortest Path with Alternating Colors
 * `Archived` 1161 - Maximum Level Sum of a Binary Tree
 * `Queue` `BFS` 1162 - As Far from Land as Possible
+
+## Graph/Tree DFS - Backtracking
+* `Backtracking` `Classic` 37 - Sudoku Solver
+* `Backtracking` `Classic` 39 - Combination Sum
+* `Backtracking` `Classic` 40 - Combination Sum II
+* `Backtracking` `Classic` 46 - Permutations
+* `Backtracking` `Classic` 47 - Permutations II
+* `Backtracking` `Classic` 51 - N-Queens
+* `Backtracking` `Classic` 52 - N-Queens II
+* `Backtracking` `Classic` 77 - Combinations
+* `Backtracking` `Classic` 78 - Subsets
+* `Backtracking` `Classic` 79 - Word Search
+* `Backtracking` `Classic` 90 - Subsets II
+* `Backtracking` `Classic` 131 - Palindrome Partitioning
+* `Backtracking` `Classic` 306 - Additive Number
+* `Backtracking` `Classic` 1079 - Letter Tile Possibilities
 
 ## Graph/Tree DFS
 * 39 - Combination Sum
