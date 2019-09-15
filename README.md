@@ -105,6 +105,7 @@
 * 368 - Largest Divisible Subset
 * `Classic` `0-1-Knapsack` 416 - Partition Equal Subset Sum
 * 494 - Target Sum
+* `DP-Sequence-Action-Groups` `Classic` 576 - Out of Boundary Paths
 * 581 - Shortest Unsorted Continuous Subarray
 * `DP-Array-Subarray` `Classic` 647 - Palindromic Substrings
 * `DP-Array-Subsequence` 673 - Number of Longest Increasing Subsequence
