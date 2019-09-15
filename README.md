@@ -105,6 +105,7 @@
 * `Classic` `0-1-Knapsack` 416 - Partition Equal Subset Sum
 * 494 - Target Sum
 * 581 - Shortest Unsorted Continuous Subarray
+* `DP-Array-Subarray` `Classic` 647 - Palindromic Substrings
 * `DP-Array-Subsequence` 673 - Number of Longest Increasing Subsequence
 * 718 - Maximum Length of Repeated Subarray
 * `DP-Sequence-Action` 740 - Delete and Earn
