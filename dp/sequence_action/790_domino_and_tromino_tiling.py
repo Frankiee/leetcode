@@ -1,4 +1,4 @@
-# [Hard, DP-Sequence-Action]
+# [Classic, DP-Sequence-Action]
 # https://leetcode.com/problems/domino-and-tromino-tiling/
 # 790. Domino and Tromino Tiling
 

@@ -1,4 +1,4 @@
-# [Hard, Buy-And-Sell-Stock]
+# [Classic, Buy-And-Sell-Stock]
 # https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
 # 188. Best Time to Buy and Sell Stock IV
 

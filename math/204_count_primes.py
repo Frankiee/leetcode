@@ -1,4 +1,4 @@
-# [Prime-Factor, Hard]
+# [Prime-Factor, Classic]
 # https://leetcode.com/problems/count-primes/
 # 204. Count Primes
 

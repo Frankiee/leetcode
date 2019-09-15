@@ -1,4 +1,4 @@
-# [Hard, BFS, Queue]
+# [Classic, BFS, Queue]
 # https://leetcode.com/problems/shortest-path-visiting-all-nodes/
 # 847. Shortest Path Visiting All Nodes
 

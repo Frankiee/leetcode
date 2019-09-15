@@ -1,4 +1,4 @@
-# [Rolling-Hash, Hard]
+# [Rolling-Hash, Classic]
 # https://leetcode.com/problems/longest-chunked-palindrome-decomposition/
 # 1147. Longest Chunked Palindrome Decomposition
 

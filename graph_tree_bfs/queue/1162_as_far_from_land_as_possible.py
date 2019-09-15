@@ -1,4 +1,4 @@
-# [Hard, BFS, Queue]
+# [Classic, BFS, Queue]
 # https://leetcode.com/problems/as-far-from-land-as-possible/
 # 1162. As Far from Land as Possible
 

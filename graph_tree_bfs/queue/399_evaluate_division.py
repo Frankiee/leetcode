@@ -1,4 +1,4 @@
-# [Hard, BFS, Queue]
+# [Classic, BFS, Queue]
 # https://leetcode.com/problems/evaluate-division/
 # 399. Evaluate Division
 

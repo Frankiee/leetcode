@@ -1,4 +1,4 @@
-# [Hard, XOR]
+# [Classic, XOR]
 # https://leetcode.com/problems/single-number-iii/
 # 260. Single Number III
 

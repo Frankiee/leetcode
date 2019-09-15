@@ -1,4 +1,4 @@
-# [Hard, 0-1-Knapsack]
+# [Classic, 0-1-Knapsack]
 # https://leetcode.com/problems/partition-equal-subset-sum/
 # 416. Partition Equal Subset Sum
 

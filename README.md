@@ -71,7 +71,7 @@
 * 190 - Revert Bits
 * 191 - Number of 1 Bits
 * 231 - Power of Two
-* `Hard` `XOR` 260 - Single Number III
+* `Classic` `XOR` 260 - Single Number III
 * 476 - Number Complement
 * 693 - Binary Number with Alternating Bits
 
@@ -91,35 +91,35 @@
 * 115 - Distinct Subsequences
 * `Buy-And-Sell-Stock` 121 - Best Time to Buy and Sell Stock
 * `Buy-And-Sell-Stock` 122 - Best Time to Buy and Sell Stock II
-* `Hard` `Buy-And-Sell-Stock` 123 - Best Time to Buy and Sell Stock III
+* `Classic` `Buy-And-Sell-Stock` 123 - Best Time to Buy and Sell Stock III
 * 139 - Word Break
 * `DP-Array-Subarray` 152 - Maximum Product Subarray
-* `Hard` `Buy-And-Sell-Stock` 188 - Best Time to Buy and Sell Stock IV
+* `Classic` `Buy-And-Sell-Stock` 188 - Best Time to Buy and Sell Stock IV
 * `DP-Sequence-Action` 198 - House Robber
 * `DP-Sequence-Action-Groups` 279 - Perfect Squares
 * `DP-Array-Subsequence` 300 - Longest Increasing Subsequence
-* `Hard` `Buy-And-Sell-Stock` 309 - Best Time to Buy and Sell Stock with Cooldown
+* `Classic` `Buy-And-Sell-Stock` 309 - Best Time to Buy and Sell Stock with Cooldown
 * `DP-Sequence-Action` 312 - Burst Balloons
 * 322 - Coin Change
 * 368 - Largest Divisible Subset
-* `Hard` `0-1-Knapsack` 416 - Partition Equal Subset Sum
+* `Classic` `0-1-Knapsack` 416 - Partition Equal Subset Sum
 * 494 - Target Sum
 * 581 - Shortest Unsorted Continuous Subarray
 * `DP-Array-Subsequence` 673 - Number of Longest Increasing Subsequence
 * 718 - Maximum Length of Repeated Subarray
 * `DP-Sequence-Action` 740 - Delete and Earn
 * `DP-Sequence-Action` 746 - Min Cost Climbing Stairs
-* `Hard` `DP-Sequence-Action` 790 - Domino and Tromino Tiling
+* `Classic` `DP-Sequence-Action` 790 - Domino and Tromino Tiling
 * 801 - Minimum Swaps To Make Sequences Increasing
 * `DP-Sequence-Action-Groups` 813 - Largest Sum of Averages
-* `DP-Array-Subsequence` `Hard` 873 - Length of Longest Fibonacci Subsequence
+* `DP-Array-Subsequence` `Classic` 873 - Length of Longest Fibonacci Subsequence
 * 894 - All Possible Full Binary Trees
 * 926 - Flip String to Monotone Increasing
 * 983 - Minimum Cost For Tickets
-* `Hard` `DP-Array-Subsequence` 1092 - Shortest Common Supersequence
+* `Classic` `DP-Array-Subsequence` 1092 - Shortest Common Supersequence
 * `DP-Sequence-Action` 1130 - Minimum Cost Tree From Leaf Values
 * `Archived` 1137 - N-th Tribonacci Number
-* `Hard` `DP-Array-Subsequence` 1143 - Longest Common Subsequence
+* `Classic` `DP-Array-Subsequence` 1143 - Longest Common Subsequence
 * 1155 - Number of Dice Rolls With Target Sum
 * `DP-Array-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix
 
@@ -136,7 +136,7 @@
 * 116 - Populating Next Right Pointers in Each Node
 * 133 - Clone Graph
 * 773 - Sliding Puzzle
-* `Hard` `Queue` `BFS` 847 - Shortest Path Visiting All Nodes
+* `Classic` `Queue` `BFS` 847 - Shortest Path Visiting All Nodes
 * `Queue` `BFS` 399 - Evaluate Division
 * `Queue` `BFS` 815 - Bus Routes
 * `Archived` 958 - Check Completeness of a Binary Tree
@@ -185,9 +185,9 @@
 ## Math
 * 29 - Divide Two Integers
 * 172 - Factorial Trailing Zeroes
-* `Prime-Factor` `Hard` 204. Count Primes
+* `Prime-Factor` `Classic` 204. Count Primes
 * `Prime-Factor` `Ugly-Number` 263 - Ugly Number
-* `Prime-Factor` `Ugly-Number` `Hard` 264 - Ugly Number II
+* `Prime-Factor` `Ugly-Number` `Classic` 264 - Ugly Number II
 * `Prime-Factor` `Ugly-Number` 313 - Super Ugly Number
 * `gcd` 914 - X of a Kind in a Deck of Cards
 * `Archived` 970 - Powerful Integers
@@ -250,7 +250,7 @@
 * 225 - Implement Stack using Queues
 * 232 - Implement Queue using Stacks
 * 234 - Palindrome Linked List
-* `Hard` 316 - Remove Duplicate Letters
+* `Classic` 316 - Remove Duplicate Letters
 * 321 - Create Maximum Number
 * 402 - Remove K Digits
 * 503 - Next Greater Element II
@@ -272,7 +272,7 @@
 * 680 - Valid Palindrome II
 * `Archived` 796 - Rotate String
 * `Archived` 830 - Positions of Large Groups
-* `Rolling-Hash` `Hard` 1147 - Longest Chunked Palindrome Decomposition
+* `Rolling-Hash` `Classic` 1147 - Longest Chunked Palindrome Decomposition
 * 1156 - Swap For Longest Repeated Character Substring
 
 ## Trie
@@ -286,7 +286,7 @@
 * `Union-Find` 000 - [Algorithm] Union Find
 * `Union-Find` 547 - Friend Circles
 * `Union-Find` 684 - Redundant Connection
-* `Hard` `Union-Find` `Prime-Factor` 952 - Largest Component Size by Common Factor
+* `Classic` `Union-Find` `Prime-Factor` 952 - Largest Component Size by Common Factor
 * `Union-Find` 959 - Regions Cut By Slashes
 
 ## Others - SQL

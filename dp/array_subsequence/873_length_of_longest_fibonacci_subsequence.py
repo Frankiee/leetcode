@@ -1,4 +1,4 @@
-# [DP-Array-Subsequence, Hard]
+# [DP-Array-Subsequence, Classic]
 # https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/
 # 873. Length of Longest Fibonacci Subsequence
 
