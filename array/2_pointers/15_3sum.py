@@ -1,4 +1,4 @@
-# [2-Pointers]
+# [2-Pointers, Classic]
 # https://leetcode.com/problems/3sum/
 # 15. 3Sum
 

@@ -2,7 +2,7 @@
 
 ## Array
 * `Archived` 1 - Two Sum
-* `2-Pointers` 15 - 3Sum
+* `2-Pointers` `Classic` 15 - 3Sum
 * `2-Pointers` 16 - 3Sum Closest
 * `Archived` 26 - Remove Duplicates from Sorted Array
 * 54 - Spiral Matrix
@@ -89,6 +89,7 @@
 * 322 - Coin Change
 * 368 - Largest Divisible Subset
 * `Classic` `0-1-Knapsack` 416 - Partition Equal Subset Sum
+* `DP-Sequence-Action` 488 - Zuma Game
 * 494 - Target Sum
 * `DP-Sequence-Action-Groups` `Classic` 576 - Out of Boundary Paths
 * 581 - Shortest Unsorted Continuous Subarray
