@@ -237,6 +237,7 @@
 ## Sliding Window
 * 42 - Trapping Rain Water
 * 76 - Minimum Window Substring
+* 1052 - Grumpy Bookstore Owner
 
 ## Sort
 * `Bucket-Sort` 539 - Minimum Time Difference
