@@ -266,6 +266,7 @@
 * `Knuth–Morris–Pratt` 28 - Implement strStr()
 * `Rolling-Hash` 187 - Repeated DNA Sequences
 * `Archived` 383 - Ransom Note
+* `Archived` 409 - Longest Palindrome
 * `Rolling-Hash` 438 - Find All Anagrams in a String
 * `String-Pair` 678 - Valid Parenthesis String
 * 680 - Valid Palindrome II
