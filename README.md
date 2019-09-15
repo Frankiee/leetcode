@@ -276,6 +276,7 @@
 * `Rolling-Hash` 438 - Find All Anagrams in a String
 * `String-Pair` 678 - Valid Parenthesis String
 * 680 - Valid Palindrome II
+* `Archived` 686 - Repeated String Match
 * `Archived` 796 - Rotate String
 * `Archived` 830 - Positions of Large Groups
 * `Rolling-Hash` `Classic` 1147 - Longest Chunked Palindrome Decomposition
