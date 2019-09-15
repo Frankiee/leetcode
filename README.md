@@ -2,8 +2,8 @@
 
 ## Array
 * `Archived` 1 - Two Sum
-* `2Sum` 15 - 3Sum
-* `2Sum` 16 - 3Sum Closest
+* `2-Pointers` 15 - 3Sum
+* `2-Pointers` 16 - 3Sum Closest
 * `Archived` 26 - Remove Duplicates from Sorted Array
 * 54 - Spiral Matrix
 * 56 - Merge Intervals
@@ -305,3 +305,8 @@
 ## View - Stack Queue Conversion
 * 225 - Implement Stack using Queues
 * 232 - Implement Queue using Stacks
+
+## Knowledge
+* Input Size vs. Time Complexity
+https://www.youtube.com/watch?v=eG99FDBeuJo&t=20s
+
