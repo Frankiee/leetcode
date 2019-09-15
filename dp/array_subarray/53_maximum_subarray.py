@@ -2,6 +2,9 @@
 # https://leetcode.com/problems/maximum-subarray/
 # 53. Maximum Subarray
 
+# Related:
+# 1186. Maximum Subarray Sum with One Deletion
+
 # Given an integer array nums, find the contiguous subarray (containing at
 # least one number) which has the largest sum and return its sum.
 #
@@ -22,11 +25,10 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        dp = float('-inf')
-        max_so_far = float('-inf')
+        ret = dp_with_last = float('-inf')
 
-        for i in nums:
-            dp = i if dp < 0 else dp + i
-            max_so_far = max(max_so_far, dp)
+        for n in nums:
+            dp_with_last = max(n, n + dp_with_last)
+            ret = max(dp_with_last, ret)
 
-        return max_so_far
+        return ret

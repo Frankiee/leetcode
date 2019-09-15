@@ -1,4 +1,4 @@
-# # [DP-Array-Subarray, Classic]
+# [DP-Array-Subarray, Classic]
 # https://leetcode.com/problems/palindromic-substrings/
 # 647. Palindromic Substrings
 

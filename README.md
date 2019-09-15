@@ -122,6 +122,7 @@
 * `Archived` 1137 - N-th Tribonacci Number
 * `Classic` `DP-Array-Subsequence` 1143 - Longest Common Subsequence
 * 1155 - Number of Dice Rolls With Target Sum
+* `DP-Array-Subarray` `Classic` 1186 - Maximum Subarray Sum with One Deletion
 * `DP-Array-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix
 
 ## Graph Bellman Ford
