@@ -1,4 +1,4 @@
-# [DP-Sequence-Action]
+# [Backtracking]
 # https://leetcode.com/problems/zuma-game/
 # 488. Zuma Game
 

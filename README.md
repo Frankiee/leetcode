@@ -89,7 +89,6 @@
 * 322 - Coin Change
 * 368 - Largest Divisible Subset
 * `Classic` `0-1-Knapsack` 416 - Partition Equal Subset Sum
-* `DP-Sequence-Action` 488 - Zuma Game
 * 494 - Target Sum
 * `DP-Sequence-Action-Groups` `Classic` 576 - Out of Boundary Paths
 * 581 - Shortest Unsorted Continuous Subarray
@@ -148,11 +147,10 @@
 * `Backtracking` `Classic` 90 - Subsets II
 * `Backtracking` `Classic` 131 - Palindrome Partitioning
 * `Backtracking` `Classic` 306 - Additive Number
+* `Backtracking` 488 - Zuma Game
 * `Backtracking` `Classic` 1079 - Letter Tile Possibilities
 
 ## Graph/Tree DFS
-* 39 - Combination Sum
-* 40 - Combination Sum II
 * `Tree-Serialization-Deserialization` 105 - Construct Binary Tree from Preorder and Inorder Traversal
 * `DFS` `Stack` 173 - Binary Search Tree Iterator
 * `DFS` `Stack` 230 - Kth Smallest Element in a BST
