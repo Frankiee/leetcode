@@ -124,10 +124,11 @@
 ## Graph/Tree BFS
 * 116 - Populating Next Right Pointers in Each Node
 * 133 - Clone Graph
+* `Queue` `BFS` 399 - Evaluate Division
 * 773 - Sliding Puzzle
 * `Classic` `Queue` `BFS` 847 - Shortest Path Visiting All Nodes
-* `Queue` `BFS` 399 - Evaluate Division
 * `Queue` `BFS` 815 - Bus Routes
+* `Classic` `BFS` `DFS` `Queue` 934 - Shortest Bridge
 * `Archived` 958 - Check Completeness of a Binary Tree
 * 1129 - Shortest Path with Alternating Colors
 * `Archived` 1161 - Maximum Level Sum of a Binary Tree
