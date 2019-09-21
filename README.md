@@ -98,6 +98,7 @@
 * `DP-Sequence-Action` 740 - Delete and Earn
 * `DP-Sequence-Action` 746 - Min Cost Climbing Stairs
 * `Classic` `DP-Sequence-Action` 790 - Domino and Tromino Tiling
+* 799 - Champagne Tower
 * 801 - Minimum Swaps To Make Sequences Increasing
 * `DP-Sequence-Action-Groups` 813 - Largest Sum of Averages
 * `DP-Array-Subsequence` `Classic` 873 - Length of Longest Fibonacci Subsequence
