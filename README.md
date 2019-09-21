@@ -283,6 +283,7 @@
 * `Archived` 830 - Positions of Large Groups
 * `Rolling-Hash` `Classic` 1147 - Longest Chunked Palindrome Decomposition
 * 1156 - Swap For Longest Repeated Character Substring
+* `Archived` 1189 - Maximum Number of Balloons
 
 ## Trie
 * 648 - Replace Words
