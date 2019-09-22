@@ -171,14 +171,15 @@
 * 979 - Distribute Coins in Binary Tree
 
 ## Greedy
-* 122 - Best Time to Buy and Sell Stock II
-* `Forward-Backward-Traversal` 135 - Candy
-* 435 - Non-overlapping Intervals
-* 452 - Minimum Number of Arrows to Burst Balloons
-* 621 - Task Scheduler
-* 646 - Maximum Length of Pair Chain
-* `Classic` 853 - Car Fleet
-* XXX - Deliveries on a One Way Street
+* `Greedy` 122 - Best Time to Buy and Sell Stock II
+* `Forward-Backward-Traversal` `Greedy` 135 - Candy
+* `Greedy` 435 - Non-overlapping Intervals
+* `Greedy` 452 - Minimum Number of Arrows to Burst Balloons
+* `Greedy` 621 - Task Scheduler
+* `Greedy` 646 - Maximum Length of Pair Chain
+* `Greedy` `Classic` 853 - Car Fleet
+* `Greedy` `Classic` 860 - Lemonade Change
+* `Greedy` XXX - Deliveries on a One Way Street
 
 ## HashMap/HashSet
 * 560 - Subarray Sum Equals K

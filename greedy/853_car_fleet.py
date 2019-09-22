@@ -1,4 +1,4 @@
-# [Classic]
+# [Greedy, Classic]
 # https://leetcode.com/problems/car-fleet/
 # 853. Car Fleet
 

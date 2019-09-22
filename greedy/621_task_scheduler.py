@@ -1,3 +1,4 @@
+# [Greedy]
 # https://leetcode.com/problems/task-scheduler/
 # 621. Task Scheduler
 
