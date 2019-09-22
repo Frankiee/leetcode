@@ -25,6 +25,7 @@
 * 731 - My Calendar II
 * 792 - Number of Matching Subsequences
 * `Archived` 819 - Most Common Word
+* `Archived` 848 - Shifting Letters
 * `Archived` 849 - Maximize Distance to Closest Person
 * `In-Place-Swap` 905 - Sort Array By Parity
 * `In-Place-Swap` 922 - Sort Array By Parity II
