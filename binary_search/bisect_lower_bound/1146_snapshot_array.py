@@ -1,4 +1,4 @@
-# [Bisect]
+# [Bisect-Lower-Bound]
 # https://leetcode.com/problems/snapshot-array/
 # 1146. Snapshot Array
 

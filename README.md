@@ -40,17 +40,22 @@
 * 168 - Excel Sheet Column Title
 
 ## Binary Search
+* README
 * 34 - Find First and Last Position of Element in Sorted Array
 * 35 - Search Insert Position
-* `Bisect` 57 - Insert Interval
-* 69 - Sqrt(x)
-* `Bisect` 74. Search a 2D Matrix
+* `Bisect-Lower-Bound` 57 - Insert Interval
+* `Upper-Bound` 69 - Sqrt(x)
+* `Bisect-Lower-Bound` 74. Search a 2D Matrix
 * 162 - Find Peak Element
 * 222 - Count Complete Tree Nodes
+* `Bisect-Lower-Bound` 278 - First Bad Version
+* `Bisect-Lower-Bound` `Classic `378 - Kth Smallest Element in a Sorted Matrix
 * 704 - Binary Search
-* `Bisect` 729 - My Calendar I
+* `Classic` 719 - Find K-th Smallest Pair Distance
+* `Bisect-Lower-Bound` 729 - My Calendar I
+* `Bisect-Lower-Bound` 875 - Koko Eating Bananas
 * 744 - Find Smallest Letter Greater Than Target
-* `Bisect` 1146 - Snapshot Array
+* `Bisect-Lower-Bound` 1146 - Snapshot Array
 
 ## Bitwise
 * `XOR` 136 - Single Number
@@ -125,6 +130,7 @@
 * 994 - Rotting Oranges
 
 ## Graph/Tree BFS
+* README
 * 116 - Populating Next Right Pointers in Each Node
 * 133 - Clone Graph
 * `Queue` `BFS` 399 - Evaluate Division
@@ -138,6 +144,7 @@
 * `Queue` `BFS` 1162 - As Far from Land as Possible
 
 ## Graph/Tree DFS - Backtracking
+* README
 * `Backtracking` `Classic` 37 - Sudoku Solver
 * `Backtracking` `Classic` 39 - Combination Sum
 * `Backtracking` `Classic` 40 - Combination Sum II
@@ -234,7 +241,6 @@
 
 ## Quick Select
 * 215 - Kth Largest Element in an Array
-* 378 - Kth Smallest Element in a Sorted Matrix
 * 973 - K Closest Points to Origin
 
 ## Repeated Value
@@ -257,6 +263,7 @@
 * `Quick-Sort` 23 - Merge k Sorted Lists
 
 ## Stack
+* README
 * 155 - Min Stack
 * 173 - Binary Search Tree Iterator
 * 225 - Implement Stack using Queues
@@ -315,7 +322,7 @@
 * 225 - Implement Stack using Queues
 * 232 - Implement Queue using Stacks
 
-## Knowledge
+## Reference
 * Input Size vs. Time Complexity
 https://www.youtube.com/watch?v=eG99FDBeuJo&t=20s
 

@@ -1,4 +1,4 @@
-# [Bisect]
+# [Bisect-Lower-Bound]
 # https://leetcode.com/problems/insert-interval/
 # 57. Insert Interval
 

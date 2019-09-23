@@ -31,7 +31,6 @@ class Solution(object):
                 nums[l], nums[curr] = nums[curr], nums[l]
                 l += 1
         nums[l], nums[r] = nums[r], nums[l]
-        print nums, l
         return l
 
     def find_kth_smallest(self, nums, k, l, r):
