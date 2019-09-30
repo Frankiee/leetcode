@@ -310,6 +310,7 @@
 * `Union-Find` 684 - Redundant Connection
 * `Classic` `Union-Find` `Prime-Factor` 952 - Largest Component Size by Common Factor
 * `Union-Find` 959 - Regions Cut By Slashes
+* `Union-Find` 1202 - Smallest String With Swaps
 
 ## Others - SQL
 * 184 - Department Highest Salary
