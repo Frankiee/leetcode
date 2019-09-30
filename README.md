@@ -56,6 +56,7 @@
 * `Bisect-Lower-Bound` 875 - Koko Eating Bananas
 * 744 - Find Smallest Letter Greater Than Target
 * `Bisect-Lower-Bound` 1146 - Snapshot Array
+* `Bisect-Lower-Bound` 1201 - Ugly Number III
 
 ## Bitwise
 * `XOR` 136 - Single Number
