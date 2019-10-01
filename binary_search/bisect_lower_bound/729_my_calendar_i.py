@@ -50,12 +50,10 @@ class MyCalendar(object):
         while l < r:
             m = l + (r - l) / 2
 
-            if num == self.calendar[m][0]:
-                return m
-            elif num > self.calendar[m][0]:
-                l = m + 1
-            else:
+            if num <= self.calendar[m][0]:
                 r = m
+            else:
+                l = m + 1
 
         return l
 
