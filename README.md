@@ -121,8 +121,11 @@
 * `DP-Array-Subarray` 1191 - K-Concatenation Maximum Sum
 * `DP-Array-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix
 
-## Graph Bellman Ford
-* 787 - Cheapest Flights Within K Stops
+## Graph Shortest Path - Bellman Ford
+* `Bellman-Ford` 787 - Cheapest Flights Within K Stops
+
+## Graph Shortest Path - Dijkstra
+* `Dijkstra` 787 - Cheapest Flights Within K Stops
 
 ## Graph DFS Grid
 * 130 - Surrounded Regions
