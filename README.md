@@ -120,6 +120,7 @@
 * 1155 - Number of Dice Rolls With Target Sum
 * `DP-Array-Subarray` `Classic` 1186 - Maximum Subarray Sum with One Deletion
 * `DP-Array-Subarray` 1191 - K-Concatenation Maximum Sum
+* `DP-Array-Subsequence` 1218 - Longest Arithmetic Subsequence of Given Difference
 * `DP-Array-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix
 
 ## Graph Shortest Path - Bellman Ford
