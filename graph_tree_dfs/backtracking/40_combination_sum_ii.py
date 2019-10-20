@@ -1,6 +1,12 @@
-# [Backtracking]
+# [Backtracking, Classic]
 # https://leetcode.com/problems/combination-sum-ii/
 # 40. Combination Sum II
+
+# History:
+# 1.
+# Aug 11, 2019
+# 2.
+# Oct 19, 2019
 
 # Given a collection of candidate numbers (candidates) and a target number (
 # target), find all unique combinations in candidates where the candidate

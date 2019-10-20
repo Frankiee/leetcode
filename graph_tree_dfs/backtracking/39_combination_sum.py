@@ -1,6 +1,12 @@
-# [Backtracking]
+# [Backtracking, Classic]
 # https://leetcode.com/problems/combination-sum/
 # 39. Combination Sum
+
+# History:
+# 1.
+# Aug 11, 2019
+# 2.
+# Oct 19, 2019
 
 # Given a set of candidate numbers (candidates) (without duplicates) and a
 # target number (target), find all unique combinations in candidates where

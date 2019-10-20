@@ -1,6 +1,12 @@
-# [Backtracking]
+# [Backtracking, Classic]
 # https://leetcode.com/problems/permutations-ii/
 # 47. Permutations II
+
+# History:
+# 1.
+# Aug 11, 2019
+# 2.
+# Oct 19, 2019
 
 # Given a collection of numbers that might contain duplicates, return all
 # possible unique permutations.

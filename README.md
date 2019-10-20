@@ -155,7 +155,7 @@
 * `Backtracking` `Classic` 37 - Sudoku Solver
 * `Backtracking` `Classic` 39 - Combination Sum
 * `Backtracking` `Classic` 40 - Combination Sum II
-* `Backtracking` `Classic` 46 - Permutations
+* `Backtracking` `Classic` `Facebook` 46 - Permutations
 * `Backtracking` `Classic` 47 - Permutations II
 * `Backtracking` `Classic` 51 - N-Queens
 * `Backtracking` `Classic` 52 - N-Queens II

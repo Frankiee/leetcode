@@ -1,6 +1,12 @@
-# [Backtracking]
+# [Backtracking, Classic]
 # https://leetcode.com/problems/subsets/
 # 78. Subsets
+
+# History:
+# 1.
+# Aug 11, 2019
+# 2.
+# Oct 19, 2019
 
 # Given a set of distinct integers, nums, return all possible subsets (the
 # power set).

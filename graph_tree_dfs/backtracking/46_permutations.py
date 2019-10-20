@@ -1,6 +1,13 @@
-# [Backtracking]
+# [Backtracking, Classic, Facebook]
 # https://leetcode.com/problems/permutations/
 # 46. Permutations
+
+# History:
+# 1.
+# Aug 11, 2019
+# 2.
+# Oct 19, 2019
+# Daily Interview Pro - Facebook
 
 # Given a collection of distinct integers, return all possible permutations.
 #
