@@ -273,7 +273,9 @@
 * README
 * 155 - Min Stack
 * 173 - Binary Search Tree Iterator
+* `Calculator` `Google` `Classic` 224 - Basic Calculator
 * 225 - Implement Stack using Queues
+* `Calculator` `Google` `Classic` 227 - Basic Calculator II
 * 232 - Implement Queue using Stacks
 * 234 - Palindrome Linked List
 * `Classic` 316 - Remove Duplicate Letters
