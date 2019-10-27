@@ -79,6 +79,7 @@
 ## DP
 * 45 - Jump Game II
 * `DP-Array-Subarray` 53 - Maximum Subarray
+* 62 - Unique Paths
 * 72 - Edit Distance
 * 91 - Decode Ways
 * 97 - Interleaving String
