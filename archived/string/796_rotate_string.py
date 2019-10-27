@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/rotate-string/
 # 796. Rotate String
 
+# History:
+# 1.
+# Sep 7, 2019
+# 2.
+# Oct 27, 2019
+# Daily Interview Pro
+
 # We are given two strings, A and B.
 #
 # A shift on A consists of taking string A and moving the leftmost character

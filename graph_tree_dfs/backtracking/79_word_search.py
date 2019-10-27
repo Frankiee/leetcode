@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/word-search/description/
 # 79. Word Search
 
+# History:
+# 1.
+# Feb 13, 2019
+# 2.
+# Oct 27, 2019
+# Daily Interview Pro
+
 # Given a 2D board and a word, find if the word exists in the grid.
 #
 # The word can be constructed from letters of sequentially adjacent cell,
@@ -23,41 +30,19 @@
 
 
 class Solution(object):
-    def exist_neighbour(self, board, word, r, c, word_index, used_indices):
-        if word_index >= len(word):
+    def dfs(self, board, word, word_idx, b_r, b_c, visited):
+        if word_idx >= len(word):
             return True
 
-        if r > 0 and board[r - 1][c] == word[word_index] and (
-                r - 1, c) not in used_indices:
-            used_indices.add((r - 1, c))
-            if self.exist_neighbour(
-                    board, word, r - 1, c, word_index + 1, used_indices):
-                return True
-            used_indices.remove((r - 1, c))
-
-        if c > 0 and board[r][c - 1] == word[word_index] and (
-                r, c - 1) not in used_indices:
-            used_indices.add((r, c - 1))
-            if self.exist_neighbour(
-                    board, word, r, c - 1, word_index + 1, used_indices):
-                return True
-            used_indices.remove((r, c - 1))
-
-        if r < len(board) - 1 and board[r + 1][c] == word[word_index] and (
-                r + 1, c) not in used_indices:
-            used_indices.add((r + 1, c))
-            if self.exist_neighbour(
-                    board, word, r + 1, c, word_index + 1, used_indices):
-                return True
-            used_indices.remove((r + 1, c))
-
-        if c < len(board[0]) - 1 and board[r][c + 1] == word[word_index] and (
-                r, c + 1) not in used_indices:
-            used_indices.add((r, c + 1))
-            if self.exist_neighbour(
-                    board, word, r, c + 1, word_index + 1, used_indices):
-                return True
-            used_indices.remove((r, c + 1))
+        for r, c in [(b_r + 1, b_c), (b_r - 1, b_c), (b_r, b_c + 1), (b_r, b_c - 1)]:
+            if ((r, c) not in visited and
+                    len(board) > r >= 0 and
+                    len(board[0]) > c >= 0 and
+                    word[word_idx] == board[r][c]):
+                visited.add((r, c))
+                if self.dfs(board, word, word_idx + 1, r, c, visited):
+                    return True
+                visited.remove((r, c))
 
         return False
 
@@ -74,8 +59,7 @@ class Solution(object):
 
         for r in range(len(board)):
             for c in range(len(board[0])):
-                if board[r][c] == word[0]:
-                    if self.exist_neighbour(board, word, r, c, 1, {(r, c)}):
-                        return True
+                if board[r][c] == word[0] and self.dfs(board, word, 1, r, c, {(r, c)}):
+                    return True
 
         return False
