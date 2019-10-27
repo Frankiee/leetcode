@@ -39,32 +39,35 @@ class Solution(object):
         """
         stack = []
 
-        number = 0
-        sign = '+'
+        num = 0
+        pre_sign = "+"
 
-        for i in range(len(s)):
-            c = s[i]
+        # make sure last number also got calculated
+        s += '+'
+
+        for c in s:
+            if c == ' ':
+                continue
+
             if c.isdigit():
-                number = number * 10 + int(c)
+                num = num * 10 + int(c)
+                continue
 
-            if (c != ' ' and not c.isdigit()) or i == len(s) - 1:
-                if sign == '+':
-                    stack.append(number)
-                elif sign == '-':
-                    stack.append(-number)
-                elif sign == '*':
-                    stack.append(number * stack.pop())
-                elif sign == '/':
-                    # Truncate towards 0
-                    div = stack.pop() / float(number)
-                    if div > 0:
-                        div = int(div)
-                    else:
-                        div = -int(-div)
+            if pre_sign == '+':
+                stack.append(num)
+            elif pre_sign == '-':
+                stack.append(-num)
+            elif pre_sign == '*':
+                stack.append(num * stack.pop())
+            elif pre_sign == '/':
+                stack_num = stack.pop()
 
-                    stack.append(div)
+                if stack_num >= 0:
+                    stack.append(stack_num / num)
+                else:
+                    stack.append(-(-stack_num / num))
 
-                number = 0
-                sign = c
+            num = 0
+            pre_sign = c
 
         return sum(stack)
