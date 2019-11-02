@@ -91,6 +91,7 @@
 * `DP-Array-Subarray` 152 - Maximum Product Subarray
 * `Classic` `Buy-And-Sell-Stock` 188 - Best Time to Buy and Sell Stock IV
 * `DP-Sequence-Action` 198 - House Robber
+* `2D-DP` `Classic` 221 - Maximal Square
 * `DP-Sequence-Action-Groups` 279 - Perfect Squares
 * `DP-Array-Subsequence` 300 - Longest Increasing Subsequence
 * `Classic` `Buy-And-Sell-Stock` 309 - Best Time to Buy and Sell Stock with Cooldown
