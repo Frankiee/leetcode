@@ -187,6 +187,7 @@
 * 897 - Increasing Order Search Tree
 * 979 - Distribute Coins in Binary Tree
 * `Facebook` xxx - Reverse a Directed Graph
+* `Cycle-Detection` `Classic` XXX - Detect cycle in an undirected graph
 
 ## Greedy
 * `Greedy` 122 - Best Time to Buy and Sell Stock II
