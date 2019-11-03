@@ -7,6 +7,11 @@
 # Nov 2, 2019
 # Daily Interview Pro
 
+# Given a directed graph, check whether the graph contains a cycle or not.
+# Your function should return true if the given graph contains at least one cycle, else return false
+# For example, the following graph contains three cycles 0->2->0, 0->1->2->0 and 3->3,
+# so your function must return true.
+
 
 from collections import defaultdict
 
