@@ -17,8 +17,7 @@ from collections import defaultdict
 
 
 # This class represents a undirected graph using adjacency list representation
-class Graph:
-
+class GraphRecursive(object):
     def __init__(self, vertices):
         self.vertices = vertices  # No. of vertices
         self.graph = defaultdict(list)  # default dictionary to store graph
@@ -51,7 +50,7 @@ class Graph:
 
 
 # Create a graph given in the above diagram
-g = Graph(5)
+g = GraphRecursive(5)
 g.add_edge(1, 0)
 g.add_edge(0, 2)
 g.add_edge(2, 0)

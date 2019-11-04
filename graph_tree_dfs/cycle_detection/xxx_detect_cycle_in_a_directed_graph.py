@@ -16,7 +16,7 @@
 from collections import defaultdict
 
 
-class Graph():
+class Graph(object):
     def __init__(self, vertices):
         self.graph = defaultdict(list)
         self.vertices = vertices
@@ -41,7 +41,7 @@ class Graph():
     # Returns true if graph is cyclic else false
     def is_cyclic(self):
         visited = [False] * self.vertices
-        visit_stack = [False] *  self.vertices
+        visit_stack = [False] * self.vertices
 
         for v in range(self.vertices):
             if v not in visited:
