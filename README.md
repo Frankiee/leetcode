@@ -127,11 +127,10 @@
 * `DP-Array-Subsequence` 1218 - Longest Arithmetic Subsequence of Given Difference
 * `DP-Array-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix
 
-## Graph Shortest Path - Bellman Ford
-* `Bellman-Ford` 787 - Cheapest Flights Within K Stops
-
-## Graph Shortest Path - Dijkstra
-* `Dijkstra` 787 - Cheapest Flights Within K Stops
+## Graph Shortest Path
+* `Bellman-Ford` `Shortest-Path` 787 - Cheapest Flights Within K Stops
+* `Dijkstra` `Shortest-Path` 787 - Cheapest Flights Within K Stops
+* `Classic` `Floyd-Warshall` `Shortest-Path` 399 - Evaluate Division
 
 ## Graph DFS Grid
 * 130 - Surrounded Regions
@@ -143,7 +142,7 @@
 * README
 * 116 - Populating Next Right Pointers in Each Node
 * 133 - Clone Graph
-* `Queue` `BFS` 399 - Evaluate Division
+* `Classic` `Queue` `BFS` `Floyd-Warshall` 399 - Evaluate Division
 * 773 - Sliding Puzzle
 * `Classic` `Queue` `BFS` 847 - Shortest Path Visiting All Nodes
 * `Queue` `BFS` 815 - Bus Routes
