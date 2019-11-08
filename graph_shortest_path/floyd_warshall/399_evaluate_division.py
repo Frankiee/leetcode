@@ -59,4 +59,3 @@ class SolutionFloydWarshall(object):
                     equalation[i][j] = equalation[i][k] * equalation[k][j]
 
         return [equalation[num].get(den, -1) for num, den in queries]
-
