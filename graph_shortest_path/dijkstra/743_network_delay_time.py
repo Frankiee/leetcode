@@ -32,6 +32,7 @@ import collections
 import heapq
 
 
+# 456 ms 14.2 MB
 class SolutionDijkstra(object):
     def networkDelayTime(self, times, N, K):
         """

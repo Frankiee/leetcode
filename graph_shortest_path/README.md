@@ -1,20 +1,28 @@
 # Shortest Path Algorithms
 
-## Bellman-Ford
+## Dijkstra
+* Single source all destination
+* Direct or undirected
+* Time Complexity with Heap: O(NlogN + E)
+* Space Complexity: O(N + E)
 
+## Bellman-Ford
+* Single source all destination
+* Support negative weight
+* Time Complexity: O(NE)
+* Space Complexity: O(N)
 
 ## Floyd-Warshall
-
-
-## Dijkstra
-Single Source Shortest Path
-Direct or undirected
+* All source all destination
+* Time Complexity: O(N^3)
+* Space Complexity: O(N^2)
 
 
 ### Example:
 
 https://leetcode.com/problems/network-delay-time/
-743. Network Delay Time
+
+743 - Network Delay Time
 
 There are N network nodes, labelled 1 to N.
 
@@ -28,6 +36,7 @@ signal? If it is impossible, return -1.
 Example 1:
 
 Input: times = [[2,1,1],[2,3,1],[3,4,1]], N = 4, K = 2
+
 Output: 2
 
 
@@ -39,34 +48,7 @@ Note:
 * All edges times[i] = (u, v, w) will have 1 <= u, v <= N and 0 <= w <= 100.
 
 
-BellmanFord
-```python
-class SolutionBellmanFord(object):
-    MAX_REACHABLE_TIME = 101 * 100
-
-    def networkDelayTime(self, times, N, K):
-        """
-        :type times: List[List[int]]
-        :type N: int
-        :type K: int
-        :rtype: int
-        """
-
-        max_times = [self.MAX_REACHABLE_TIME] * N
-        max_times[K - 1] = 0
-
-        for _ in range(N):
-            for time_edge in times:
-                start = time_edge[0] - 1
-                end = time_edge[1] - 1
-                time = time_edge[2]
-                max_times[end] = min(max_times[end], max_times[start] + time)
-
-        max_time = max(max_times)
-        return -1 if max_time == self.MAX_REACHABLE_TIME else max_time
-```
-
-Dijkstra
+Dijkstra (456 ms 14.2 MB)
 ```python
 import collections
 import heapq
@@ -105,7 +87,36 @@ class SolutionDijkstra(object):
             return max(dist.values())
 ```
 
-Floyd-Warshall
+
+BellmanFord (1696 ms 13.8 MB)
+```python
+class SolutionBellmanFord(object):
+    MAX_REACHABLE_TIME = 101 * 100
+
+    def networkDelayTime(self, times, N, K):
+        """
+        :type times: List[List[int]]
+        :type N: int
+        :type K: int
+        :rtype: int
+        """
+
+        max_times = [self.MAX_REACHABLE_TIME] * N
+        max_times[K - 1] = 0
+
+        for _ in range(N):
+            for time_edge in times:
+                start = time_edge[0] - 1
+                end = time_edge[1] - 1
+                time = time_edge[2]
+                max_times[end] = min(max_times[end], max_times[start] + time)
+
+        max_time = max(max_times)
+        return -1 if max_time == self.MAX_REACHABLE_TIME else max_time
+```
+
+
+Floyd-Warshall (1572 ms 13.7 MB)
 ```python
 class SolutionFloydWarshall(object):
     def networkDelayTime(self, times, N, K):

@@ -29,6 +29,7 @@
 # All edges times[i] = (u, v, w) will have 1 <= u, v <= N and 0 <= w <= 100.
 
 
+# 1572 ms 13.7 MB
 class SolutionFloydWarshall(object):
     def networkDelayTime(self, times, N, K):
         """
