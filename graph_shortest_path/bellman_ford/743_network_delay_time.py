@@ -30,7 +30,7 @@
 
 
 # 1696 ms 13.8 MB
-class Solution(object):
+class SolutionBellmanFord(object):
     MAX_REACHABLE_TIME = 101 * 100
 
     def networkDelayTime(self, times, N, K):

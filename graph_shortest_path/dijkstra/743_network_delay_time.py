@@ -1,4 +1,4 @@
-# [Classic, Floyd-Warshall, Shortest-Path]
+# [Classic, Dijkstra, Shortest-Path]
 # https://leetcode.com/problems/network-delay-time/
 # 743. Network Delay Time
 
@@ -28,8 +28,11 @@
 # The length of times will be in the range [1, 6000].
 # All edges times[i] = (u, v, w) will have 1 <= u, v <= N and 0 <= w <= 100.
 
+import collections
+import heapq
 
-class SolutionFloydWarshall(object):
+
+class SolutionDijkstra(object):
     def networkDelayTime(self, times, N, K):
         """
         :type times: List[List[int]]
@@ -37,24 +40,26 @@ class SolutionFloydWarshall(object):
         :type K: int
         :rtype: int
         """
-        MAX_REACHABLE_TIME = 101 * 100
+        graph = collections.defaultdict(list)
+        for s, e, t in times:
+            graph[s].append((e, t))
 
-        distances = [[MAX_REACHABLE_TIME] * N for _ in range(N)]
+        pq = [(0, K)]
+        dist = {}
 
-        for time in times:
-            distances[time[0] - 1][time[1] - 1] = time[2]
+        while pq:
+            d, node = heapq.heappop(pq)
 
-        for i in range(N):
-            distances[i][i] = 0
+            if node in dist:
+                continue
 
-        for k in range(N):
-            for i in range(N):
-                for j in range(N):
-                    distances[i][j] = min(
-                        distances[i][j],
-                        distances[i][k] + distances[k][j],
-                    )
+            dist[node] = d
 
-        max_distance = max(distances[K - 1])
+            for nei, d2 in graph[node]:
+                if nei not in dist:
+                    heapq.heappush(pq, (d + d2, nei))
 
-        return -1 if max_distance == MAX_REACHABLE_TIME else max_distance
+        if any([n not in dist for n in range(1, N + 1)]):
+            return -1
+        else:
+            return max(dist.values())

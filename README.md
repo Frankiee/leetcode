@@ -132,6 +132,7 @@
 * `Bellman-Ford` `Shortest-Path` 787 - Cheapest Flights Within K Stops
 
 ## Graph Shortest Path - Dijkstra
+* `Classic`, `Dijkstra`, `Shortest-Path` 743 - Network Delay Time
 * `Dijkstra` `Shortest-Path` 787 - Cheapest Flights Within K Stops
 
 ## Graph Shortest Path - Floyd-Warshall
@@ -301,7 +302,7 @@
 * 962 - Maximum Width Ramp
 * 1019 - Next Greater Node In Linked List
 
-# Stream
+## Stream
 * `Stream` 109 - Convert Sorted List to Binary Search Tree
 
 ## String
