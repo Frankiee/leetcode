@@ -1,10 +1,10 @@
-# [Classic, Bellman-Ford, Shortest-Path]
+# [Classic, Floyd-Warshall, Shortest-Path]
 # https://leetcode.com/problems/network-delay-time/
 # 743. Network Delay Time
 
 # # History:
 # # 1.
-# # Nov 8, 2019
+# # Nov 11, 2019
 
 # There are N network nodes, labelled 1 to N.
 #
@@ -29,10 +29,7 @@
 # All edges times[i] = (u, v, w) will have 1 <= u, v <= N and 0 <= w <= 100.
 
 
-# 1696 ms 13.8 MB
 class Solution(object):
-    MAX_REACHABLE_TIME = 101 * 100
-
     def networkDelayTime(self, times, N, K):
         """
         :type times: List[List[int]]
@@ -40,16 +37,24 @@ class Solution(object):
         :type K: int
         :rtype: int
         """
+        MAX_REACHABLE_TIME = 101 * 100
 
-        max_times = [self.MAX_REACHABLE_TIME] * N
-        max_times[K - 1] = 0
+        distances = [[MAX_REACHABLE_TIME] * N for _ in range(N)]
 
-        for _ in range(N):
-            for time_edge in times:
-                start = time_edge[0] - 1
-                end = time_edge[1] - 1
-                time = time_edge[2]
-                max_times[end] = min(max_times[end], max_times[start] + time)
+        for time in times:
+            distances[time[0] - 1][time[1] - 1] = time[2]
 
-        max_time = max(max_times)
-        return -1 if max_time == self.MAX_REACHABLE_TIME else max_time
+        for i in range(N):
+            distances[i][i] = 0
+
+        for k in range(N):
+            for i in range(N):
+                for j in range(N):
+                    distances[i][j] = min(
+                        distances[i][j],
+                        distances[i][k] + distances[k][j],
+                    )
+
+        max_distance = max(distances[K - 1])
+
+        return -1 if max_distance == MAX_REACHABLE_TIME else max_distance

@@ -128,7 +128,7 @@
 * `DP-Array-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix
 
 ## Graph Shortest Path - Bellman-Ford
-* `Bellman-Ford` `Shortest-Path` 743 - Network Delay Time
+* `Classic` `Bellman-Ford` `Shortest-Path` 743 - Network Delay Time
 * `Bellman-Ford` `Shortest-Path` 787 - Cheapest Flights Within K Stops
 
 ## Graph Shortest Path - Dijkstra
@@ -136,6 +136,7 @@
 
 ## Graph Shortest Path - Floyd-Warshall
 * `Classic` `Floyd-Warshall` `Shortest-Path` 399 - Evaluate Division
+* `Classic` `Floyd-Warshall` `Shortest-Path` 743 - Network Delay Time
 
 ## Graph DFS Grid
 * 130 - Surrounded Regions
