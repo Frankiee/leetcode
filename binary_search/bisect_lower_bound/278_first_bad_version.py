@@ -2,6 +2,19 @@
 # https://leetcode.com/problems/first-bad-version/
 # 278. First Bad Version
 
+# History:
+# Facebook
+# 1.
+# Sep 23, 2019
+# 2.
+# Nov 20, 2019
+# 3.
+# Feb 20, 2020
+# 4.
+# Apr 2, 2020
+# 5.
+# Apr 22, 2020
+
 # You are a product manager and currently leading a team to develop a new
 # product. Unfortunately, the latest version of your product fails the
 # quality check. Since each version is developed based on the previous
@@ -36,11 +49,10 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        l = 1
-        r = n + 1
+        l, r = 1, n + 1
 
         while l < r:
-            m = l + (r - l) / 2
+            m = (r - l) / 2 + l
 
             if isBadVersion(m):
                 r = m

@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/middle-of-the-linked-list/
 # 876. Middle of the Linked List
 
+# History:
+# Apple
+# 1.
+# Aug 31, 2019
+# 2.
+# Mar 19, 2020
+
 # Given a non-empty, singly linked list with head node head, return a middle
 # node of linked list.
 #

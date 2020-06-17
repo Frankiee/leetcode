@@ -2,6 +2,12 @@
 # https://leetcode.com/problems/sort-array-by-parity/
 # 905. Sort Array By Parity
 
+# History:
+# 1.
+# Aug 25, 2019
+# 2.
+# Nov 23, 2019
+
 # Given an array A of non-negative integers, return an array consisting of
 # all the even elements of A, followed by all the odd elements of A.
 #
@@ -29,13 +35,10 @@ class Solution(object):
         :rtype: List[int]
         """
         l = 0
-        r = len(A) - 1
 
-        while l < r:
-            if A[l] % 2 == 1:
-                A[l], A[r] = A[r], A[l]
-                r -= 1
-            else:
+        for curr in range(len(A)):
+            if A[curr] % 2 == 0:
+                A[l], A[curr] = A[curr], A[l]
                 l += 1
 
         return A

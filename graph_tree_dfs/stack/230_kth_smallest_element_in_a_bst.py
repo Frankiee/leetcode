@@ -1,6 +1,17 @@
-# [DFS, Stack]
+# [DFS-Stack, Classic]
 # https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 # 230. Kth Smallest Element in a BST
+
+# History:
+# Apple
+# 1.
+# Jun 9, 2019
+# 2.
+# Mar 21, 2020
+# 3.
+# Apr 23, 2020
+# 4.
+# May 4, 2020
 
 # Given a binary search tree, write a function kthSmallest to find the kth
 # smallest element in it.
@@ -50,23 +61,15 @@ class Solution(object):
         :rtype: int
         """
         stack = []
-        current_node = root
-        current_k = 0
+        while True:
+            while root:
+                stack.append(root)
+                root = root.left
 
-        while current_k < k:
-            while current_node:
-                stack.append(current_node)
-                current_node = current_node.left
+            nxt = stack.pop(-1)
+            k -= 1
 
-            if not stack:
-                return None
+            if k == 0:
+                return nxt.val
 
-            current_node = stack.pop()
-            current_k += 1
-
-            if k == current_k:
-                return current_node.val
-
-            current_node = current_node.right
-
-        return None
+            root = nxt.right

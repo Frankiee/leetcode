@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/maximum-product-subarray/
 # 152. Maximum Product Subarray
 
+# History:
+# Facebook
+# 1.
+# May 4, 2019
+# 2.
+# May 8, 2020
+
 # Given an integer array nums, find the contiguous subarray within an array
 # (containing at least one number) which has the largest product.
 #
@@ -18,6 +25,22 @@
 
 
 class Solution(object):
+    def maxProduct(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        ret = n_max = n_min = nums[0]
+
+        for n in nums[1:]:
+            n_max, n_min = max(n_max * n, n, n_min * n), min(n_max * n, n, n_min * n)
+
+            ret = max(ret, n_max)
+
+        return ret
+
+
+class Solution2(object):
     def maxProduct(self, nums):
         """
         :type nums: List[int]

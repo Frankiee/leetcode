@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/odd-even-linked-list/
 # 328. Odd Even Linked List
 
+# History:
+# Facebook
+# 1.
+# Apr 13, 2020
+# 2.
+# May 5, 2020
+
 # Given a singly linked list, group all odd nodes together followed by the
 # even nodes. Please note here we are talking about the node number and not
 # the value in the nodes.
@@ -29,34 +36,28 @@
 #         self.val = x
 #         self.next = None
 
-
 class Solution(object):
     def oddEvenList(self, head):
         """
         :type head: ListNode
         :rtype: ListNode
         """
-        odd = ListNode(None)
-        even = ListNode(None)
+        odd_dummy = curr_odd = ListNode(None)
+        even_dummy = curr_even = ListNode(None)
 
-        current_odd = odd
-        current_even = even
+        is_odd = True
+        curr = head
+        while curr:
+            if is_odd:
+                curr_odd.next = curr
+                curr_odd = curr_odd.next
+            else:
+                curr_even.next = curr
+                curr_even = curr_even.next
+            curr = curr.next
+            is_odd = False if is_odd else True
 
-        while head:
-            new_odd = head
-            new_even = head.next
-            head = head.next
+        curr_even.next = None
+        curr_odd.next = even_dummy.next
 
-            current_odd.next = new_odd
-            new_odd.next = None
-            current_odd = new_odd
-
-            if new_even:
-                head = new_even.next
-                current_even.next = new_even
-                new_even.next = None
-                current_even = new_even
-
-        current_odd.next = even.next
-
-        return odd.next
+        return odd_dummy.next

@@ -2,6 +2,15 @@
 # https://leetcode.com/problems/pascals-triangle/
 # 118. Pascal's Triangle
 
+# History:
+# Facebook
+# 1.
+# Sep 9, 2019
+# 2.
+# Mar 7, 2020
+# 3.
+# Apr 8, 2020
+
 # Given a non-negative integer numRows, generate the first numRows of
 # Pascal's triangle.
 #

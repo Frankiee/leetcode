@@ -2,6 +2,14 @@
 # https://leetcode.com/problems/cheapest-flights-within-k-stops/
 # 787. Cheapest Flights Within K Stops
 
+# History:
+# Facebook
+# 1.
+# May 12, 2019
+# 2.
+# Jan 29, 2020
+
+
 # There are n cities connected by m flights. Each fight starts from city u
 # and arrives at v with a price w.
 #
@@ -43,6 +51,8 @@
 import heapq
 from collections import defaultdict
 
+from collections import defaultdict
+
 
 class Solution(object):
     def findCheapestPrice(self, n, flights, src, dst, K):
@@ -54,21 +64,21 @@ class Solution(object):
         :type K: int
         :rtype: int
         """
-        routes = defaultdict(dict)
+        dep_graph = defaultdict(dict)
 
-        for s, d, c in flights:
-            routes[s][d] = c
+        for frm, to, price in flights:
+            dep_graph[frm][to] = price
 
-        heap = [[0, src, K + 1]]
+        heap = [[0, src, K]]
 
         while heap:
-            p, i, k = heapq.heappop(heap)
+            price, node, k = heapq.heappop(heap)
 
-            if i == dst:
-                return p
+            if node == dst:
+                return price
 
-            if k > 0:
-                for neighbor, price in routes[i].iteritems():
-                    heapq.heappush(heap, [p + price, neighbor, k - 1])
+            if k >= 0:
+                for nxt, nxt_price in dep_graph[node].iteritems():
+                    heapq.heappush(heap, [price + nxt_price, nxt, k - 1])
 
         return -1

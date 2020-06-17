@@ -1,6 +1,12 @@
 # https://leetcode.com/problems/print-foobar-alternately/
 # 1115. Print FooBar Alternately
 
+# History:
+# 1.
+# Aug 10, 2019
+# 2.
+# Mar 31, 2020
+
 # Suppose you are given the following code:
 #
 # class FooBar {
@@ -69,3 +75,38 @@ class FooBar(object):
             printBar()
 
             self.foo_lock.release()
+
+
+from threading import Condition
+
+
+# Python 3
+class FooBarConditionalVariable:
+    def __init__(self, n):
+        self.n = n
+        self.cv = Condition()
+
+        self.foo_counter = 0
+        self.bar_counter = 0
+
+    def foo(self, printFoo: 'Callable[[], None]') -> None:
+
+        for i in range(self.n):
+            with self.cv:
+                self.cv.wait_for(lambda: self.foo_counter == self.bar_counter)
+                # printFoo() outputs "foo". Do not change or remove this line.
+                printFoo()
+
+                self.foo_counter += 1
+                self.cv.notify(1)
+
+    def bar(self, printBar: 'Callable[[], None]') -> None:
+
+        for i in range(self.n):
+            with self.cv:
+                self.cv.wait_for(lambda: self.foo_counter > self.bar_counter)
+                # printBar() outputs "bar". Do not change or remove this line.
+                printBar()
+
+                self.bar_counter += 1
+                self.cv.notify(1)

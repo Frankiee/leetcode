@@ -5,6 +5,10 @@
 # 1.
 # Oct 27, 2019
 # Daily Interview Pro
+# 2.
+# Nov 29, 2019
+# 3.
+# Apr 28, 2020
 
 # A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
 #
@@ -40,16 +44,16 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        if m == 0 or n == 0:
-            return 0
-
-        dp = [[None] * m for i in range(n)]
+        current_dp = [None] * m
+        previous_dp = [None] * m
 
         for r in range(n):
             for c in range(m):
                 if r == 0 or c == 0:
-                    dp[r][c] = 1
+                    current_dp[c] = 1
                 else:
-                    dp[r][c] = dp[r - 1][c] + dp[r][c - 1]
+                    current_dp[c] = current_dp[c - 1] + previous_dp[c]
 
-        return dp[-1][-1]
+            current_dp, previous_dp = previous_dp, current_dp
+
+        return previous_dp[-1]

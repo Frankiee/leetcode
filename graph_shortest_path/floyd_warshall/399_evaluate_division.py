@@ -2,9 +2,9 @@
 # https://leetcode.com/problems/evaluate-division/
 # 399. Evaluate Division
 
-# # History:
-# # 1.
-# # Nov 8, 2019
+# History:
+# 1.
+# Nov 8, 2019
 
 # https://leetcode.com/problems/evaluate-division/discuss/88175/9-lines-%22Floydu2013Warshall%22-in-Python   # noqa
 

@@ -1,6 +1,12 @@
 # https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/
 # 671. Second Minimum Node In a Binary Tree
 
+# History:
+# 1.
+# Sep 2, 2019
+# 2.
+# Nov 23, 2019
+
 # Given a non-empty special binary tree consisting of nodes with the
 # non-negative value, where each node in this tree has exactly two or zero
 # sub-node. If the node has two sub-nodes, then this node's value is the
@@ -43,39 +49,26 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
-
 class Solution(object):
     def findSecondMinimumValue(self, root):
         """
         :type root: TreeNode
         :rtype: int
         """
-        if not root or not root.left:
+        if not root:
             return -1
 
-        if root.left.val == root.right.val:
-            left_second_smallest = self.findSecondMinimumValue(root.left)
-            right_second_smallest = self.findSecondMinimumValue(root.right)
+        if not root.left and not root.right:
+            return -1
 
-            if left_second_smallest == -1 and right_second_smallest == -1:
-                return -1
-            elif left_second_smallest == -1:
-                return right_second_smallest
-            elif right_second_smallest == -1:
-                return left_second_smallest
-            else:
-                return min(left_second_smallest, right_second_smallest)
-        elif root.val == root.left.val:
-            left_second_smallest = self.findSecondMinimumValue(root.left)
+        left_second_smallest = self.findSecondMinimumValue(root.left)
+        right_second_smallest = self.findSecondMinimumValue(root.right)
 
-            if left_second_smallest == -1:
-                return root.right.val
-            else:
-                return min(left_second_smallest, root.right.val)
-        else:
-            right_second_smallest = self.findSecondMinimumValue(root.right)
+        ret = sorted([i for i in {
+            left_second_smallest,
+            right_second_smallest,
+            root.left.val,
+            root.right.val,
+        } if i != -1])
 
-            if right_second_smallest == -1:
-                return root.left.val
-            else:
-                return min(right_second_smallest, root.left.val)
+        return ret[1] if len(ret) > 1 else -1

@@ -1,6 +1,19 @@
 # https://leetcode.com/problems/find-peak-element/
 # 162. Find Peak Element
 
+# History:
+# Facebook
+# 1.
+# Dec 20, 2019
+# 2.
+# Feb 20, 2020
+# 3.
+# Apr 3, 2020
+# 4.
+# Apr 7, 2020
+# 5.
+# May 5, 2020
+
 # A peak element is an element that is greater than its neighbors.
 #
 # Given an input array nums, where nums[i] ≠ nums[i+1], find a peak element
@@ -38,20 +51,16 @@ class Solution(object):
         nums.insert(0, float('-inf'))
         nums.append(float('-inf'))
 
-        l = 1
-        r = len(nums) + 1
+        l, r = 1, len(nums) - 1
 
         while l < r:
-            m = l + (r - l) / 2
+            m = (r - l) / 2 + l
 
-            if nums[m] > nums[m - 1] and nums[m] > nums[m + 1]:
+            if nums[m] > nums[m + 1] and nums[m] > nums[m - 1]:
                 return m - 1
-            if nums[m - 1] < nums[m] < nums[m + 1]:
-                l = m + 1
-            else:
+            if nums[m] > nums[m + 1]:
                 r = m
+            else:
+                l = m + 1
 
-        if 0 < m < len(nums) + 1:
-            return l - 1
-
-        return -1
+        return l - 1

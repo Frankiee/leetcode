@@ -2,6 +2,12 @@
 # https://leetcode.com/problems/maximum-length-of-pair-chain/
 # 646. Maximum Length of Pair Chain
 
+# History:
+# 1.
+# Sep 15, 2019
+# 2.
+# Nov 23, 2019
+
 # You are given n pairs of numbers. In every pair, the first number is
 # always smaller than the second number.
 #
@@ -25,19 +31,13 @@ class Solution(object):
         :type pairs: List[List[int]]
         :rtype: int
         """
-        if not pairs:
-            return 0
-
         pairs.sort(key=lambda p: p[1])
 
-        print pairs
-
-        ret = 1
-        pre_pick = 0
-
-        for idx in range(1, len(pairs)):
-            if pairs[pre_pick][1] < pairs[idx][0]:
-                pre_pick = idx
+        ret = 0
+        curr_pair = None
+        for p in pairs:
+            if not curr_pair or curr_pair[1] < p[0]:
+                curr_pair = p
                 ret += 1
 
         return ret

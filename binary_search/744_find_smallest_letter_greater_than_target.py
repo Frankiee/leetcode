@@ -1,6 +1,13 @@
 # https://leetcode.com/problems/find-smallest-letter-greater-than-target/
 # 744. Find Smallest Letter Greater Than Target
 
+# History:
+# Linkedin
+# 1.
+# May 5, 2019
+# 2.
+# Feb 20, 2020
+
 # Given a list of sorted characters letters containing only lowercase
 # letters, and given a target letter target, find the smallest element in
 # the list that is larger than the given target.
@@ -52,18 +59,17 @@ class Solution(object):
         :type target: str
         :rtype: str
         """
-        l = 0
-        r = len(letters)
+        l, r = 0, len(letters)
 
         while l < r:
-            m = l + (r - l) / 2
+            m = (r - l) / 2 + l
 
-            if ord(letters[m]) <= ord(target):
+            if letters[m] <= target:
                 l = m + 1
             else:
                 r = m
 
-        if l < len(letters):
-            return letters[l]
-        else:
+        if l > len(letters) - 1:
             return letters[0]
+        else:
+            return letters[l]

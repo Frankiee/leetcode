@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/single-number/
 # 136. Single Number
 
+# History:
+# Facebook
+# 1.
+# Dec 15, 2019
+# 2.
+# Apr 28, 2020
+
 # Given a non-empty array of integers, every element appears twice except
 # for one. Find that single one.
 #

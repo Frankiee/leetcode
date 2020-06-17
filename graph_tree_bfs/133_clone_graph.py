@@ -1,6 +1,17 @@
 # https://leetcode.com/problems/clone-graph/
 # 133. Clone Graph
 
+# History:
+# Facebook
+# 1.
+# Mar 31, 2019
+# 2.
+# Feb 15, 2020
+# 3.
+# Apr 23, 2020
+# 4.
+# May 12, 2020
+
 # Given a reference of a node in a connected undirected graph, return a deep
 # copy (clone) of the graph. Each node in the graph contains a val (int) and
 # a list (List[Node]) of its neighbors.
@@ -32,12 +43,15 @@
 # graph.
 
 
+from collections import deque
+
+
 """
 # Definition for a Node.
 class Node(object):
-    def __init__(self, val, neighbors):
+    def __init__(self, val = 0, neighbors = None):
         self.val = val
-        self.neighbors = neighbors
+        self.neighbors = neighbors if neighbors is not None else []
 """
 
 
@@ -47,44 +61,27 @@ class Solution(object):
         :type node: Node
         :rtype: Node
         """
-        visited = set()
-        clone_map = {}
+        if not node:
+            return None
 
-        to_visit = [node]
-        res = None
+        node_clone = Node(node.val)
+        mp = {
+            node: node_clone
+        }
+        to_do = deque()
+        to_do.append(node)
 
-        while to_visit:
-            next_visit = None
-            while to_visit:
-                next_try = to_visit.pop(0)
-                if next_try in visited:
-                    continue
-                else:
-                    next_visit = next_try
-                    break
+        while to_do:
+            nxt = to_do.popleft()
+            nxt_clone = mp[nxt]
 
-            if not next_visit:
-                return res
+            for nei in nxt.neighbors:
+                if nei not in mp:
+                    nei_clone = Node(nei.val)
+                    mp[nei] = nei_clone
 
-            if next_visit in clone_map:
-                clone = clone_map[next_visit]
-            else:
-                clone = Node(next_visit.val, None)
-                clone_map[next_visit] = clone
-            clone_neighbors = []
-            for n in next_visit.neighbors:
-                if n in clone_map:
-                    clone_n = clone_map[n]
-                else:
-                    clone_n = Node(n.val, None)
-                    clone_map[n] = clone_n
-                clone_neighbors.append(clone_n)
-            clone.neighbors = clone_neighbors
+                    to_do.append(nei)
 
-            if not res:
-                res = clone
-            visited.add(next_visit)
-            for n in next_visit.neighbors:
-                if n not in visited:
-                    to_visit.append(n)
-        return res
+                nxt_clone.neighbors.append(mp[nei])
+
+        return node_clone

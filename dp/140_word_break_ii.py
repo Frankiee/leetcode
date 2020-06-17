@@ -1,6 +1,15 @@
 # https://leetcode.com/problems/word-break-ii/
 # 140. Word Break II
 
+# History:
+# Facebook
+# 1.
+# Aug 18, 2019
+# 2.
+# Mar 12, 2020
+# 3.
+# Apr 24, 2020
+
 # Given a non-empty string s and a dictionary wordDict containing a list of
 # non-empty words, add spaces in s to construct a sentence where each word
 # is a valid dictionary word. Return all such possible sentences.
@@ -41,17 +50,18 @@
 # []
 
 
-class Solution(object):
-    def dfs(self, ret, i, prefix, dp):
+class SolutionDP(object):
+    def _dfs(self, s, wordDict, i, curr, ret, dp):
         if i == -1:
-            ret.append(' '.join(prefix))
-        if i < 0:
+            ret.append(
+                " ".join(reversed(curr))
+            )
             return
 
-        for w in list(dp[i]):
-            prefix.insert(0, w)
-            self.dfs(ret, i - len(w), prefix, dp)
-            prefix.pop(0)
+        for w in wordDict:
+            if ((i - len(w) == -1 or (i - len(w) >= 0 and dp[i - len(w)])) and
+                    s[i - len(w) + 1:i + 1] == w):
+                self._dfs(s, wordDict, i - len(w), curr + [w], ret, dp)
 
     def wordBreak(self, s, wordDict):
         """
@@ -59,20 +69,57 @@ class Solution(object):
         :type wordDict: List[str]
         :rtype: List[str]
         """
-        dp = []
-        for i in range(len(s)):
-            dp.append(set())
+        dp = [False] * len(s)
 
         for i in range(len(s)):
             for w in wordDict:
-                back_i = i - len(w)
-                if ((back_i == -1 or (back_i >= 0 and dp[back_i])) and
-                        s[back_i + 1:i + 1] == w):
-                    dp[i].add(w)
+                if (i - len(w) == -1 or dp[i - len(w)]) and s[i - len(w) + 1:i + 1] == w:
+                    dp[i] = True
+                    break
+
+        if not dp[-1]:
+            return []
 
         ret = []
 
-        if dp[len(s) - 1]:
-            self.dfs(ret, len(s) - 1, [], dp)
+        self._dfs(s, wordDict, len(s) - 1, [], ret, dp)
 
+        return ret
+
+
+class SolutionDPSet(object):
+    def _dfs(self, s, wordDict, ret, curr_result, curr_idx, dp):
+        if curr_idx < 0:
+            ret.append(curr_result)
+            return
+
+        for w_i in dp[curr_idx]:
+            self._dfs(
+                s,
+                wordDict,
+                ret,
+                wordDict[w_i] + " " + curr_result if curr_result else wordDict[w_i],
+                curr_idx - len(wordDict[w_i]),
+                dp,
+            )
+
+    def wordBreak(self, s, wordDict):
+        """
+        :type s: str
+        :type wordDict: List[str]
+        :rtype: List[str]
+        """
+        dp = [set() for _ in range(len(s))]
+
+        for i in range(len(s)):
+            for w_i, w in enumerate(wordDict):
+                if ((i - len(w) == -1 or (i >= len(w) and dp[i - len(w)])) and
+                        s[i - len(w) + 1:i + 1] == w):
+                    dp[i].add(w_i)
+
+        if not dp[-1]:
+            return []
+
+        ret = []
+        self._dfs(s, wordDict, ret, "", len(s) - 1, dp)
         return ret

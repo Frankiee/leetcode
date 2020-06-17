@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
 # 236. Lowest Common Ancestor of a Binary Tree
 
+# History:
+# Facebook
+# 1.
+# Mar 15, 2020
+# 3.
+# Apr 24, 2020
+
 # Related:
 # 235. Lowest Common Ancestor of a Binary Search Tree
 
@@ -43,31 +50,30 @@
 #         self.right = None
 
 class Solution(object):
-    def lca(self, root, p, q):
+    def _lowest_common_ancestor(self, root, expected):
         if not root:
-            return None, []
+            return None, set()
 
-        contains = []
-        if root == p:
-            contains.append(p)
-        if root == q:
-            contains.append(q)
+        left_ret, left_contains = self._lowest_common_ancestor(root.left, expected)
 
-        left_result, left_contains = self.lca(root.left, p, q)
-        if left_result:
-            return left_result, left_contains
-        contains.extend(left_contains)
-        if len(contains) == 2:
-            return root, [p, q]
+        if left_ret:
+            return left_ret, left_contains
 
-        right_result, right_contains = self.lca(root.right, p, q)
-        if right_result:
-            return right_result, right_contains
-        contains.extend(right_contains)
-        if len(contains) == 2:
-            return root, [p, q]
+        if root.val in expected:
+            left_contains.add(root.val)
+        if left_contains == expected:
+            return root, expected
 
-        return None, contains
+        right_ret, right_contains = self._lowest_common_ancestor(root.right, expected)
+
+        if right_ret:
+            return right_ret, right_contains
+
+        left_contains = left_contains | right_contains
+        if left_contains == expected:
+            return root, expected
+
+        return None, left_contains
 
     def lowestCommonAncestor(self, root, p, q):
         """
@@ -76,4 +82,6 @@ class Solution(object):
         :type q: TreeNode
         :rtype: TreeNode
         """
-        return self.lca(root, p, q)[0]
+        ret, _ = self._lowest_common_ancestor(root, {p.val, q.val})
+
+        return ret

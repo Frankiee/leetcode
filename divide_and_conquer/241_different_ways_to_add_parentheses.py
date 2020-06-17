@@ -1,6 +1,12 @@
 # https://leetcode.com/problems/different-ways-to-add-parentheses/
 # 241. Different Ways to Add Parentheses
 
+# History:
+# 1.
+# Apr 15, 2019
+# 2.
+# Nov 23, 2019
+
 # Given a string of numbers and operators, return all possible results from
 # computing all the different possible ways to group numbers and operators.
 # The valid operators are +, - and *.
@@ -26,40 +32,54 @@
 
 class Solution(object):
     def __init__(self):
-        self.dp = {}
+        self.cache = {}
+
+    def tokenize(self, input):
+        ret = []
+        curr_num = 0
+
+        for c in input:
+            if c in {'+', '-', '*'}:
+                ret.append(curr_num)
+                ret.append(c)
+                curr_num = 0
+            else:
+                curr_num = curr_num * 10 + int(c)
+
+        ret.append(curr_num)
+
+        return ret
 
     def diffWaysToCompute(self, input):
         """
         :type input: str
         :rtype: List[int]
         """
-        if input in self.dp:
-            return self.dp[input]
+        tokens = self.tokenize(input)
 
-        has_operator = False
+        return self.diff_ways_to_compute(tokens, 0, len(tokens))
+
+    def diff_ways_to_compute(self, tokens, l, r):
+        if (l, r) in self.cache:
+            return self.cache[(l, r)]
+
+        if r - l == 1:
+            self.cache[(l, r)] = [tokens[l]]
+            return [tokens[l]]
+
         ret = []
-        for i in range(len(input)):
-            if input[i] in {'+', '-', '*'}:
-                has_operator = True
-                left_ret = self.diffWaysToCompute(input[0:i])
-                right_ret = self.diffWaysToCompute(input[i + 1:])
+        for op in range(l + 1, r, 2):
+            lefts = self.diff_ways_to_compute(tokens, l, op)
+            rights = self.diff_ways_to_compute(tokens, op + 1, r)
 
-                for l in left_ret:
-                    for r in right_ret:
-                        l = int(l)
-                        r = int(r)
-                        if input[i] == '+':
-                            ret.append(l + r)
-                        elif input[i] == '-':
-                            ret.append(l - r)
-                        else:
-                            ret.append(l * r)
+            for left in lefts:
+                for right in rights:
+                    if tokens[op] == '+':
+                        ret.append(left + right)
+                    elif tokens[op] == '-':
+                        ret.append(left - right)
+                    else:
+                        ret.append(left * right)
 
-                self.dp[input] = ret
-
-        if not has_operator:
-            ret = [int(input)]
-            self.dp[input] = ret
-            return ret
-
+        self.cache[(l, r)] = ret
         return ret

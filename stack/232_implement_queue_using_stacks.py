@@ -1,6 +1,12 @@
 # https://leetcode.com/problems/implement-queue-using-stacks/
 # 232. Implement Queue using Stacks
 
+# History:
+# 1.
+# May 20, 2019
+# 2.
+# Nov 12, 2019
+
 # Implement the following operations of a queue using stacks.
 #
 # push(x) -- Push element x to the back of queue.

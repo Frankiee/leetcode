@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/my-calendar-i/
 # 729. My Calendar I
 
+# History:
+# Google
+# 1.
+# Mar 24, 2020
+# 2.
+# Jun 14, 2020
+
 # Implement a MyCalendar class to store your events. A new event can be
 # added if adding the event will not cause a double booking.
 #
@@ -71,6 +78,43 @@ class MyCalendar(object):
 
         self.calendar.insert(i, (start, end))
         return True
+
+# Your MyCalendar object will be instantiated and called as such:
+# obj = MyCalendar()
+# param_1 = obj.book(start,end)
+
+
+class MyCalendarCompareEnd(object):
+
+    def __init__(self):
+        self.bookings = []
+
+    def _bisect(self, start, end):
+        l, r = 0, len(self.bookings)
+
+        while l < r:
+            m = (r - l) / 2 + l
+
+            if self.bookings[m][0] >= end:
+                r = m
+            else:
+                l = m + 1
+
+        return l
+
+    def book(self, start, end):
+        """
+        :type start: int
+        :type end: int
+        :rtype: bool
+        """
+        insertion_pos = self._bisect(start, end)
+
+        if insertion_pos == 0 or self.bookings[insertion_pos - 1][1] <= start:
+            self.bookings.insert(insertion_pos, (start, end))
+            return True
+
+        return False
 
 # Your MyCalendar object will be instantiated and called as such:
 # obj = MyCalendar()

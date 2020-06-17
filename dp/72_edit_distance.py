@@ -1,6 +1,15 @@
 # https://leetcode.com/problems/edit-distance/
 # 72. Edit Distance
 
+# History:
+# Google
+# 1.
+# March 17, 2019
+# 2.
+# Nov 23, 2019
+# 3.
+# Mar 17, 2020
+
 # Given two words word1 and word2, find the minimum number of operations
 # required to convert word1 to word2.
 #
@@ -39,9 +48,7 @@ class Solution(object):
         word1_len = len(word1)
         word2_len = len(word2)
 
-        dp = [None] * (word1_len + 1)
-        for r in range(word1_len + 1):
-            dp[r] = [0] * (word2_len + 1)
+        dp = [[0] * (word2_len + 1) for _ in range(word1_len + 1)]
 
         for r in range(word1_len + 1):
             for c in range(word2_len + 1):
@@ -57,4 +64,4 @@ class Solution(object):
                             dp[r - 1][c - 1],
                         ]) + 1
 
-        return dp[word1_len][word2_len]
+        return dp[-1][-1]

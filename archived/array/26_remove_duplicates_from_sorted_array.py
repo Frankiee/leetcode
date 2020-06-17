@@ -2,6 +2,17 @@
 # https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 # 26. Remove Duplicates from Sorted Array
 
+# History:
+# Facebook
+# 1.
+# Aug 18, 2019
+# 2.
+# Mar 6, 2020
+# 3.
+# Apr 11, 2020
+# 4.
+# May 2, 2020
+
 # Given a sorted array nums, remove the duplicates in-place such that each
 # element appear only once and return the new length.
 #
@@ -50,18 +61,10 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        ret = 0
-        if not nums:
-            return ret
+        nxt_idx = 0
+        for i in range(len(nums)):
+            if i == 0 or nums[i] != nums[i - 1]:
+                nums[nxt_idx] = nums[i]
+                nxt_idx += 1
 
-        previous_n = None
-        for idx in range(len(nums)):
-            if idx == 0:
-                ret += 1
-                previous_n = nums[idx]
-            elif previous_n != nums[idx]:
-                previous_n = nums[idx]
-                nums[ret] = nums[idx]
-                ret += 1
-
-        return ret
+        return nxt_idx

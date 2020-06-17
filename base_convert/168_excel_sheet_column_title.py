@@ -1,6 +1,13 @@
 # https://leetcode.com/problems/excel-sheet-column-title/
 # 168. Excel Sheet Column Title
 
+# History:
+# Facebook
+# 1.
+# Mar 19, 2019
+# 2.
+# May 11, 2020
+
 # Given a positive integer, return its corresponding column title as appear in
 # an Excel sheet.
 #
@@ -28,8 +35,11 @@
 # Output: "ZY"
 
 
+from collections import deque
+
+
 class Solution(object):
-    def to_ascii(self, num):
+    def _convert_to_char(self, num):
         return str(unichr(num + 65))
 
     def convertToTitle(self, n):
@@ -37,10 +47,12 @@ class Solution(object):
         :type n: int
         :rtype: str
         """
-        ret = []
+        ret = deque()
         while n:
-            next_digit = (n - 1) % 26
-            ret.insert(0, self.to_ascii(next_digit))
-            n = (n - 1) / 26
+            n -= 1
+            nxt_c = self._convert_to_char(n % 26)
 
-        return ''.join(ret)
+            ret.appendleft(nxt_c)
+            n /= 26
+
+        return "".join(ret)

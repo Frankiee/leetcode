@@ -1,7 +1,18 @@
+# [Classic]
 # https://leetcode.com/problems/number-of-matching-subsequences/
 # 792. Number of Matching Subsequences
 
-# Given string S and a dictionary of words words, find the number of words[
+# Related:
+# 392. Is Subsequence
+
+# History:
+# TikTok
+# 1.
+# Aug 12, 2019
+# 2.
+# Nov 23, 2019
+
+# Given string S and a dictionary of words words, f ind the number of words[
 # i] that is a subsequence of S.
 #
 # Example :
@@ -18,6 +29,7 @@
 # The length of words will be in the range of [1, 5000].
 # The length of words[i] will be in the range of [1, 50].
 
+
 from collections import defaultdict
 
 
@@ -33,13 +45,12 @@ class Solution(object):
         for w in words:
             waiting[w[0]].append(w[1:])
 
-        for s in S:
-            waiting_words = waiting.get(s)
-            if waiting_words:
-                waiting_words = waiting.pop(s)
+        for c in S:
+            if c in waiting:
+                waiting_words = waiting.pop(c)
 
                 for w in waiting_words:
-                    if w:
+                    if len(w) > 0:
                         waiting[w[0]].append(w[1:])
 
-        return len(words) - sum(len(ws) for ws in waiting.values())
+        return len(words) - sum([len(ws) for ws in waiting.values()])

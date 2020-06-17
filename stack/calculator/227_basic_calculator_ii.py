@@ -1,11 +1,15 @@
-# [Calculator, Google, Classic]
+# [Calculator, Classic]
 # https://leetcode.com/problems/basic-calculator-ii/
 # 227. Basic Calculator II
 
 # History:
+# Google, Facebook
 # 1.
 # Oct 20, 2019
-# Daily Interview Pro - Google
+# 2.
+# Feb 9, 2020
+# 3,
+# May 15, 2020
 
 # Implement a basic calculator to evaluate a simple expression string.
 #
@@ -32,6 +36,47 @@
 
 
 class Solution(object):
+    def calculate(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        ret = num = prev_num = 0
+        sign, operator = 1, '+'
+        s += '+'
+
+        for c in s:
+            if c == ' ':
+                continue
+
+            if c.isdigit():
+                num = num * 10 + int(c)
+            elif c in {'+', '-'}:
+                if operator == '*':
+                    ret += prev_num * num * sign
+                elif operator == '/':
+                    ret += prev_num / num * sign
+                else:
+                    ret += num * sign
+
+                prev_num, num = 0, 0
+                operator = c
+                sign = 1 if c == '+' else -1
+            else:
+                if operator == '*':
+                    prev_num *= num
+                elif operator == '/':
+                    prev_num /= num
+                else:
+                    prev_num = num
+
+                num = 0
+                operator = c
+
+        return ret
+
+
+class SolutionStack(object):
     def calculate(self, s):
         """
         :type s: str

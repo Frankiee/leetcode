@@ -1,6 +1,12 @@
 # https://leetcode.com/problems/print-in-order/
 # 1114. Print in Order
 
+# History:
+# Apple
+# 1.
+# Aug 10, 2019
+# 2.
+# Mar 19, 2020
 
 # Suppose we have a class:
 #

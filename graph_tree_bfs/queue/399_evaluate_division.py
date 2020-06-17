@@ -2,9 +2,9 @@
 # https://leetcode.com/problems/evaluate-division/
 # 399. Evaluate Division
 
-# # History:
-# # 1.
-# # Nov 8, 2019
+# History:
+# 1.
+# Nov 8, 2019
 
 # Equations are given in the format A / B = k, where A and B are variables
 # represented as strings, and k is a real number (floating point number).

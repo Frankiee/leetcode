@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/insert-interval/
 # 57. Insert Interval
 
+# History:
+# Facebook
+# 1.
+# Aug 17, 2019
+# 2.
+# May 6, 2020
+
 # Given a set of non-overlapping intervals, insert a new interval into the
 # intervals (merge if necessary).
 #
@@ -21,7 +28,57 @@
 # default code definition to get new method signature.
 
 
-class Solution(object):
+class Solution1(object):
+    def _bisect_lower_left(self, intervals, start):
+        l, r = 0, len(intervals)
+
+        while l < r:
+            m = (r - l) / 2 + l
+
+            if intervals[m][1] >= start:
+                r = m
+            else:
+                l = m + 1
+
+        return l
+
+    def _bisect_lower_right(self, intervals, end):
+        l, r = 0, len(intervals)
+
+        while l < r:
+            m = (r - l) / 2 + l
+
+            if intervals[m][0] > end:
+                r = m
+            else:
+                l = m + 1
+
+        return l
+
+    def insert(self, intervals, newInterval):
+        """
+        :type intervals: List[List[int]]
+        :type newInterval: List[int]
+        :rtype: List[List[int]]
+        """
+        left = self._bisect_lower_left(intervals, newInterval[0])
+
+        if left == len(intervals):
+            intervals.append(newInterval)
+            return intervals
+
+        right = self._bisect_lower_right(intervals, newInterval[1]) - 1
+
+        if right == -1:
+            return [newInterval] + intervals
+
+        return intervals[:left] + [
+            [min(newInterval[0], intervals[left][0]),
+             max(newInterval[1], intervals[right][1])]
+        ] + intervals[right + 1:]
+
+
+class Solution2(object):
     def bisect(self, intervals, num, key):
         l = 0
         r = len(intervals)

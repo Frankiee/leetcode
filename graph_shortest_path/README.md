@@ -1,18 +1,20 @@
 # Shortest Path Algorithms
 
+https://www.youtube.com/watch?v=vwLYDeghs_c
+
 ## Dijkstra
 * Single source all destination
 * Direct or undirected
 * Time Complexity with Heap: O(NlogN + E)
 * Space Complexity: O(N + E)
 
-## Bellman-Ford
+## Bellman Ford
 * Single source all destination
 * Support negative weight
 * Time Complexity: O(NE)
 * Space Complexity: O(N)
 
-## Floyd-Warshall
+## Floyd Warshall
 * All source all destination
 * Time Complexity: O(N^3)
 * Space Complexity: O(N^2)
@@ -88,7 +90,7 @@ class SolutionDijkstra(object):
 ```
 
 
-BellmanFord (1696 ms 13.8 MB)
+Bellman Ford (1696 ms 13.8 MB)
 ```python
 class SolutionBellmanFord(object):
     MAX_REACHABLE_TIME = 101 * 100
@@ -116,7 +118,7 @@ class SolutionBellmanFord(object):
 ```
 
 
-Floyd-Warshall (1572 ms 13.7 MB)
+Floyd Warshall (1572 ms 13.7 MB)
 ```python
 class SolutionFloydWarshall(object):
     def networkDelayTime(self, times, N, K):

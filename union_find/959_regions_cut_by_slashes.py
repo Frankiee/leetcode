@@ -4,6 +4,12 @@
 
 # https://www.youtube.com/watch?v=n3s9Q7GtfB4&t=133s
 
+# History:
+# 1.
+# May 20, 2019
+# 2.
+# Nov 17, 2019
+
 # In a N x N grid composed of 1 x 1 squares, each 1 x 1 square consists of a
 # /, \, or blank space.  These characters divide the square into contiguous
 # regions.
@@ -78,103 +84,51 @@
 
 class UnionFindSet(object):
     def __init__(self, n):
-        self.roots = range(n)
-        self.ranks = [0] * n
+        self.parents = range(n)
 
-    def find_root(self, i):
-        # Path compression
-        if i != self.roots[i]:
-            # If i is not root
-            self.roots[i] = self.find_root(self.roots[i])
-
-        return self.roots[i]
-
-    def _union_two(self, i, j):
+    def union(self, i, j):
         i_root = self.find_root(i)
         j_root = self.find_root(j)
 
-        if self.ranks[i_root] > self.ranks[j_root]:
-            self.roots[i_root] = j_root
-        elif self.ranks[j_root] > self.ranks[i_root]:
-            self.roots[j_root] = i_root
-        else:   # Equal
-            self.roots[i_root] = j_root
-            self.ranks[i_root] += 1
+        self.parents[i_root] = j_root
 
-    def union(self, lst):
-        fst = lst[0]
+    def find_root(self, i):
+        if self.parents[i] != i:
+            self.parents[i] = self.find_root(self.parents[i])
 
-        for l in lst[1:]:
-            self._union_two(fst, l)
+        return self.parents[i]
 
 
 class Solution(object):
-    def _get_square_idx(self, r, c, square_region):
-        # For square_region
-        # 0: up, 1: left, 2: right 3: bottom
-
-        return r * 4 * self.N + c * 4 + square_region
-
     def regionsBySlashes(self, grid):
         """
         :type grid: List[str]
         :rtype: int
         """
-        if not grid:
+        if not grid or len(grid[0]) == 0:
             return 0
 
-        self.N = len(grid)
+        sides = len(grid)
 
-        total_regions = 4 * self.N * self.N
-        union_find_set = UnionFindSet(total_regions)
+        union_find = UnionFindSet(4 * sides * sides)
 
-        for r in range(self.N):
-            for c in range(self.N):
-                square = grid[r][c]
-                # current
-                if square == ' ':
-                    union_find_set.union([
-                        self._get_square_idx(r, c, 0),
-                        self._get_square_idx(r, c, 1),
-                        self._get_square_idx(r, c, 2),
-                        self._get_square_idx(r, c, 3),
-                    ])
-                elif square == '/':
-                    union_find_set.union([
-                        self._get_square_idx(r, c, 0),
-                        self._get_square_idx(r, c, 1),
-                    ])
-                    union_find_set.union([
-                        self._get_square_idx(r, c, 2),
-                        self._get_square_idx(r, c, 3),
-                    ])
-                elif square == '\\':
-                    union_find_set.union([
-                        self._get_square_idx(r, c, 0),
-                        self._get_square_idx(r, c, 2),
-                    ])
-                    union_find_set.union([
-                        self._get_square_idx(r, c, 1),
-                        self._get_square_idx(r, c, 3),
-                    ])
+        for r in range(len(grid)):
+            for c in range(len(grid[r])):
+                base = 4 * (sides * r + c)
 
-                # Up
-                if r > 0:
-                    union_find_set.union([
-                        self._get_square_idx(r, c, 0),
-                        self._get_square_idx(r - 1, c, 3),
-                    ])
-                # Down
                 if c > 0:
-                    union_find_set.union([
-                        self._get_square_idx(r, c, 1),
-                        self._get_square_idx(r, c - 1, 2),
-                    ])
+                    union_find.union(base, base - 2)
+                if r > 0:
+                    union_find.union(base + 1, 4 * (sides * (r - 1) + c) + 3)
+                if grid[r][c] == '\\' or grid[r][c] == ' ':
+                    union_find.union(base, base + 3)
+                    union_find.union(base + 1, base + 2)
+                if grid[r][c] == '/' or grid[r][c] == ' ':
+                    union_find.union(base, base + 1)
+                    union_find.union(base + 2, base + 3)
 
-        regions = set()
-        for region_idx in range(total_regions):
-            regions.add(
-                union_find_set.find_root(region_idx)
-            )
+        ret_set = set()
+        for i in range(4 * sides * sides):
+            ret_set.add(union_find.find_root(i))
 
-        return len(regions)
+        return len(ret_set)

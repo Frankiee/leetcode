@@ -3,6 +3,13 @@
 
 # https://www.youtube.com/watch?v=__yxFFRQAl8&t=614s
 
+# History:
+# Google
+# 1.
+# Aug 15, 2019
+# 2.
+# Mar 13, 2020
+
 # We have two integer sequences A and B of the same non-zero length.
 #
 # We are allowed to swap elements A[i] and B[i].  Note that both elements
@@ -28,6 +35,32 @@
 # A, B are arrays with the same length, and that length will be in the range
 # [1, 1000].
 # A[i], B[i] are integer values in the range [0, 2000].
+
+
+# DP
+class Solution2(object):
+    def minSwap(self, A, B):
+        """
+        :type A: List[int]
+        :type B: List[int]
+        :rtype: int
+        """
+        swap = [float('inf')] * len(A)
+        keep = [float('inf')] * len(A)
+
+        for i in range(len(A)):
+            if i == 0:
+                swap[i] = 1
+                keep[i] = 0
+            else:
+                if A[i] > A[i - 1] and B[i] > B[i - 1]:
+                    keep[i] = keep[i - 1]
+                    swap[i] = swap[i - 1] + 1
+                if A[i] > B[i - 1] and B[i] > A[i - 1]:
+                    keep[i] = min(keep[i], swap[i - 1])
+                    swap[i] = min(swap[i], keep[i - 1] + 1)
+
+        return min(keep[-1], swap[-1])
 
 
 # DFS
@@ -63,29 +96,3 @@ class Solution1(object):
         self.dfs(A, B, 0, 0)
 
         return self.min_step
-
-
-# DP
-class Solution2(object):
-    def minSwap(self, A, B):
-        """
-        :type A: List[int]
-        :type B: List[int]
-        :rtype: int
-        """
-        swap = [float('inf')] * len(A)
-        keep = [float('inf')] * len(A)
-
-        for i in range(len(A)):
-            if i == 0:
-                swap[i] = 1
-                keep[i] = 0
-            else:
-                if A[i] > A[i - 1] and B[i] > B[i - 1]:
-                    keep[i] = keep[i - 1]
-                    swap[i] = swap[i - 1] + 1
-                if A[i] > B[i - 1] and B[i] > A[i - 1]:
-                    keep[i] = min(keep[i], swap[i - 1])
-                    swap[i] = min(swap[i], keep[i - 1] + 1)
-
-        return min(keep[-1], swap[-1])

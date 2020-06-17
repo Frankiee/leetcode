@@ -7,6 +7,10 @@
 # Aug 11, 2019
 # 2.
 # Oct 19, 2019
+# 3.
+# Nov 30, 2019
+# 4.
+# Apr 6, 2020
 
 # Given a collection of candidate numbers (candidates) and a target number (
 # target), find all unique combinations in candidates where the candidate
@@ -37,6 +41,39 @@
 #   [1,2,2],
 #   [5]
 # ]
+
+
+class SolutionRecursion(object):
+    def _dfs(self, candidates, i, target_remaining, used, ret, curr_combo):
+        if i == len(candidates):
+            if target_remaining == 0:
+                ret.append(curr_combo)
+            return
+
+        # take ith item
+        if (i == 0 or
+                candidates[i] != candidates[i - 1] or
+                used[i - 1]) and target_remaining >= candidates[i]:
+            used[i] = True
+            self._dfs(candidates, i + 1, target_remaining - candidates[i], used, ret,
+                      curr_combo + [candidates[i]])
+            used[i] = False
+
+        # not take ith item
+        self._dfs(candidates, i + 1, target_remaining, used, ret, curr_combo)
+
+    def combinationSum2(self, candidates, target):
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+        used = [False] * len(candidates)
+
+        candidates = sorted(candidates, reverse=True)
+        ret = []
+        self._dfs(candidates, 0, target, used, ret, [])
+        return ret
 
 
 class Solution(object):

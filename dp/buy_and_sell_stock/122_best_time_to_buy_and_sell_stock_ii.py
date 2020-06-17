@@ -2,6 +2,14 @@
 # https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
 # 122. Best Time to Buy and Sell Stock II
 
+# History:
+# 1.
+# Aug 25, 2019
+# 2.
+# Nov 23, 2019
+# 3.
+# May 5, 2020
+
 # Say you have an array for which the ith element is the price of a given
 # stock on day i.
 #

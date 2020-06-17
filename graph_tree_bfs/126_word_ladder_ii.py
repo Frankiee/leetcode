@@ -1,0 +1,99 @@
+# [Classic]
+# https://leetcode.com/problems/word-ladder-ii/
+# 126. Word Ladder II
+
+# History:
+# Facebook
+# 1.
+# Mar 1, 2020
+# 2.
+# May 15, 2020
+
+# Given two words (beginWord and endWord), and a dictionary's word list, find all shortest
+# transformation sequence(s) from beginWord to endWord, such that:
+#
+# Only one letter can be changed at a time
+# Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
+# Note:
+#
+# Return an empty list if there is no such transformation sequence.
+# All words have the same length.
+# All words contain only lowercase alphabetic characters.
+# You may assume no duplicates in the word list.
+# You may assume beginWord and endWord are non-empty and are not the same.
+# Example 1:
+#
+# Input:
+# beginWord = "hit",
+# endWord = "cog",
+# wordList = ["hot","dot","dog","lot","log","cog"]
+#
+# Output:
+# [
+#   ["hit","hot","dot","dog","cog"],
+#   ["hit","hot","lot","log","cog"]
+# ]
+# Example 2:
+#
+# Input:
+# beginWord = "hit"
+# endWord = "cog"
+# wordList = ["hot","dot","dog","lot","log"]
+#
+# Output: []
+#
+# Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.
+
+
+class Solution(object):
+    CHARS = 'abcdefghijkmlnopqrstuvwxyz'
+
+    def _find_neighbours(self, word, wordList):
+        ret = set()
+        for i in range(len(word)):
+            for c in self.CHARS:
+                new_word = word[:i] + c + word[i + 1:]
+
+                if new_word in wordList:
+                    ret.add(new_word)
+
+        return ret
+
+    def findLadders(self, beginWord, endWord, wordList):
+        """
+        :type beginWord: str
+        :type endWord: str
+        :type wordList: List[str]
+        :rtype: List[List[str]]
+        """
+        if endWord not in wordList:
+            return []
+
+        wordList = set(wordList)
+
+        to_do = [[beginWord]]
+
+        ret = []
+        while to_do:
+            nxt_to_do = []
+
+            for nxt in to_do:
+                word = nxt[-1]
+
+                if word == endWord:
+                    ret.append(nxt)
+                    continue
+
+                neis = self._find_neighbours(word, wordList)
+                for nei in neis:
+                    nxt_to_do.append(nxt + [nei])
+
+            if ret:
+                return ret
+
+            lasts = set([n[-1] for n in nxt_to_do])
+            wordList = wordList.difference(lasts)
+
+            to_do = nxt_to_do
+
+        return ret

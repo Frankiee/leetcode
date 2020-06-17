@@ -2,6 +2,14 @@
 # https://leetcode.com/problems/koko-eating-bananas/
 # 875. Koko Eating Bananas
 
+# History:
+# 1.
+# Sep 23, 2019
+# 2.
+# Nov 20, 2019
+# 3.
+# Apr 30, 2020
+
 # Koko loves to eat bananas.  There are N piles of bananas, the i-th pile
 # has piles[i] bananas.  The guards have gone and will come back in H hours.
 #

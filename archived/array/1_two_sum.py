@@ -2,6 +2,15 @@
 # https://leetcode.com/problems/two-sum/
 # 1. Two Sum
 
+# History:
+# Google, Facebook
+# 1.
+# Aug 21, 2019
+# 2.
+# Mar 10, 2020
+# 3.
+# May 2, 2020
+
 # Given an array of integers, return indices of the two numbers such that
 # they add up to a specific target.
 #

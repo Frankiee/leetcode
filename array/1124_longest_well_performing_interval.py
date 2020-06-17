@@ -1,6 +1,13 @@
 # https://leetcode.com/problems/longest-well-performing-interval/
 # 1124. Longest Well-Performing Interval
 
+# History:
+# 1.
+# Jul 15, 2019
+# 2.
+# Nov 24, 2019
+
+
 # We are given hours, a list of the number of hours worked per day for a
 # given employee.
 #

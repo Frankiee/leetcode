@@ -1,6 +1,11 @@
 # https://leetcode.com/problems/next-greater-node-in-linked-list/
 # 1019. Next Greater Node In Linked List
 
+# History:
+# Facebook
+# 1.
+# May 3, 2020
+
 # We are given a linked list with head as the first node.  Let's number the
 # nodes in the list: node_1, node_2, node_3, ... etc.
 #
@@ -41,29 +46,29 @@
 
 # Definition for singly-linked list.
 # class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution(object):
     def nextLargerNodes(self, head):
         """
         :type head: ListNode
         :rtype: List[int]
         """
-        pending = []
+        stack = []
         ret = []
-        current_idx = 0
 
-        while head:
-            while pending and pending[-1][0] < head.val:
-                ret[pending[-1][1]] = head.val
-                pending.pop()
+        curr = head
 
-            pending.append((head.val, current_idx))
+        curr_idx = 0
+        while curr:
             ret.append(0)
 
-            head = head.next
-            current_idx += 1
+            while stack and curr.val > stack[-1][1]:
+                ret[stack.pop(-1)[0]] = curr.val
+            stack.append((curr_idx, curr.val))
+
+            curr_idx += 1
+            curr = curr.next
 
         return ret

@@ -2,6 +2,11 @@
 # https://leetcode.com/problems/snapshot-array/
 # 1146. Snapshot Array
 
+# History:
+# Facebook
+# 1.
+# Mar 3, 2020
+
 # Implement a SnapshotArray that supports the following interface:
 #
 # SnapshotArray(int length) initializes an array-like data structure with
@@ -36,7 +41,51 @@
 # 0 <= val <= 10^9
 
 
-from collections import defaultdict
+import bisect
+
+
+class SnapshotArrayBisect(object):
+
+    def __init__(self, length):
+        """
+        :type length: int
+        """
+        self.mem = [[[0, 0]] for _ in range(length)]
+        self.curr_version = 0
+
+    def set(self, index, val):
+        """
+        :type index: int
+        :type val: int
+        :rtype: None
+        """
+        if self.mem[index][-1][0] == self.curr_version:
+            self.mem[index][-1] = [self.curr_version, val]
+        else:
+            self.mem[index].append([self.curr_version, val])
+
+    def snap(self):
+        """
+        :rtype: int
+        """
+        self.curr_version += 1
+        return self.curr_version - 1
+
+    def get(self, index, snap_id):
+        """
+        :type index: int
+        :type snap_id: int
+        :rtype: int
+        """
+        i = bisect.bisect(self.mem[index], [snap_id+1]) - 1
+        return self.mem[index][i][1]
+
+
+# Your SnapshotArray object will be instantiated and called as such:
+# obj = SnapshotArray(length)
+# obj.set(index,val)
+# param_2 = obj.snap()
+# param_3 = obj.get(index,snap_id)
 
 
 class SnapshotArray(object):
@@ -45,9 +94,8 @@ class SnapshotArray(object):
         """
         :type length: int
         """
-        self.length = length
-        self.current_v = 0
-        self.data = defaultdict(list)
+        self.mem = [[[0, 0]] for _ in range(length)]
+        self.curr_version = 0
 
     def set(self, index, val):
         """
@@ -55,19 +103,32 @@ class SnapshotArray(object):
         :type val: int
         :rtype: None
         """
-        if not self.data[index]:
-            self.data[index].append((self.current_v, val))
-        elif self.data[index][-1][0] == self.current_v:
-            self.data[index][-1] = (self.current_v, val)
+        if self.mem[index][-1][0] == self.curr_version:
+            self.mem[index][-1] = [self.curr_version, val]
         else:
-            self.data[index].append((self.current_v, val))
+            self.mem[index].append([self.curr_version, val])
 
     def snap(self):
         """
         :rtype: int
         """
-        self.current_v += 1
-        return self.current_v - 1
+        self.curr_version += 1
+        return self.curr_version - 1
+
+    def _bisect(self, search_arry, snap_id):
+        l, r = 0, len(search_arry)
+
+        while l < r:
+            m = (r - l) / 2 + l
+
+            if search_arry[m][0] == snap_id:
+                return m
+            elif search_arry[m][0] > snap_id:
+                r = m - 1
+            else:
+                l = m
+
+        return l
 
     def get(self, index, snap_id):
         """
@@ -75,39 +136,11 @@ class SnapshotArray(object):
         :type snap_id: int
         :rtype: int
         """
-        if not self.data[index]:
-            return 0
-        else:
-            lst = self.data[index]
+        search_arry = self.mem[index]
 
-            if not lst:
-                return 0
+        i = self._bisect(search_arry, snap_id)
 
-            idx = self._bisect(lst, snap_id)
-
-            if idx >= len(lst):
-                return lst[-1][1]
-            elif idx == 0 and lst[0][0] > snap_id:
-                return 0
-            elif lst[idx][0] > snap_id:
-                return lst[idx - 1][1]
-            else:
-                return lst[idx][1]
-
-    def _bisect(self, lst, snap_id):
-        l = 0
-        r = len(lst)
-
-        while l < r:
-            m = l + (r - l) / 2
-            if lst[m][0] == snap_id:
-                return m
-            elif lst[m][0] > snap_id:
-                r = m
-            else:
-                l = m + 1
-
-        return l
+        return self.mem[index][i][1]
 
 # Your SnapshotArray object will be instantiated and called as such:
 # obj = SnapshotArray(length)

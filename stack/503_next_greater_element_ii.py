@@ -1,6 +1,13 @@
 # https://leetcode.com/problems/next-greater-element-ii/
 # 503. Next Greater Element II
 
+# History:
+# Facebook
+# 1.
+# Mar 8, 2020
+# 2.
+# May 20, 2020
+
 # Given a circular array (the next element of the last element is the first
 # element of the array), print the Next Greater Number for every element.
 # The Next Greater Number of a number x is the first greater number to its
@@ -24,18 +31,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        nums += nums
+        ret = [-1] * len(nums)
+
         stack = []
-        ret = []
+        for i, n in (list(enumerate(nums)) * 2):
+            while stack and nums[stack[-1]] < n:
+                idx = stack.pop(-1)
+                ret[idx] = n
+            stack.append(i)
 
-        while nums:
-            nxt = nums.pop(0)
-
-            while stack and stack[-1][1] < nxt:
-                idx, _ = stack.pop()
-                ret[idx] = nxt
-
-            stack.append((len(ret), nxt))
-            ret.append(-1)
-
-        return ret[:len(ret) / 2]
+        return ret

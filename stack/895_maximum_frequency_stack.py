@@ -1,6 +1,12 @@
 # https://leetcode.com/problems/maximum-frequency-stack/
 # 895. Maximum Frequency Stack
 
+# History:
+# 1.
+# Apr 29, 2019
+# 2.
+# Dec 1, 2019
+
 # Implement FreqStack, a class which simulates the operation of a stack-like
 # data structure.
 #
@@ -56,28 +62,30 @@ from collections import defaultdict
 class FreqStack(object):
 
     def __init__(self):
-        self.freq_map = defaultdict(int)
-        self.c_list = defaultdict(list)
-        self.current_max = 0
+        self.stack = []
+        self.frequency = defaultdict(int)
 
     def push(self, x):
         """
         :type x: int
         :rtype: None
         """
-        self.freq_map[x] += 1
-        self.current_max = max(self.current_max, self.freq_map[x])
-        self.c_list[self.freq_map[x]].append(x)
+        self.frequency[x] += 1
+        feq = self.frequency[x]
+        if feq > len(self.stack):
+            self.stack.append([x])
+        else:
+            self.stack[feq - 1].append(x)
 
     def pop(self):
         """
         :rtype: int
         """
-        ret = self.c_list[self.current_max].pop()
-        self.freq_map[ret] -= 1
+        ret = self.stack[-1].pop()
+        if not self.stack[-1]:
+            self.stack.pop()
 
-        if not self.c_list[self.current_max]:
-            self.current_max -= 1
+        self.frequency[ret] -= 1
 
         return ret
 

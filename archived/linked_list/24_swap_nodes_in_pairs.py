@@ -2,6 +2,11 @@
 # 24. Swap Nodes in Pairs
 # https://leetcode.com/problems/swap-nodes-in-pairs/
 
+# History:
+# Facebook
+# 1.
+# Apr 30, 2020
+
 # Given a linked list, swap every two adjacent nodes and return its head.
 #
 # You may not modify the values in the list's nodes, only nodes itself may
@@ -15,30 +20,21 @@
 
 # Definition for singly-linked list.
 # class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution(object):
     def swapPairs(self, head):
         """
         :type head: ListNode
         :rtype: ListNode
         """
-        if not head:
-            return None
+        if not head or not head.next:
+            return head
 
-        dummy = ListNode(None)
-        dummy.next = head
-        prv = dummy
+        first, second, third = head, head.next, head.next.next
 
-        while prv.next and prv.next.next:
-            p1 = prv.next
-            p2 = prv.next.next
+        second.next = first
+        first.next = self.swapPairs(third)
 
-            p1.next = p2.next
-            prv.next = p2
-            p2.next = p1
-            prv = p1
-
-        return dummy.next
+        return second

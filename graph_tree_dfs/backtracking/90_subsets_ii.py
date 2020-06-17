@@ -7,6 +7,8 @@
 # Aug 11, 2019
 # 2.
 # Oct 19, 2019
+# 3.
+# Nov 30, 2019
 
 # Given a collection of integers that might contain duplicates, nums,
 # return all possible subsets (the power set).
@@ -68,5 +70,33 @@ class Solution2(object):
         ret = []
 
         self.dfs(ret, nums, 0, [])
+
+        return ret
+
+
+class Solution3(object):
+    def dfs(self, nums, ret, prefix, start, used):
+        if start >= len(nums):
+            ret.append(prefix)
+            return
+
+        self.dfs(nums, ret, prefix, start + 1, used)
+
+        if start > 0 and nums[start] == nums[start - 1] and not used[start - 1]:
+            return
+        used[start] = True
+        self.dfs(nums, ret, prefix + [nums[start]], start + 1, used)
+        used[start] = False
+
+    def subsetsWithDup(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        ret = []
+        used = [False] * len(nums)
+
+        nums.sort()
+        self.dfs(nums, ret, [], 0, used)
 
         return ret

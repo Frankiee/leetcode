@@ -1,6 +1,17 @@
 # https://leetcode.com/problems/decode-ways/
 # 91. Decode Ways
 
+# History:
+# Facebook
+# 1.
+# May 17, 2019
+# 2.
+# Jan 30, 2020
+# 3.
+# Apr 6, 2020
+# 4.
+# May 15, 2020
+
 # A message containing letters from A-Z is being encoded to numbers using the
 # following mapping:
 #
@@ -30,32 +41,37 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        if s == '0':
-            return 0
-
-        dp_m1 = None
-        dp_m2 = None
-        dp_next = None
+        dp = [0] * len(s)
 
         for i in range(len(s)):
-            if i == 0:
-                if int(s[i]) == 0:
-                    return 0
-                dp_next = 1
-            else:
-                num = int(str(s[i - 1]) + str(s[i]))
-                if 0 < num <= 26:
-                    dp_next = 0
-                    if int(s[i]) != num:
-                        dp_next += (dp_m2 if i >= 2 else 1)
-                    if int(s[i]) != 0:
-                        dp_next += dp_m1
-                elif int(s[i]) != 0:
-                    dp_next = dp_m1
-                else:
-                    return 0
+            if s[i] != '0':
+                dp[i] += (dp[i - 1] if i >= 1 else 1)
+            if i - 1 >= 0 and s[i - 1] != '0' and 10 <= int(s[i - 1:i + 1]) <= 26:
+                dp[i] += (dp[i - 2] if i - 2 >= 0 else 1)
 
-            dp_m2 = dp_m1
-            dp_m1 = dp_next
+        return dp[-1]
 
-        return dp_next
+
+class SolutionDFS(object):
+    def _dfs(self, s, i):
+        if i == len(s):
+            self.ret += 1
+            return
+
+        # 1 char
+        if s[i] != '0':
+            self._dfs(s, i + 1)
+
+        # 2 char
+        if s[i] != '0' and 10 <= int(s[i:i + 2]) <= 26:
+            self._dfs(s, i + 2)
+
+    def numDecodings(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        self.ret = 0
+        self._dfs(s, 0)
+
+        return self.ret

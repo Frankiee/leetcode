@@ -18,28 +18,27 @@
 
 
 class Solution(object):
+    VOWELS = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
+
     def reverseVowels(self, s):
         """
         :type s: str
         :rtype: str
         """
-        if not s:
-            return s
-
-        l = 0
-        r = len(s) - 1
         s = list(s)
-
-        vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
+        l, r = 0, len(s) - 1
 
         while l < r:
-            while l < r and s[l] not in vowels:
+            if s[l] not in self.VOWELS:
                 l += 1
-            while l < r and s[r] not in vowels:
+                continue
+
+            if s[r] not in self.VOWELS:
                 r -= 1
-            if l < r:
-                s[l], s[r] = s[r], s[l]
-                l += 1
-                r -= 1
+                continue
+
+            s[l], s[r] = s[r], s[l]
+            l += 1
+            r -= 1
 
         return "".join(s)

@@ -1,6 +1,13 @@
 # https://leetcode.com/problems/flood-fill/
 # 733. Flood Fill
 
+# History:
+# Google
+# 1.
+# Sep 7, 2020
+# 2.
+# Mar 10, 2020
+
 # An image is represented by a 2-D array of integers, each integer
 # representing the pixel value of the image (from 0 to 65535).
 #
@@ -39,6 +46,17 @@
 
 
 class Solution(object):
+    def _dfs(self, image, r, c, new_color, init_color):
+        print r, c
+        if image[r][c] != init_color:
+            return
+
+        image[r][c] = new_color
+
+        for n_r, n_c in [(r + 1, c), (r - 1, c), (r, c + 1), (r, c - 1)]:
+            if 0 <= n_r < len(image) and 0 <= n_c < len(image[0]):
+                self._dfs(image, n_r, n_c, new_color, init_color)
+
     def floodFill(self, image, sr, sc, newColor):
         """
         :type image: List[List[int]]
@@ -47,32 +65,11 @@ class Solution(object):
         :type newColor: int
         :rtype: List[List[int]]
         """
-        if image[sr][sc] == newColor:
+        if not image or not image[0]:
             return image
 
-        old_color = image[sr][sc]
-
-        to_do = [(sr, sc)]
-
-        while to_do:
-            n_r, n_c = to_do.pop(0)
-
-            if image[n_r][n_c] == newColor:
-                continue
-
-            image[n_r][n_c] = newColor
-
-            # up
-            if n_r > 0 and image[n_r - 1][n_c] == old_color:
-                to_do.append((n_r - 1, n_c))
-            # down
-            if n_r < len(image) - 1 and image[n_r + 1][n_c] == old_color:
-                to_do.append((n_r + 1, n_c))
-            # left
-            if n_c > 0 and image[n_r][n_c - 1] == old_color:
-                to_do.append((n_r, n_c - 1))
-            # right
-            if n_c < len(image[0]) - 1 and image[n_r][n_c + 1] == old_color:
-                to_do.append((n_r, n_c + 1))
+        if image[sr][sc] == newColor:
+            return image
+        self._dfs(image, sr, sc, newColor, image[sr][sc])
 
         return image

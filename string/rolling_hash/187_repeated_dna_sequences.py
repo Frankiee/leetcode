@@ -2,6 +2,12 @@
 # https://docs.google.com/spreadsheets/d/1MDAhN1RX6W6XhHbB-A62vmYma9FwcR3wwqzlT5ieV0g/edit#gid=0
 # 187. Repeated DNA Sequences
 
+# History:
+# 1.
+# Apr 6, 2019
+# 2.
+# Nov 12, 2019
+
 # All DNA is composed of a series of nucleotides abbreviated as A, C, G,
 # and T, for example: "ACGAATTCCG". When studying DNA, it is sometimes
 # useful to identify repeated sequences within the DNA.

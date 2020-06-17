@@ -1,5 +1,12 @@
+# [Classic, Hash]
 # https://leetcode.com/problems/design-hashset/
 # 705. Design HashSet
+
+# History:
+# 1.
+# Aug 12, 2019
+# 2.
+# Dec 2, 2019
 
 # Design a HashSet without using any built-in hash table libraries.
 #
@@ -29,6 +36,9 @@
 # Please do not use the built-in HashSet library.
 
 
+from collections import defaultdict
+
+
 class MyHashSet(object):
 
     def __init__(self):
@@ -36,7 +46,7 @@ class MyHashSet(object):
         Initialize your data structure here.
         """
         self.size = 10001
-        self.dp = [None] * self.size
+        self.dp = defaultdict(list)
 
     def _get_slot(self, key):
         return key % self.size
@@ -48,14 +58,11 @@ class MyHashSet(object):
         """
         slot = self._get_slot(key)
 
-        if not self.dp[slot]:
-            self.dp[slot] = [key]
-        else:
-            for i in range(len(self.dp[slot])):
-                if self.dp[slot][i] == key:
-                    return
+        for i in self.dp[slot]:
+            if i == key:
+                return
 
-            self.dp[slot].append(key)
+        self.dp[slot].append(key)
 
     def remove(self, key):
         """
@@ -65,8 +72,8 @@ class MyHashSet(object):
         slot = self._get_slot(key)
 
         if self.dp[slot]:
-            for i in range(len(self.dp[slot])):
-                if self.dp[slot][i] == key:
+            for i, val in enumerate(self.dp[slot]):
+                if val == key:
                     self.dp[slot].pop(i)
                     return
 
@@ -78,10 +85,12 @@ class MyHashSet(object):
         """
         slot = self._get_slot(key)
 
-        if not self.dp[slot]:
-            return False
-        else:
-            return key in self.dp[slot]
+        if self.dp[slot]:
+            for i in self.dp[slot]:
+                if i == key:
+                    return True
+
+        return False
 
 # Your MyHashSet object will be instantiated and called as such:
 # obj = MyHashSet()

@@ -2,9 +2,9 @@
 # https://leetcode.com/problems/network-delay-time/
 # 743. Network Delay Time
 
-# # History:
-# # 1.
-# # Nov 11, 2019
+# History:
+# 1.
+# Nov 11, 2019
 
 # There are N network nodes, labelled 1 to N.
 #

@@ -1,6 +1,14 @@
 # https://leetcode.com/problems/merge-intervals/
 # 56. Merge Intervals
 
+# History:
+# 1.
+# Aug 18, 2019
+# 2.
+# Nov 23, 2019
+# 3.
+# Apr 22, 2020
+
 # Given a collection of intervals, merge all overlapping intervals.
 #
 # Example 1:
@@ -23,25 +31,13 @@ class Solution(object):
         :type intervals: List[List[int]]
         :rtype: List[List[int]]
         """
+        intervals.sort()
         ret = []
 
-        intervals = sorted(intervals, key=lambda i: i[0])
-
-        current_next = None
-
         for i in intervals:
-            if not current_next:
-                current_next = i
-            elif i[0] > current_next[1]:
-                ret.append(current_next)
-                current_next = i
+            if not ret or ret[-1][1] < i[0]:
+                ret.append(i)
             else:
-                current_next = [
-                    min(current_next[0], i[0]),
-                    max(current_next[1], i[1]),
-                ]
-
-        if current_next:
-            ret.append(current_next)
+                ret[-1][1] = max(ret[-1][1], i[1])
 
         return ret

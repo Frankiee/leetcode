@@ -1,6 +1,15 @@
 # https://leetcode.com/problems/intersection-of-two-linked-lists/
 # 160. Intersection of Two Linked Lists
 
+# History:
+# Facebook
+# 1.
+# Sep 8, 2019
+# 2.
+# Mar 8, 2020
+# 3.
+# Ape 30, 2020
+
 # Write a program to find the node at which the intersection of two singly
 # linked lists begins.
 #
@@ -63,39 +72,33 @@
 #         self.next = None
 
 class Solution(object):
+    def _get_length(self, node):
+        if not node:
+            return 0
+
+        return 1 + self._get_length(node.next)
+
     def getIntersectionNode(self, headA, headB):
         """
         :type head1, head1: ListNode
         :rtype: ListNode
         """
-        len_a = len_b = 0
+        a_len = self._get_length(headA)
+        b_len = self._get_length(headB)
 
-        c_a, c_b = headA, headB
+        while a_len > b_len:
+            headA = headA.next
+            a_len -= 1
 
-        while c_a:
-            len_a += 1
-            c_a = c_a.next
+        while b_len > a_len:
+            headB = headB.next
+            b_len -= 1
 
-        while c_b:
-            len_b += 1
-            c_b = c_b.next
+        while headA != headB and headA and headB:
+            headA = headA.next
+            headB = headB.next
 
-        c_l, c_s, len_l, len_s = (
-            (headA, headB, len_a, len_b)
-            if len_a > len_b
-            else
-            (headB, headA, len_b, len_a)
-        )
+        if not headA or not headB:
+            return None
 
-        while len_l > len_s:
-            c_l = c_l.next
-            len_l -= 1
-
-        while c_l and c_s:
-            if c_l == c_s:
-                return c_l
-
-            c_l = c_l.next
-            c_s = c_s.next
-
-        return None
+        return headA

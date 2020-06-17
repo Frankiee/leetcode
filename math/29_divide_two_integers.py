@@ -1,6 +1,15 @@
 # https://leetcode.com/problems/divide-two-integers/
 # 29. Divide Two Integers
 
+# History:
+# Facebook
+# 1.
+# Mar 16, 2019
+# 2.
+# Feb 02, 2020
+# 3.
+# Apr 13, 2020
+
 # Given two integers dividend and divisor, divide two integers without using
 # multiplication, division and mod operator.
 #
@@ -26,7 +35,68 @@
 # result overflows.
 
 
-class Solution(object):
+class SolutionBitShift(object):
+    def divide(self, dividend, divisor):
+        """
+        :type dividend: int
+        :type divisor: int
+        :rtype: int
+        """
+        # if divisor == 1:
+        #     return dividend
+        # elif divisor == -1:
+        #     return -dividend
+        if dividend == -2147483648 and divisor == -1:
+            return 2147483647
+
+        is_negative = (
+            dividend > 0 and divisor < 0 or
+            dividend < 0 and divisor > 0)
+
+        dividend, divisor, ret = abs(dividend), abs(divisor), 0
+
+        for i in range(32)[::-1]:
+            if divisor << i <= dividend:
+                ret += 1 << i
+                dividend -= divisor << i
+
+        return ret if not is_negative else -ret
+
+
+class SolutionBinarySearch(object):
+    def divide(self, dividend, divisor):
+        """
+        :type dividend: int
+        :type divisor: int
+        :rtype: int
+        """
+        # if divisor == 1:
+        #     return dividend
+        # elif divisor == -1:
+        #     return -dividend
+        if dividend == -2147483648 and divisor == -1:
+            return 2147483647
+
+        is_negative = (
+            dividend > 0 and divisor < 0 or
+            dividend < 0 and divisor > 0)
+
+        dividend, divisor = abs(dividend), abs(divisor)
+
+        l, r = 0, dividend + 1
+
+        while l < r:
+            m = (r - l) / 2 + l
+            if m * divisor > dividend:
+                r = m
+            else:
+                l = m + 1
+
+        l -= 1
+        return l if not is_negative else -l
+
+
+class DeprecatedSolution(object):
     def divide(self, dividend, divisor):
         """
         :type dividend: int

@@ -2,6 +2,12 @@
 # https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
 # 188. Best Time to Buy and Sell Stock IV
 
+# History:
+# 1.
+# Aug 25, 2019
+# 2.
+# Nov 23, 2019
+
 # Say you have an array for which the i-th element is the price of a given
 # stock on day i.
 #
@@ -47,15 +53,12 @@ class Solution(object):
         dp = [float('-inf')] * 2 * k
 
         for p in prices:
-            for i in range(len(dp)):
-                if i == 0:
-                    # Initial Buy
-                    dp[i] = max(dp[i], -p)
-                elif i % 2 == 1:
-                    # Sell
-                    dp[i] = max(dp[i], dp[i - 1] + p)
+            for i in range(k):
+                if i != 0:
+                    dp[2*i] = max(dp[2*i], dp[2*i-1] - p)
                 else:
-                    # Buy
-                    dp[i] = max(dp[i], dp[i - 1] - p)
+                    dp[2*i] = max(dp[2*i], - p)
+
+                dp[2*i + 1] = max(dp[2*i + 1], dp[2*i] + p)
 
         return dp[-1]

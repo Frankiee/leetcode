@@ -1,6 +1,12 @@
 # https://leetcode.com/problems/kth-largest-element-in-an-array/
 # 215. Kth Largest Element in an Array
 
+# History:
+# 1.
+# Apr 1, 2019
+# 2.
+# Nov 21, 2019
+
 # Find the kth largest element in an unsorted array. Note that it is the kth
 # largest element in the sorted order, not the kth distinct element.
 #
@@ -30,7 +36,6 @@ class Solution(object):
         :rtype: int
         """
         hp = []
-        heapq.heapify(hp)
 
         for n in nums:
             heapq.heappush(hp, n)

@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/implement-strstr/
 # 28. Implement strStr()
 
+# History:
+# Facebook
+# 1.
+# May 18, 2019
+# 2.
+# Mar 27, 2020
+
 # Implement strStr().
 #
 # Return the index of the first occurrence of needle in haystack, or -1 if
@@ -73,5 +80,19 @@ class Solution(object):
                 else:
                     current_needle_idx = longest_prefix_surfix[
                         current_needle_idx - 1]
+
+        return -1
+
+
+class SolutionStringComparison(object):
+    def strStr(self, haystack, needle):
+        """
+        :type haystack: str
+        :type needle: str
+        :rtype: int
+        """
+        for i in range(len(haystack) - len(needle) + 1):
+            if needle == haystack[i:i + len(needle)]:
+                return i
 
         return -1

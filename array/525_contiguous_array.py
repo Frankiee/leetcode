@@ -1,6 +1,12 @@
 # https://leetcode.com/problems/contiguous-array/description/
 # 525. Contiguous Array
 
+# History:
+# 1.
+# Feb 11, 2019
+# 2.
+# Nov 23, 2019
+
 # Given a binary array, find the maximum length of a contiguous subarray with
 # equal number of 0 and 1.
 #
@@ -22,25 +28,18 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        diff_count = 0
-        longest = 0
-        diff_arry = [None] * (len(nums) + 1)
-        diff_arry[0] = 0
+        dp = {0: 0}
 
+        curr_balance = 0
+        max_balance = 0
         for i in range(len(nums)):
-            if nums[i] == 1:
-                diff_count += 1
+            if nums[i] == 0:
+                curr_balance += 1
             else:
-                diff_count -= 1
-            diff_arry[i + 1] = diff_count
+                curr_balance -= 1
+            if curr_balance not in dp:
+                dp[curr_balance] = i + 1
+            else:
+                max_balance = max(max_balance, i - dp[curr_balance] + 1)
 
-        earlest_map = {}
-
-        current_longest = 0
-        for i in range(len(nums) + 1):
-            if diff_arry[i] not in earlest_map:
-                earlest_map[diff_arry[i]] = i
-            current_longest = max(current_longest,
-                                  i - earlest_map[diff_arry[i]])
-
-        return current_longest
+        return max_balance

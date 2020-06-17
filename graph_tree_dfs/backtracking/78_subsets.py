@@ -7,6 +7,10 @@
 # Aug 11, 2019
 # 2.
 # Oct 19, 2019
+# 3.
+# Nov 30, 2019
+# 4.
+# Apr 22, 2020
 
 # Given a set of distinct integers, nums, return all possible subsets (the
 # power set).
@@ -45,7 +49,7 @@ class Solution(object):
         return ret
 
 
-# Recursion 1
+# Recursion 179
 import copy
 
 
@@ -89,5 +93,26 @@ class Solution2(object):
         ret = []
 
         self.dfs(ret, nums, 0, [])
+
+        return ret
+
+
+class Solution3(object):
+    def dfs(self, nums, ret, prefix, start):
+        if start >= len(nums):
+            ret.append(prefix)
+            return
+
+        self.dfs(nums, ret, prefix + [nums[start]], start + 1)
+        self.dfs(nums, ret, prefix, start + 1)
+
+    def subsets(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        ret = []
+
+        self.dfs(nums, ret, [], 0)
 
         return ret

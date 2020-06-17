@@ -27,7 +27,7 @@ def binary_search(l, r):
 
 ## Example 
 ### Example 1:
-Return the index of an element in a sorted array. Elements are unique. If not found return -1.
+LC 704: Return the index of an element in a sorted array. Elements are unique. If not found return -1.
 A = [1, 2, 5, 7, 8, 12]
 search(8) = 4, search(6) = -1
 

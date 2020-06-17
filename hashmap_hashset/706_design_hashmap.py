@@ -1,5 +1,12 @@
+# [Classic, Hash]
 # https://leetcode.com/problems/design-hashmap/
 # 706. Design HashMap
+
+# History:
+# 1.
+# Mar 17, 2019
+# 2.
+# Dec 2, 2019
 
 # Design a HashMap without using any built-in hash table libraries.
 #
@@ -31,14 +38,17 @@
 # Please do not use the built-in HashMap library.
 
 
+from collections import defaultdict
+
+
 class MyHashMap(object):
 
     def __init__(self):
         """
         Initialize your data structure here.
         """
-        self.size = 100001
-        self.mem = [None] * self.size
+        self.size = 10001
+        self.dp = defaultdict(list)
 
     def _get_slot(self, key):
         return key % self.size
@@ -52,44 +62,42 @@ class MyHashMap(object):
         """
         slot = self._get_slot(key)
 
-        if self.mem[slot]:
-            for idx, i in enumerate(self.mem[slot]):
-                if i[0] == key:
-                    self.mem[slot][idx] = (key, value)
-                    return
+        for i, (k, v) in enumerate(self.dp[slot]):
+            if k == key:
+                self.dp[slot][i] = (key, value)
+                return
 
-        self.mem[slot] = [(key, value)]
+        self.dp[slot].append((key, value))
 
     def get(self, key):
         """
-        Returns the value to which the specified key is mapped, or -1 if
-        this map contains no mapping for the key
+        Returns the value to which the specified key is mapped, or -1 if this map contains no
+        mapping for the key
         :type key: int
         :rtype: int
         """
         slot = self._get_slot(key)
 
-        if self.mem[slot]:
-            for i in self.mem[slot]:
-                if i[0] == key:
-                    return i[1]
+        if self.dp[slot]:
+            for k, v in self.dp[slot]:
+                if k == key:
+                    return v
 
         return -1
 
     def remove(self, key):
         """
-        Removes the mapping of the specified value key if this map contains
-        a mapping for the key
+        Removes the mapping of the specified value key if this map contains a mapping for the key
         :type key: int
         :rtype: None
         """
         slot = self._get_slot(key)
 
-        if self.mem[slot]:
-            for idx, i in enumerate(self.mem[slot]):
-                if i[0] == key:
-                    self.mem[slot].pop(idx)
-                    break
+        if self.dp[slot]:
+            for i, (k, v) in enumerate(self.dp[slot]):
+                if k == key:
+                    self.dp[slot].pop(i)
+                    return
 
 # Your MyHashMap object will be instantiated and called as such:
 # obj = MyHashMap()

@@ -1,6 +1,12 @@
 # https://leetcode.com/problems/maximum-length-of-repeated-subarray/
 # 718. Maximum Length of Repeated Subarray
 
+# History:
+# 1.
+# March 17, 2019
+# 2.
+# Nov 23, 2019
+
 # Given two integer arrays A and B, return the maximum length of an subarray
 # that appears in both arrays.
 #
@@ -23,24 +29,15 @@ class Solution(object):
         :type B: List[int]
         :rtype: int
         """
-        if not A or not B:
-            return 0
+        dp = [None] * (len(A) + 1)
+        for r in range(len(A) + 1):
+            dp[r] = [0] * (len(B) + 1)
 
-        max_length = 0
+        max_so_far = 0
+        for r in range(len(A) + 1):
+            for c in range(len(B) + 1):
+                if r > 0 and c > 0 and A[r - 1] == B[c - 1]:
+                    dp[r][c] = dp[r - 1][c - 1] + 1
+                    max_so_far = max(max_so_far, dp[r][c])
 
-        len_a, len_b = len(A), len(B)
-
-        dp = [None] * (len_a + 1)
-        for r in range(len_a + 1):
-            dp[r] = [0] * (len_b + 1)
-
-        for r in range(len_a + 1):
-            for c in range(len_b + 1):
-                if r == 0 or c == 0:
-                    dp[r][c] = 0
-                else:
-                    if A[r - 1] == B[c - 1]:
-                        dp[r][c] = dp[r - 1][c - 1] + 1
-                        max_length = max(max_length, dp[r][c])
-
-        return max_length
+        return max_so_far

@@ -1,11 +1,17 @@
-# [Calculator, Google, Classic]
+# [Calculator, Classic]
 # https://leetcode.com/problems/basic-calculator/
 # 224. Basic Calculator
 
 # History:
+# Google
 # 1.
 # Oct 20, 2019
-# Daily Interview Pro - Google
+# 2.
+# Feb 9, 2020
+# 3.
+# Apr 26, 2020
+# 4.
+# May 3, 2020
 
 # Implement a basic calculator to evaluate a simple expression string.
 #
@@ -37,40 +43,90 @@ class Solution(object):
         """
         stack = []
 
-        number = 0
-        result = 0
-        pre_sign = 1
+        ret = 0
+
+        sign = 1
+        num = 0
 
         for c in s:
             if c == ' ':
                 continue
-            elif c.isdigit():
-                number = number * 10 + int(c)
+
+            if c.isdigit():
+                num = num * 10 + int(c)
             elif c == '+':
-                result += pre_sign * number
+                ret += sign * num
 
-                pre_sign = 1
-                number = 0
+                sign = 1
+                num = 0
             elif c == '-':
-                result += pre_sign * number
+                ret += sign * num
 
-                pre_sign = -1
-                number = 0
+                sign = -1
+                num = 0
             elif c == '(':
-                stack.append(result)
-                stack.append(pre_sign)
+                stack.append(sign)
+                stack.append(ret)
 
-                pre_sign = 1
-                number = 0
-                result = 0
+                sign = 1
+                num = 0
+                ret = 0
             elif c == ')':
-                result += pre_sign * number
+                ret += sign * num
 
-                pre_sign = 1
-                number = 0
+                pre_ret = stack.pop()
+                pre_sign = stack.pop()
 
-                result *= stack.pop()
-                result += stack.pop()
+                ret = pre_ret + pre_sign * ret
 
-        result += pre_sign * number
-        return result
+                sign = 1
+                num = 0
+
+        if num:
+            ret += sign * num
+
+        return ret
+
+
+class SolutionPushAllStack(object):
+    def calculate(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        stack = []
+        sign = 1
+        curr_num = 0
+
+        s += '+'
+
+        for c in s:
+            if c.isdigit():
+                curr_num *= 10
+                curr_num += int(c)
+            elif c in {'+', '-'}:
+                stack.append(sign * curr_num)
+                curr_num = 0
+                sign = 1
+
+                if c == '-':
+                    sign = -1
+            elif c == '(':
+                stack.append(sign)
+                stack.append('(')
+
+                curr_num = 0
+                sign = 1
+            elif c == ')':
+                stack.append(sign * curr_num)
+                curr_num = 0
+                sign = 1
+
+                total = 0
+                while stack and stack[-1] != '(':
+                    total += stack.pop(-1)
+
+                stack.pop()
+                stack.append(stack.pop() * total)
+
+        return sum(stack)

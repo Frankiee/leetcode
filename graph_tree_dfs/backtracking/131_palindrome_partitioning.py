@@ -2,6 +2,12 @@
 # https://leetcode.com/problems/palindrome-partitioning/description/
 # 131. Palindrome Partitioning
 
+# History:
+# 1.
+# Feb 12, 2019
+# 2.
+# Dec 1, 2019
+
 # Given a string s, partition s such that every substring of the partition
 # is a palindrome.
 #

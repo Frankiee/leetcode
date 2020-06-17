@@ -1,6 +1,13 @@
 # https://leetcode.com/problems/factorial-trailing-zeroes/
 # 172. Factorial Trailing Zeroes
 
+# History:
+# Facebook
+# 1.
+# March 21, 2020
+# 2.
+# May 28, 2020
+
 # Given an integer n, return the number of trailing zeroes in n!.
 #
 # Example 1:
@@ -22,11 +29,7 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        ret = 0
+        if n < 5:
+            return 0
 
-        i = 5
-        while n / i > 0:
-            ret += n / i
-            i *= 5
-
-        return ret
+        return n / 5 + self.trailingZeroes(n / 5)

@@ -2,6 +2,12 @@
 # https://leetcode.com/problems/largest-component-size-by-common-factor/
 # 952. Largest Component Size by Common Factor
 
+# History:
+# 1.
+# Sep 1, 2019
+# 2.
+# Nov 13, 2019
+
 # Given a non-empty array of unique positive integers A, consider the
 # following graph:
 #

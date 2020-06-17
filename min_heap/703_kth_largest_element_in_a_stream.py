@@ -1,6 +1,15 @@
 # https://leetcode.com/problems/kth-largest-element-in-a-stream/
 # 703. Kth Largest Element in a Stream
 
+# History:
+# Facebook
+# 1.
+# Sep 7, 2019
+# 2.
+# Mar 18, 2020
+# 3.
+# May 4, 2020
+
 # Design a class to find the kth largest element in a stream. Note that it
 # is the kth largest element in the sorted order, not the kth distinct element.
 #

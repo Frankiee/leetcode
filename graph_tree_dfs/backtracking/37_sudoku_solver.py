@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/sudoku-solver/
 # 37. Sudoku Solver
 
+# History:
+# Apple
+# 1.
+# Aug 19, 2019
+# 2.
+# Apr 9, 2020
+
 # Write a program to solve a Sudoku puzzle by filling the empty cells.
 #
 # A sudoku solution must satisfy all of the following rules:
@@ -24,6 +31,58 @@
 # You may assume that the given Sudoku puzzle will have a single unique
 # solution.
 # The given board size is always 9x9.
+
+
+class SolutionMem(object):
+    def _dfs(self, board, r, c, col_avails, row_avails, grid_avails):
+        if 0 <= r < len(board) and 0 <= c < len(board[0]):
+            if board[r][c] != '.':
+                if c == len(board) - 1:
+                    return self._dfs(board, r + 1, 0, col_avails, row_avails, grid_avails)
+                else:
+                    return self._dfs(board, r, c + 1, col_avails, row_avails, grid_avails)
+            else:
+                avails = col_avails[c]
+                avails = avails.intersection(row_avails[r])
+                avails = avails.intersection(grid_avails[(r / 3) * 3 + c / 3])
+
+                for n in avails:
+                    board[r][c] = str(n)
+                    col_avails[c].remove(n)
+                    row_avails[r].remove(n)
+                    grid_avails[(r / 3) * 3 + c / 3].remove(n)
+                    if c == len(board) - 1:
+                        if self._dfs(board, r + 1, 0, col_avails, row_avails, grid_avails):
+                            return True
+                    else:
+                        if self._dfs(board, r, c + 1, col_avails, row_avails, grid_avails):
+                            return True
+                    board[r][c] = '.'
+                    col_avails[c].add(n)
+                    row_avails[r].add(n)
+                    grid_avails[(r / 3) * 3 + c / 3].add(n)
+                return False
+
+        return True
+
+    def solveSudoku(self, board):
+        """
+        :type board: List[List[str]]
+        :rtype: None Do not return anything, modify board in-place instead.
+        """
+        col_avails = [{1, 2, 3, 4, 5, 6, 7, 8, 9} for _ in range(len(board))]
+        row_avails = [{1, 2, 3, 4, 5, 6, 7, 8, 9} for _ in range(len(board))]
+        grid_avails = [{1, 2, 3, 4, 5, 6, 7, 8, 9} for _ in range(len(board))]
+
+        for r in range(len(board)):
+            for c in range(len(board[0])):
+                if board[r][c] != '.':
+                    val = int(board[r][c])
+                    col_avails[c].remove(val)
+                    row_avails[r].remove(val)
+                    grid_avails[(r / 3) * 3 + c / 3].remove(val)
+
+        self._dfs(board, 0, 0, col_avails, row_avails, grid_avails)
 
 
 class Solution(object):

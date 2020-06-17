@@ -2,6 +2,14 @@
 # https://leetcode.com/problems/non-overlapping-intervals/
 # 435. Non-overlapping Intervals
 
+# History:
+# 1.
+# Apr 30, 2019
+# 2.
+# Nov 12, 2019
+# 3.
+# May 3, 2020
+
 # Given a collection of intervals, find the minimum number of intervals you
 # need to remove to make the rest of the intervals non-overlapping.
 #
@@ -54,10 +62,11 @@ class Solution(object):
         intervals = sorted(intervals, key=lambda i: i[1])
 
         ret = 0
-        previous_end = None
-        for start, end in intervals:
-            if previous_end is not None and start < previous_end:
-                ret += 1
+        pre_end = float('-inf')
+        for s, e in intervals:
+            if s >= pre_end:
+                pre_end = e
             else:
-                previous_end = end
+                ret += 1
+
         return ret

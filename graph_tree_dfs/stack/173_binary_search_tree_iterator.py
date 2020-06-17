@@ -1,6 +1,16 @@
-# [DFS, Stack]
+# [DFS-Stack]
 # https://leetcode.com/problems/binary-search-tree-iterator/
 # 173. Binary Search Tree Iterator
+
+# History:
+# 1.
+# Apr 1, 2019
+# 2.
+# Nov 12, 2019
+# 3.
+# Apr 4, 2020
+# 4.
+# May 5, 2020
 
 # Implement an iterator over a binary search tree (BST). Your iterator will
 # be initialized with the root node of a BST.

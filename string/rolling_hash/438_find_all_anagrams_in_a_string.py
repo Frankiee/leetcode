@@ -2,6 +2,17 @@
 # https://leetcode.com/problems/find-all-anagrams-in-a-string/
 # 438. Find All Anagrams in a String
 
+# History:
+# Facebook
+# 1.
+# May 9, 2019
+# 2.
+# Jan 4, 2020
+# 3.
+# Mar 18, 2020
+# 4.
+# Apr 23, 2020
+
 # Given a string s and a non-empty string p, find all the start indices of
 # p's anagrams in s.
 #
@@ -33,6 +44,39 @@
 # The substring with start index = 0 is "ab", which is an anagram of "ab".
 # The substring with start index = 1 is "ba", which is an anagram of "ab".
 # The substring with start index = 2 is "ab", which is an anagram of "ab".
+
+from collections import Counter, defaultdict
+
+
+class Solution(object):
+    def findAnagrams(self, s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+        p_counter = Counter(p)
+        s_counter = defaultdict(int)
+        char_diff = len(p)
+
+        ret = []
+        for i, c in enumerate(s):
+            s_counter[c] += 1
+
+            if c in p_counter and s_counter[c] <= p_counter[c]:
+                char_diff -= 1
+
+            if i >= len(p):
+                old_c = s[i - len(p)]
+                s_counter[old_c] -= 1
+
+                if old_c in p_counter and s_counter[old_c] < p_counter[old_c]:
+                    char_diff += 1
+
+            if char_diff == 0:
+                ret.append(i - len(p) + 1)
+
+        return ret
 
 
 from collections import Counter

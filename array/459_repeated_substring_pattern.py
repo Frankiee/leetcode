@@ -1,6 +1,15 @@
 # https://leetcode.com/problems/repeated-substring-pattern/description/
 # 459. Repeated Substring Pattern
 
+# History:
+# Google
+# 1.
+# Feb 11, 2019
+# 2.
+# Nov 17, 2019
+# 3.
+# Mar 11, 2020
+
 # Given a non-empty string check if it can be constructed by taking a
 # substring of it and appending multiple copies of the substring together.
 # You may assume the given string consists of lowercase English letters only
@@ -32,5 +41,4 @@ class Solution(object):
         if not s:
             return False
 
-        ss = (s + s)[1:-1]
-        return ss.find(s) != -1
+        return s in (s + s)[1:-1]

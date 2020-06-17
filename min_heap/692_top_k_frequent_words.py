@@ -1,6 +1,13 @@
 # https://leetcode.com/problems/top-k-frequent-words/
 # 692. Top K Frequent Words
 
+# History:
+# Facebook
+# 1.
+# Apr 28, 2019
+# 2.
+# May 12, 2020
+
 # Given a non-empty list of words, return the k most frequent elements.
 #
 # Your answer should be sorted by frequency from highest to lowest. If two
@@ -28,6 +35,36 @@
 # Try to solve it in O(n log k) time and O(n) extra space.
 
 
+from collections import Counter, defaultdict
+
+
+class SolutionCounter(object):
+    def topKFrequent(self, words, k):
+        """
+        :type words: List[str]
+        :type k: int
+        :rtype: List[str]
+        """
+        counter = Counter(words)
+
+        reverse_counter = defaultdict(list)
+
+        max_freq = 0
+        for w, f in counter.iteritems():
+            reverse_counter[f].append(w)
+            max_freq = max(max_freq, f)
+
+        ret = []
+        for i in range(max_freq, -1, -1):
+            ret.extend(sorted(reverse_counter[i]))
+
+            if len(ret) >= k:
+                ret = ret[:k]
+                return ret
+
+        return ret
+
+
 from collections import Counter
 from heapq import heappush, heappop
 
@@ -47,7 +84,7 @@ class WordFrequency(object):
         return self.frequency < other.frequency
 
 
-class Solution(object):
+class SolutionMinHeap(object):
     def topKFrequent(self, words, k):
         """
         :type words: List[str]

@@ -2,6 +2,17 @@
 # https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 # 121. Best Time to Buy and Sell Stock
 
+# History:
+# Apple
+# 1.
+# Feb 3, 2019
+# 2.
+# Nov 23, 2019
+# 3.
+# Mar 7, 2020
+# 4.
+# Apr 28, 2020
+
 # Say you have an array for which the ith element is the price of a given
 # stock on day i.
 

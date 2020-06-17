@@ -1,6 +1,15 @@
 # https://leetcode.com/problems/daily-temperatures/
 # 739. Daily Temperatures
 
+# History:
+# Apple
+# 1.
+# May 20, 2019
+# 2.
+# Nov 22, 2019
+# 3.
+# Mar 21, 2020
+
 # Given a list of daily temperatures T, return a list such that, for each
 # day in the input, tells you how many days you would have to wait until a
 # warmer temperature. If there is no future day for which this is possible,
@@ -14,18 +23,18 @@
 
 
 class Solution(object):
-    def dailyTemperatures(self, temperatures):
+    def dailyTemperatures(self, T):
         """
-        :type temperatures: List[int]
+        :type T: List[int]
         :rtype: List[int]
         """
-        ret = [0] * len(temperatures)
+        ret = [0] * len(T)
         stack = []
 
-        for idx in range(len(temperatures)):
-            while stack and temperatures[stack[-1]] < temperatures[idx]:
-                last = stack.pop()
-                ret[last] = idx - last
-            stack.append(idx)
+        for i in range(len(T)):
+            while stack and stack[-1][0] < T[i]:
+                lst = stack.pop()
+                ret[lst[1]] = i - lst[1]
+            stack.append((T[i], i))
 
         return ret

@@ -1,6 +1,13 @@
 # https://leetcode.com/problems/power-of-two/
 # 231. Power of Two
 
+# History:
+# Apple
+# 1.
+# Mar 30, 2019
+# 2.
+# Mar 21, 2020
+
 # Given an integer, write a function to determine if it is a power of two.
 #
 # Example 1:

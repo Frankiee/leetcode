@@ -1,6 +1,15 @@
 # https://leetcode.com/problems/number-of-1-bits/
 # 191. Number of 1 Bits
 
+# History:
+# Apple, Facebook
+# 1.
+# Mar 28, 2020
+# 2.
+# Mar 29, 2020
+# 3.
+# Apr 28, 2020
+
 # Write a function that takes an unsigned integer and return the number of
 # '1' bits it has (also known as the Hamming weight).
 #
@@ -33,6 +42,21 @@
 # In Java, the compiler represents the signed integers using 2's complement
 # notation. Therefore, in Example 3 above the input represents the signed
 # integer -3.
+
+
+class SolutionNNminusOne(object):
+    def hammingWeight(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        ret = 0
+
+        while n != 0:
+            n &= (n - 1)
+            ret += 1
+
+        return ret
 
 
 class Solution(object):

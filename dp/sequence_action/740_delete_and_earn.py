@@ -2,6 +2,10 @@
 # https://leetcode.com/problems/delete-and-earn/
 # 740. Delete and Earn
 
+# History:
+# Uber
+# Dec 8, 2019
+
 # https://www.youtube.com/watch?v=YzZd-bsMthk
 # Related: 198. House Robber
 
@@ -43,32 +47,6 @@ from collections import Counter
 
 
 class Solution(object):
-    def _get_house_robber_max(self, sorted_nums):
-        if not sorted_nums:
-            return 0
-        if len(sorted_nums) == 1:
-            return sorted_nums[0][1]
-
-        # index 0 initially
-        max_minus_2 = (sorted_nums[0][0], sorted_nums[0][1])
-        # index 1 initially
-        if max_minus_2[0] + 1 == sorted_nums[1][0]:
-            max_minus_1 = (
-            sorted_nums[1][0], max(max_minus_2[1], sorted_nums[1][1]))
-        else:
-            max_minus_1 = (
-            sorted_nums[1][0], max_minus_2[1] + sorted_nums[1][1])
-
-        for num, value in sorted_nums[2:]:
-            if max_minus_1[0] + 1 == num:
-                new_minus_1 = (
-                num, max(max_minus_2[1] + value, max_minus_1[1]))
-            else:
-                new_minus_1 = (num, max_minus_1[1] + value)
-            max_minus_1, max_minus_2 = new_minus_1, max_minus_1
-
-        return max_minus_1[1]
-
     def deleteAndEarn(self, nums):
         """
         :type nums: List[int]
@@ -76,9 +54,32 @@ class Solution(object):
         """
         counter = Counter(nums)
 
-        sorted_nums = sorted(
-            [(num, num * frequency) for num, frequency in counter.iteritems()],
-            key=lambda (num, value): num,
+        values_total = sorted(
+            [(v, f * v) for (v, f) in counter.items()],
+            key=lambda i: i[0]
         )
 
-        return self._get_house_robber_max(sorted_nums)
+        if len(values_total) == 0:
+            return 0
+        if len(values_total) == 1:
+            return values_total[0][1]
+        if len(values_total) == 2:
+            if values_total[1][0] == values_total[0][0] + 1:
+                return max(values_total[1][1], values_total[0][1])
+            else:
+                return values_total[1][1] + values_total[0][1]
+
+        dp_minus_2 = values_total[0][1]
+        if values_total[1][0] == values_total[0][0] + 1:
+            dp_minus_1 = max(values_total[1][1], values_total[0][1])
+        else:
+            dp_minus_1 = values_total[1][1] + values_total[0][1]
+
+        for i in range(2, len(values_total)):
+            if values_total[i][0] == values_total[i - 1][0] + 1:
+                dp_minus_2, dp_minus_1 = dp_minus_1, max(dp_minus_2 + values_total[i][1],
+                                                         dp_minus_1)
+            else:
+                dp_minus_2, dp_minus_1 = dp_minus_1, dp_minus_1 + values_total[i][1]
+
+        return dp_minus_1

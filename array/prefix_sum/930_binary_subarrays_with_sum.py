@@ -2,6 +2,12 @@
 # https://leetcode.com/problems/binary-subarrays-with-sum/
 # 930. Binary Subarrays With Sum
 
+# History:
+# 1.
+# Sep 8, 2019
+# 2.
+# Nov 20, 2019
+
 # In an array A of 0s and 1s, how many non-empty subarrays have sum S?
 #
 #
@@ -33,13 +39,13 @@ class Solution(object):
         :type S: int
         :rtype: int
         """
-        ct = Counter({0: 1})
-
         ret = 0
+        counter = Counter({0: 1})
         prefix_sum = 0
-        for c in A:
-            prefix_sum += c
-            ret += ct[prefix_sum - S]
-            ct[prefix_sum] += 1
+
+        for n in A:
+            prefix_sum += n
+            ret += counter[prefix_sum - S]
+            counter[prefix_sum] += 1
 
         return ret

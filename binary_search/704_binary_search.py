@@ -3,6 +3,14 @@
 
 # https://www.youtube.com/watch?v=v57lNF2mb_s
 
+# History:
+# 1.
+# May 6, 2019
+# 2.
+# Nov 20, 2019
+# 3.
+# Mar 7, 2020
+
 # Given a sorted (in ascending order) integer array nums of n elements and a
 # target value, write a function to search target in nums. If target exists,
 # then return its index, otherwise return -1.

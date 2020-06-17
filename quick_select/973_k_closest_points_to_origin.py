@@ -1,5 +1,19 @@
+# [Quick-Select, Classic]
 # https://leetcode.com/problems/k-closest-points-to-origin/
 # 973. K Closest Points to Origin
+
+# History:
+# Facebook
+# 1.
+# Jun 14, 2019
+# 2.
+# Nov 21, 2019
+# 3.
+# Feb 21, 2020
+# 4.
+# Apr 22, 2020
+# 5.
+# May 12, 2020
 
 # We have a list of points on the plane.  Find the K closest points to the
 # origin (0, 0).
@@ -29,44 +43,52 @@
 
 
 # O(n) in average with quick select
-class Solution(object):
+import random
+
+
+class SolutionQuickSelect(object):
     def kClosest(self, points, K):
         """
         :type points: List[List[int]]
         :type K: int
         :rtype: List[List[int]]
         """
-        self.sort(points, 0, len(points) - 1, K)
-        return points[:K]
+        random.shuffle(points)
 
-    def sort(self, points, l, r, K):
-        if l < r:
-            p = self.partition(points, l, r)
+        return self._k_closest(points, K - 1, 0, len(points) - 1)
 
-            if p == K:
-                return
-            elif p < K:
-                self.sort(points, p + 1, r, K)
-            else:
-                self.sort(points, l, p - 1, K)
+    def _k_closest(self, points, k, l, r):
+        pos = self._partition(points, l, r)
 
-    def partition(self, points, l, r):
+        if pos == k:
+            return points[:k + 1]
+        elif pos > k:
+            return self._k_closest(points, k, l, pos - 1)
+        else:
+            return self._k_closest(points, k, pos + 1, r)
+
+    def _partition(self, points, l, r):
         pivot = points[r]
-        l = -1
-        for i in range(r + 1):
-            if (points[i][0] ** 2 + points[i][1] ** 2 <=
-                    pivot[0] ** 2 + pivot[1] ** 2):
+        pivot_distance = self._get_distance(pivot)
+
+        for curr in range(l, r):
+            if self._get_distance(points[curr]) < pivot_distance:
+                points[curr], points[l] = points[l], points[curr]
                 l += 1
-                points[i], points[l] = points[l], points[i]
+
+        points[r], points[l] = points[l], points[r]
 
         return l
 
+    def _get_distance(self, point):
+        return point[0] ** 2 + point[1] ** 2
 
-# O(log(n)) with heap
+
+# O(log(n)) with max heap
 from heapq import heappush, heappop
 
 
-class Solution2(object):
+class SolutionMaxHeap(object):
     def kClosest(self, points, K):
         """
         :type points: List[List[int]]
@@ -81,4 +103,3 @@ class Solution2(object):
                 heappop(hp)
 
         return [item[1] for item in hp]
-

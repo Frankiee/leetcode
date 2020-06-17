@@ -7,6 +7,10 @@
 # Feb 13, 2019
 # 2.
 # Oct 19, 2019
+# 3.
+# Nov 30, 2019
+# 4.
+# Apr 6, 2020
 
 # Given two integers n and k, return all possible combinations of k numbers
 # out of 1 ... n.
@@ -26,17 +30,15 @@
 
 
 class Solution(object):
-    def find_comb(self, n, k, start_digit, temp, ret):
+    def dfs(self, n, k, start_digit, temp, ret):
         if k == 0:
             ret.append(temp)
             return
 
         for i in range(start_digit, n + 1):
-            new_temp = temp[:]
-            new_temp.append(i)
             if n - i < k - 1:
                 break
-            self.find_comb(n, k - 1, i + 1, new_temp, ret)
+            self.dfs(n, k - 1, i + 1,  temp + [i], ret)
 
     def combine(self, n, k):
         """
@@ -46,6 +48,6 @@ class Solution(object):
         """
         ret = []
 
-        self.find_comb(n, k, 1, [], ret)
+        self.dfs(n, k, 1, [], ret)
 
         return ret

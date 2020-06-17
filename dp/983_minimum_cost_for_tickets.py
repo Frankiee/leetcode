@@ -1,6 +1,13 @@
 # https://leetcode.com/problems/minimum-cost-for-tickets/
 # 983. Minimum Cost For Tickets
 
+# History:
+# Facebook
+# 1.
+# Mar 4, 2020
+# 2.
+# Apr 30, 2020
+
 # In a country popular for train travel, you have planned some train
 # travelling one year in advance.  The days of the year that you will travel
 # is given as an array days.  Each day is an integer from 1 to 365.
@@ -60,31 +67,25 @@ class Solution(object):
         :type costs: List[int]
         :rtype: int
         """
-        if not days:
-            return 0
+        dp = [0] + [None] * len(days)
+        days = [0] + days
 
-        dp = [float('inf')] * len(days)
-        seven_day_idx = -1
-        thirty_day_idx = -1
+        one_pt, seven_pt, thirty_pt = 0, 0, 0
 
-        for d in range(len(days)):
-            for c_i in range(len(costs)):
-                c = costs[c_i]
-                if c_i == 0:
-                    dp[d] = min(dp[d], (dp[d - 1] + c) if d - 1 >= 0 else c)
-                elif c_i == 1:
-                    while days[seven_day_idx + 1] <= days[d] - 7:
-                        seven_day_idx += 1
-                    dp[d] = min(
-                        dp[d],
-                        (dp[seven_day_idx] + c) if seven_day_idx >= 0 else c,
-                    )
-                else:
-                    while days[thirty_day_idx + 1] <= days[d] - 30:
-                        thirty_day_idx += 1
-                    dp[d] = min(
-                        dp[d],
-                        (dp[thirty_day_idx] + c) if thirty_day_idx >= 0 else c,
-                    )
+        for i in range(1, len(days)):
+            d = days[i]
+            # 1 day
+            while days[one_pt + 1] <= days[i] - 1:
+                one_pt += 1
+            while days[seven_pt + 1] <= days[i] - 7:
+                seven_pt += 1
+            while days[thirty_pt + 1] <= days[i] - 30:
+                thirty_pt += 1
+
+            dp[i] = min(
+                dp[one_pt] + costs[0],
+                dp[seven_pt] + costs[1],
+                dp[thirty_pt] + costs[2],
+            )
 
         return dp[-1]

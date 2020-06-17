@@ -2,6 +2,17 @@
 # https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
 # 235. Lowest Common Ancestor of a Binary Search Tree
 
+# History:
+# Facebook
+# 1.
+# Aug 31, 2019
+# 2.
+# Nov 12, 2019
+# 3.
+# Apr 30, 2020
+# 4.
+# May 9, 2020
+
 # Related:
 # 236. Lowest Common Ancestor of a Binary Tree
 
@@ -14,8 +25,6 @@
 # of itself)."
 #
 # Given binary search tree:  root = [6,2,8,0,4,7,9,null,null,3,5]
-#
-#
 #
 #
 # Example 1:
@@ -44,7 +53,7 @@
 #         self.left = None
 #         self.right = None
 
-class Solution(object):
+class SolutionIteration(object):
     def lowestCommonAncestor(self, root, p, q):
         """
         :type root: TreeNode
@@ -52,13 +61,41 @@ class Solution(object):
         :type q: TreeNode
         :rtype: TreeNode
         """
-        if not root or not p or not q:
-            return
-        p, q = (p.val, q.val) if p.val > q.val else (q.val, p.val)
+        b, s = (p.val, q.val) if p.val >= q.val else (q.val, p.val)
+
         while root:
-            if p >= root.val >= q:
+            if b >= root.val >= s:
                 return root
-            elif root.val > p:
+            elif root.val > b:
                 root = root.left
             else:
                 root = root.right
+
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class SolutionRecursion(object):
+    def lowestCommonAncestor(self, root, p, q):
+        """
+        :type root: TreeNode
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: TreeNode
+        """
+        if not root:
+            return None
+
+        p, q = (p, q) if q.val > p.val else (q, p)
+
+        if p.val <= root.val <= q.val:
+            return root
+
+        if root.val > q.val:
+            return self.lowestCommonAncestor(root.left, p, q)
+
+        return self.lowestCommonAncestor(root.right, p, q)

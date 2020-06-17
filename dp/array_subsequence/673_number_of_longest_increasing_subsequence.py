@@ -2,6 +2,12 @@
 # https://leetcode.com/problems/number-of-longest-increasing-subsequence/
 # 673. Number of Longest Increasing Subsequence
 
+# History:
+# 1.
+# May 12, 2019
+# 2.
+# Nov 21, 2019
+
 # Given an unsorted array of integers, find the number of longest increasing
 # subsequence.
 #
@@ -28,20 +34,16 @@ class Solution(object):
         if not nums:
             return 0
 
-        max_len = 1
-        dp = [1] * len(nums)
-        dp_count = [1] * len(nums)
+        dp = [(1, 1)] * len(nums)
 
-        for idx in range(1, len(nums)):
-            for p in range(idx):
-                if nums[idx] > nums[p]:
-                    current_len = dp[p] + 1
-                    if dp[idx] == current_len:
-                        dp_count[idx] += dp_count[p]
-                    elif current_len > dp[idx]:
-                        dp_count[idx] = dp_count[p]
+        for i in range(len(nums)):
+            for j in range(i):
+                if nums[i] > nums[j]:
+                    if dp[i][0] == dp[j][0] + 1:
+                        dp[i] = (dp[i][0], dp[i][1] + dp[j][1])
+                    elif dp[i][0] < dp[j][0] + 1:
+                        dp[i] = (dp[j][0] + 1, dp[j][1])
 
-                    max_len = max(max_len, current_len)
-                    dp[idx] = max(dp[idx], current_len)
+        max_length = max([n[0] for n in dp])
 
-        return sum([dp_count[i] for i in range(len(dp)) if dp[i] == max_len])
+        return sum([n[1] for n in dp if n[0] == max_length])

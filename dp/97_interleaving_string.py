@@ -1,6 +1,13 @@
 # https://leetcode.com/problems/interleaving-string/
 # 97. Interleaving String
 
+# History:
+# Facebook
+# 1.
+# Mar 31, 2019
+# 2.
+# Apr 22, 2020
+
 # Given s1, s2, s3, find whether s3 is formed by the interleaving of s1 and s2.
 #
 # Example 1:
@@ -23,27 +30,18 @@ class Solution(object):
         """
         if len(s1) + len(s2) != len(s3):
             return False
-        if not s1:
-            return s2 == s3
-        if not s2:
-            return s1 == s3
 
-        dp = [False] * (len(s1) + 1)
-        for r in range(len(s1) + 1):
-            dp[r] = [False] * (len(s2) + 1)
+        dp = [[False] * (len(s2) + 1) for _ in range(len(s1) + 1)]
 
-        for r in range(len(s1) + 1):
-            for c in range(len(s2) + 1):
-                if r == 0 and c == 0:
-                    dp[r][c] = True
+        for s1_i in range(len(s1) + 1):
+            for s2_i in range(len(s2) + 1):
+                if s1_i == s2_i == 0:
+                    dp[s1_i][s2_i] = True
                 else:
-                    dp[r][c] = (
-                        # next char comes from s1
-                        r != 0 and dp[r - 1][c] and s3[r + c - 1] == s1[r - 1]
-                    ) or (
-                        # next char comes from s2
-                        c != 0 and dp[r][c - 1] and s3[r + c - 1] ==
-                        s2[c - 1]
-                    )
+                    if s1_i > 0 and s1[s1_i - 1] == s3[s1_i + s2_i - 1]:
+                        dp[s1_i][s2_i] = dp[s1_i - 1][s2_i]
 
-        return dp[len(s1)][len(s2)]
+                    if s2_i > 0 and s2[s2_i - 1] == s3[s1_i + s2_i - 1]:
+                        dp[s1_i][s2_i] = dp[s1_i][s2_i] or dp[s1_i][s2_i - 1]
+
+        return dp[-1][-1]

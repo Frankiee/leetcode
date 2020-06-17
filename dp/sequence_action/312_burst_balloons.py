@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/burst-balloons/
 # 312. Burst Balloons
 
+# History:
+# Facebook
+# 1.
+# May 4, 2019
+# 2.
+# Feb 15, 2020
+
 # Given n balloons, indexed from 0 to n-1. Each balloon is painted with a
 # number on it represented by array nums. You are asked to burst all the
 # balloons. If the you burst balloon i you will get nums[left] * nums[i] *

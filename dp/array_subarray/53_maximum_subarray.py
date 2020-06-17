@@ -2,6 +2,15 @@
 # https://leetcode.com/problems/maximum-subarray/
 # 53. Maximum Subarray
 
+# History:
+# 1.
+# Apr 22, 2019
+# 2.
+# Nov 23, 2019
+# 3.
+# Nov 24, 2019
+# Daily Interview Pro - Twitter
+
 # Related:
 # 1186. Maximum Subarray Sum with One Deletion
 
@@ -25,10 +34,33 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        ret = dp_with_last = float('-inf')
+        ret = float('-inf')
+        max_with_last = float('-inf')
 
         for n in nums:
-            dp_with_last = max(n, n + dp_with_last)
-            ret = max(dp_with_last, ret)
+            max_with_last = max(
+                n,
+                n + max_with_last
+            )
+            ret = max(ret, max_with_last)
+
+        return ret
+
+
+class SolutionPrefixSum(object):
+    def maxSubArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        for i in range(1, len(nums)):
+            nums[i] += nums[i - 1]
+
+        lowest = 0
+
+        ret = float('-inf')
+        for n in nums:
+            ret = max(ret, n - lowest)
+            lowest = min(lowest, n)
 
         return ret

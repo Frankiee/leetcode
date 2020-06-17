@@ -1,6 +1,11 @@
 # https://leetcode.com/problems/reverse-bits/
 # 190. Reverse Bits
 
+# History:
+# Apple
+# 1.
+# Mar 19, 2020
+
 # Reverse bits of a given 32 bits unsigned integer.
 #
 # Example 1:
@@ -40,5 +45,20 @@ class Solution:
             ret <<= 1
             ret += (n & 1)
             n >>= 1
+
+        return ret
+
+
+class SolutionDivide:
+    # @param n, an integer
+    # @return an integer
+    def reverseBits(self, n):
+        ret = 0
+
+        for i in range(32):
+            next_bit = n % 2
+            n >>= 1
+            ret <<= 1
+            ret += next_bit
 
         return ret

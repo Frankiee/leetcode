@@ -1,6 +1,13 @@
-# [Upper-Bound]
+# [Bisect-Upper-Bound]
 # https://leetcode.com/problems/sqrtx/
 # 69. Sqrt(x)
+
+# History:
+# Facebook
+# 1.
+# May 5, 2019
+# 2.
+# Apr 4, 2020
 
 # Implement int sqrt(int x).
 #

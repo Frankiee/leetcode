@@ -2,6 +2,15 @@
 # https://leetcode.com/problems/sort-list/
 # 148. Sort List
 
+# History:
+# Facebook
+# 1.
+# Mar, 20, 2019
+# 2.
+# Jan, 20, 2019
+# 3.
+# Apr 24, 2020
+
 # Sort a linked list in O(n log n) time using constant space complexity.
 #
 # Example 1:
@@ -22,6 +31,26 @@
 #         self.next = None
 
 class Solution(object):
+    def _merge_two(self, first, second):
+        dummy = curr = ListNode(None)
+
+        while first and second:
+            if first.val < second.val:
+                curr.next = first
+                first = first.next
+            else:
+                curr.next = second
+                second = second.next
+
+            curr = curr.next
+
+        if first:
+            curr.next = first
+        else:
+            curr.next = second
+
+        return dummy.next
+
     def sortList(self, head):
         """
         :type head: ListNode
@@ -29,49 +58,18 @@ class Solution(object):
         """
         if not head or not head.next:
             return head
-        if not head.next.next:
-            if head.val > head.next.val:
-                new_head = head.next
-                head.next.next = head
-                head.next = None
-                return new_head
-            else:
-                return head
 
-        fast = head
-        slow = head
+        slow, fast = head, head
 
-        while fast and fast.next:
-            fast = fast.next.next
+        while fast.next and fast.next.next:
             slow = slow.next
+            fast = fast.next.next
 
-        list1 = head
-        list2 = slow.next
+        first = head
+        second = slow.next
         slow.next = None
 
-        sorted_list1 = self.sortList(list1)
-        sorted_list2 = self.sortList(list2)
+        first = self.sortList(first)
+        second = self.sortList(second)
 
-        sorted_list = ListNode(None)
-        cur = sorted_list
-
-        while sorted_list1 or sorted_list2:
-            if not sorted_list1:
-                nxt = sorted_list2
-                sorted_list2 = sorted_list2.next
-            elif not sorted_list2:
-                nxt = sorted_list1
-                sorted_list1 = sorted_list1.next
-            else:
-                if sorted_list1.val < sorted_list2.val:
-                    nxt = sorted_list1
-                    sorted_list1 = sorted_list1.next
-                else:
-                    nxt = sorted_list2
-                    sorted_list2 = sorted_list2.next
-
-            cur.next = nxt
-            cur = nxt
-            nxt.next = None
-
-        return sorted_list.next
+        return self._merge_two(first, second)

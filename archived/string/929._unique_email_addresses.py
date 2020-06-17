@@ -1,9 +1,9 @@
 # https://leetcode.com/problems/unique-email-addresses/
 # 929. Unique Email Addresses
 
-# # History:
-# # 1.
-# # Nov 8, 2019
+# History:
+# 1.
+# Nov 8, 2019
 
 # Every email consists of a local name and a domain name, separated by the @ sign.
 #

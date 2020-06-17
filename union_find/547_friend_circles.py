@@ -2,6 +2,14 @@
 # https://leetcode.com/problems/friend-circles/
 # 547. Friend Circles
 
+# History:
+# 1.
+# Apr 28, 2019
+# 2.
+# Nov 13, 2019
+# 3.
+# May 4, 2020
+
 # There are N students in a class. Some of them are friends, while some are
 # not. Their friendship is transitive in nature. For example, if A is a
 # direct friend of B, and B is a direct friend of C, then A is an indirect
@@ -42,39 +50,93 @@
 
 class UnionFindSet(object):
     def __init__(self, n):
-        self.parent = range(n)
-
-    def find_root(self, i):
-        if i != self.parent[i]:
-            self.parent[i] = self.find_root(self.parent[i])
-
-        return self.parent[i]
+        self.parents = range(n)
 
     def union(self, i, j):
         i_root = self.find_root(i)
         j_root = self.find_root(j)
 
-        self.parent[i_root] = j_root
+        self.parents[i_root] = j_root
+
+    def find_root(self, i):
+        # Not root
+        if i != self.parents[i]:
+            self.parents[i] = self.find_root(self.parents[i])
+
+        return self.parents[i]
 
 
-class Solution(object):
+class SolutionWithoutRank(object):
     def findCircleNum(self, M):
         """
         :type M: List[List[int]]
         :rtype: int
         """
-        if not M:
+        if not M or not M[0]:
             return 0
 
         union_find_set = UnionFindSet(len(M))
 
-        for r in range(len(M)):
-            for c in range(len(M)):
-                if M[r][c] == 1:
-                    union_find_set.union(r, c)
+        for i in range(len(M) - 1):
+            for j in range(i + 1, len(M)):
+                if M[i][j] == 1:
+                    union_find_set.union(i, j)
 
-        ret = set()
+        circles = set()
         for i in range(len(M)):
-            ret.add(union_find_set.find_root(i))
+            circles.add(union_find_set.find_root(i))
 
-        return len(list(ret))
+        return len(circles)
+
+
+from collections import defaultdict
+
+
+class UnionFindWithRank(object):
+    def __init__(self):
+        self.parents = {}
+        self.ranks = defaultdict(int)
+
+    def union(self, i, j):
+        i_root = self.find_root(i)
+        j_root = self.find_root(j)
+
+        if i_root == j_root:
+            return
+
+        if self.ranks[i_root] > self.ranks[j_root]:
+            self.parents[j_root] = i_root
+        elif self.ranks[i_root] < self.ranks[j_root]:
+            self.parents[i_root] = j_root
+        else:
+            self.parents[i_root] = j_root
+            self.ranks[j_root] += 1
+
+    def find_root(self, i):
+        if i not in self.parents:
+            self.parents[i] = i
+        else:
+            if self.parents[i] != i:
+                self.parents[i] = self.find_root(self.parents[i])
+
+        return self.parents[i]
+
+
+class SolutionWithRank(object):
+    def findCircleNum(self, M):
+        """
+        :type M: List[List[int]]
+        :rtype: int
+        """
+        union_find = UnionFindWithRank()
+
+        circles = set()
+        for i in range(len(M)):
+            for j in range(i, len(M)):
+                if M[i][j] == 1:
+                    union_find.union(i, j)
+
+        for i in range(len(M)):
+            circles.add(union_find.find_root(i))
+
+        return len(circles)

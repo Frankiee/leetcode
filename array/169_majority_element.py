@@ -1,5 +1,17 @@
+# [Boyer-Moore-Majority-Vote]
 # https://leetcode.com/problems/majority-element/description/
 # 169. Majority Element
+
+# History:
+# Facebook, Google
+# 1.
+# Feb 11, 2019
+# 2.
+# Nov 17, 2019
+# 3.
+# Apr 13, 2020
+# 4.
+# Jun 14, 2020
 
 # Given an array of size n, find the majority element. The majority element
 # is the element that appears more than ⌊ n/2 ⌋ times.
@@ -17,7 +29,28 @@
 # Output: 2
 
 
-class Solution(object):
+class Solution1(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        ret = None
+        count = 0
+
+        for n in nums:
+            if n == ret:
+                count += 1
+            else:
+                count -= 1
+                if count <= 0:
+                    count = 1
+                    ret = n
+
+        return ret
+
+
+class Solution2(object):
     def majorityElement(self, nums):
         """
         :type nums: List[int]

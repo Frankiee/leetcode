@@ -1,5 +1,12 @@
+# [Classic]
 # https://leetcode.com/problems/jump-game-ii/description/
 # 45. Jump Game II
+
+# History:
+# 1.
+# Feb 10, 2019
+# 2.
+# Nov 12, 2019
 
 # Given an array of non-negative integers, you are initially positioned at
 # the first index of the array.

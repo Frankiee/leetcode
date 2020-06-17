@@ -2,6 +2,10 @@
 # https://leetcode.com/problems/house-robber/
 # 198. House Robber
 
+# History:
+# Google
+# Dec 8, 2019
+
 # https://www.youtube.com/watch?v=H75Qp7ExCwo
 # Related: 740. Delete and Earn
 
@@ -36,16 +40,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        if len(nums) == 0:
+        if not nums:
             return 0
-        elif len(nums) == 1:
-            return nums[0]
-        elif len(nums) == 2:
-            return max(nums[0], nums[1])
+        if len(nums) <= 2:
+            return max(nums)
 
-        minus_2 = nums[0]
-        minus_1 = max(nums[0], nums[1])
+        ret, ret_minus_one = max(nums[0], nums[1]), nums[0]
+
         for i in range(2, len(nums)):
-            minus_2, minus_1 = minus_1, max(minus_1, minus_2 + nums[i])
+            ret, ret_minus_one = max(nums[i] + ret_minus_one, ret), ret
 
-        return minus_1
+        return ret

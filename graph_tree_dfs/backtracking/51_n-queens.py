@@ -2,6 +2,11 @@
 # https://leetcode.com/problems/n-queens/
 # 51. N-Queens
 
+# History:
+# Facebook
+# 1.
+# May 15, 2020
+
 # The n-queens puzzle is the problem of placing n queens on an n*n
 # chessboard such that no two queens attack each other.
 #
@@ -33,41 +38,39 @@
 
 class Solution(object):
     def __init__(self):
-        self.sum_occupy = set()
-        self.diff_occupy = set()
-        self.column_occupy = set()
+        self.cols = set()
+        self.sums = set()
+        self.diff = set()
 
-    def can_take(self, r, c, n, prefix):
+    def _can_take(self, r, c):
         return (
-            (r + c) not in self.sum_occupy and
-            (r - c) not in self.diff_occupy and
-            c not in self.column_occupy
+            c not in self.cols and
+            (r + c) not in self.sums and
+            (r - c) not in self.diff
         )
 
-    def take(self, r, c, prefix):
-        self.sum_occupy.add(r + c)
-        self.diff_occupy.add(r - c)
-        self.column_occupy.add(c)
-        prefix[r][c] = 'Q'
+    def _take(self, r, c):
+        self.cols.add(c)
+        self.sums.add(r + c)
+        self.diff.add(r - c)
 
-    def untake(self, r, c, prefix):
-        self.sum_occupy.remove(r + c)
-        self.diff_occupy.remove(r - c)
-        self.column_occupy.remove(c)
-        prefix[r][c] = '.'
+    def _untake(self, r, c):
+        self.cols.remove(c)
+        self.sums.remove(r + c)
+        self.diff.remove(r - c)
 
-    def solve_nqueens(self, ret, n, r, c, prefix):
-        if r >= n:
-            board = [''.join(r) for r in prefix]
-            ret.append(board)
-            return
+    def _solve_n_queens(self, n, r, curr, ret):
+        if r == n:
+            ret.append(["".join(i) for i in curr])
+            return ret
 
         for c in range(n):
-            if self.can_take(r, c, n, prefix):
-                # take r, c
-                self.take(r, c, prefix)
-                self.solve_nqueens(ret, n, r + 1, 0, prefix)
-                self.untake(r, c, prefix)
+            if self._can_take(r, c):
+                self._take(r, c)
+                curr[r][c] = 'Q'
+                self._solve_n_queens(n, r + 1, curr, ret)
+                self._untake(r, c)
+                curr[r][c] = '.'
 
     def solveNQueens(self, n):
         """
@@ -75,10 +78,7 @@ class Solution(object):
         :rtype: List[List[str]]
         """
         ret = []
-
-        prefix = []
-        for r in range(n):
-            prefix.append(["."] * n)
-        self.solve_nqueens(ret, n, 0, 0, prefix)
+        curr = [['.'] * n for _ in range(n)]
+        self._solve_n_queens(n, 0, curr, ret)
 
         return ret
