@@ -45,6 +45,61 @@
 # range [0, 10^9].
 
 
+# O(log(n) for book
+class TreeNode(object):
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+        self.left = None
+        self.right = None
+
+
+class MyCalendarTree(object):
+
+    def __init__(self):
+        self.root = None
+
+    def _insert_into_tree(self, node, curr_node):
+        if not curr_node:
+            return True, node
+
+        if node.start >= curr_node.end:
+            success, new_right_node = self._insert_into_tree(node, curr_node.right)
+            if not success:
+                return False, None
+
+            curr_node.right = new_right_node
+            return True, curr_node
+        elif node.end <= curr_node.start:
+            success, new_left_node = self._insert_into_tree(node, curr_node.left)
+            if not success:
+                return False, None
+
+            curr_node.left = new_left_node
+            return True, curr_node
+        else:
+            return False, None
+
+    def book(self, start, end):
+        """
+        :type start: int
+        :type end: int
+        :rtype: bool
+        """
+        node = TreeNode(start, end)
+
+        success, node = self._insert_into_tree(node, self.root)
+        if not self.root:
+            self.root = node
+        return success
+
+
+# Your MyCalendar object will be instantiated and called as such:
+# obj = MyCalendar()
+# param_1 = obj.book(start,end)
+
+
+# O(n) for book
 class MyCalendar(object):
 
     def __init__(self):

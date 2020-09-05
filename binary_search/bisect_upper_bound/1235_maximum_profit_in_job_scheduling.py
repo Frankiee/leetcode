@@ -3,9 +3,11 @@
 # 1235. Maximum Profit in Job Scheduling
 
 # History:
-# TikTok
+# TikTok, Google
 # 1.
 # May 27, 2020
+# 2.
+# Jun 18, 2020
 
 # We have n jobs, where every job is scheduled to be done from startTime[i] to endTime[i],
 # obtaining a profit of profit[i].
@@ -50,7 +52,7 @@
 # 1 <= profit[i] <= 10^4
 
 
-class Solution(object):
+class SolutionBinarySearch(object):
     def _bisect_upper(self, dp, start):
         l, r = 0, len(dp)
 
@@ -83,3 +85,37 @@ class Solution(object):
                 dp.append((e, (dp[idx - 1][1] if idx - 1 >= 0 else 0) + profit))
 
         return dp[-1][1]
+
+
+from collections import defaultdict
+
+
+class SolutionAllTimes(object):
+    def jobScheduling(self, startTime, endTime, profit):
+        """
+        :type startTime: List[int]
+        :type endTime: List[int]
+        :type profit: List[int]
+        :rtype: int
+        """
+        min_start = min(startTime)
+        max_end = max(endTime)
+
+        mp = defaultdict(list)
+
+        for i in range(len(endTime)):
+            mp[endTime[i]].append((startTime[i], profit[i]))
+
+        dp = [0] * (max_end - min_start + 1)
+        for i in range(max_end - min_start + 1):
+            if i == 0:
+                continue
+
+            end_time = min_start + i
+            dp[i] = dp[i - 1]
+
+            if end_time in mp:
+                for s, profit in mp[end_time]:
+                    dp[i] = max(dp[i], dp[s - min_start] + profit)
+
+        return dp[-1]

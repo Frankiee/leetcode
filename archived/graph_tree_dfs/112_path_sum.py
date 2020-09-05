@@ -3,7 +3,7 @@
 # 112. Path Sum
 
 # History:
-# Facebook
+# Facebook, Google
 # 1.
 # Mar 7, 2020
 # 2.
@@ -32,11 +32,10 @@
 
 # Definition for a binary tree node.
 # class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution(object):
     def hasPathSum(self, root, sum):
         """
@@ -50,7 +49,5 @@ class Solution(object):
         if not root.left and not root.right:
             return root.val == sum
 
-        if self.hasPathSum(root.left, sum - root.val):
-            return True
-
-        return self.hasPathSum(root.right, sum - root.val)
+        return (self.hasPathSum(root.left, sum - root.val) or
+                self.hasPathSum(root.right, sum - root.val))

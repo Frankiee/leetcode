@@ -3,9 +3,11 @@
 # 84. Largest Rectangle in Histogram
 
 # History:
-# Cruise
+# Cruise, Google
 # 1.
 # May 17, 2020
+# 2.
+# Jun 16, 2020
 
 # Given n non-negative integers representing the histogram's bar height where the width of each
 # bar is 1, find the area of largest rectangle in the histogram.

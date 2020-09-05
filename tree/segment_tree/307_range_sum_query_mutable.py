@@ -2,6 +2,13 @@
 # https://leetcode.com/problems/range-sum-query-mutable/
 # 307. Range Sum Query - Mutable
 
+# History:
+# Google
+# 1.
+# Apr 27, 2019
+# 2.
+# Jun 22, 2020
+
 # Given an integer array nums, find the sum of the elements between indices
 # i and j (i <= j), inclusive.
 #
@@ -32,52 +39,50 @@ class SegmentTreeNode(object):
 
 
 class NumArray(object):
-    def _construct_segment_tree(self, nums, start, end):
-        if not nums:
+    def _construct_segment_tree(self, nums, l, r):
+        if not nums or l > r:
             return None
 
-        if start == end:
-            return SegmentTreeNode(nums[start], start, end)
+        if l == r:
+            return SegmentTreeNode(nums[l], l, r)
         else:
-            mid = (start + end) / 2
-            left_node = self._construct_segment_tree(nums, start, mid)
-            right_node = self._construct_segment_tree(nums, mid + 1, end)
+            mid = (l + r) / 2
+            left_node = self._construct_segment_tree(nums, l, mid)
+            right_node = self._construct_segment_tree(nums, mid + 1, r)
+
             return SegmentTreeNode(
-                left_node.val + right_node.val,
-                start, end, left_node, right_node,
+                (left_node.val if left_node else 0) + (right_node.val if right_node else 0),
+                l, r, left_node, right_node
             )
 
     def __init__(self, nums):
         """
         :type nums: List[int]
         """
-        self.segment_tree = self._construct_segment_tree(
-            nums, 0, len(nums) - 1)
+        self.segment_tree = self._construct_segment_tree(nums, 0, len(nums) - 1)
 
-    def _update_node(self, i, val, current_node):
-        if not current_node:
+    def _update_node(self, i, val, curr_node):
+        if not curr_node:
             return 0
 
-        if current_node.start == current_node.end:
-            if current_node.start == i:
-                current_node.val = val
+        if curr_node.start == curr_node.end:
+            if curr_node.start == i:
+                curr_node.val = val
                 return val
             else:
                 return 0
 
-        if (current_node.left and
-                current_node.left.start <= i <= current_node.left.end):
-            new_left_val = self._update_node(i, val, current_node.left)
-            current_node.val = new_left_val + (
-                current_node.right.val if current_node.right else 0)
-            return current_node.val
+        if curr_node.left and curr_node.left.start <= i <= curr_node.left.end:
+            left_val = self._update_node(i, val, curr_node.left)
 
-        if (current_node.right and
-                current_node.right.start <= i <= current_node.right.end):
-            new_right_val = self._update_node(i, val, current_node.right)
-            current_node.val = new_right_val + (
-                current_node.left.val if current_node.left else 0)
-            return current_node.val
+            curr_node.val = left_val + (curr_node.right.val if curr_node.right else 0)
+            return curr_node.val
+
+        if curr_node.right and curr_node.right.start <= i <= curr_node.right.end:
+            right_val = self._update_node(i, val, curr_node.right)
+
+            curr_node.val = right_val + (curr_node.left.val if curr_node.left else 0)
+            return curr_node.val
 
         return 0
 
@@ -89,15 +94,15 @@ class NumArray(object):
         """
         self._update_node(i, val, self.segment_tree)
 
-    def _sum_range_node(self, i, j, current_node):
-        if not current_node or i > current_node.end or j < current_node.start:
+    def _sum_range_node(self, i, j, curr_node):
+        if not curr_node or i > curr_node.end or j < curr_node.start:
             return 0
 
-        if i <= current_node.start and j >= current_node.end:
-            return current_node.val
+        if i <= curr_node.start and j >= curr_node.end:
+            return curr_node.val
 
-        return (self._sum_range_node(i, j, current_node.left) +
-                self._sum_range_node(i, j, current_node.right))
+        return (self._sum_range_node(i, j, curr_node.left) +
+                self._sum_range_node(i, j, curr_node.right))
 
     def sumRange(self, i, j):
         """
@@ -106,7 +111,6 @@ class NumArray(object):
         :rtype: int
         """
         return self._sum_range_node(i, j, self.segment_tree)
-
 
 # Your NumArray object will be instantiated and called as such:
 # obj = NumArray(nums)

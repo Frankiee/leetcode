@@ -3,7 +3,7 @@
 # 253. Meeting Rooms II
 
 # History:
-# Facebook
+# Facebook, Google
 # 1.
 # Feb 22, 2020
 # 2.

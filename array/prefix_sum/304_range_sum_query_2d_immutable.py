@@ -10,6 +10,8 @@
 # Apr 9, 2020
 # 3.
 # May 12, 2020
+# 4.
+# July 30, 2020
 
 # Given a 2D matrix matrix, find the sum of the elements inside the rectangle defined by its
 # upper left corner (row1, col1) and lower right corner (row2, col2).

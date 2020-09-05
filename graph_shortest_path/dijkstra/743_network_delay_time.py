@@ -31,12 +31,53 @@
 # The length of times will be in the range [1, 6000].
 # All edges times[i] = (u, v, w) will have 1 <= u, v <= N and 0 <= w <= 100.
 
+
+from collections import defaultdict
+from heapq import heappush, heappop
+
+
+class Solution1(object):
+    def networkDelayTime(self, times, N, K):
+        """
+        :type times: List[List[int]]
+        :type N: int
+        :type K: int
+        :rtype: int
+        """
+        graph = defaultdict(list)
+        for s, e, w in times:
+            graph[s].append((e, w))
+
+        visited = {}
+        unpopulated = N
+        to_visit = [(0, K)]
+
+        while to_visit:
+            if unpopulated == 0:
+                return max(visited.values())
+
+            weight, nxt_node = heappop(to_visit)
+
+            if nxt_node not in visited:
+                unpopulated -= 1
+            visited[nxt_node] = weight
+
+            for nei, extra_weight in graph[nxt_node]:
+                if nei not in visited:
+                    heappush(to_visit, (weight + extra_weight, nei))
+
+        if unpopulated == 0:
+            return max(visited.values())
+
+        return -1
+
+
 import collections
 import heapq
 
 
 # 456 ms 14.2 MB
-class SolutionDijkstra(object):
+class Solution2(object):
     def networkDelayTime(self, times, N, K):
         """
         :type times: List[List[int]]

@@ -1,6 +1,13 @@
 # https://leetcode.com/problems/count-complete-tree-nodes/
 # 222. Count Complete Tree Nodes
 
+# History:
+# Google
+# 1.
+# May 3, 2020
+# 2.
+# July 22, 2020
+
 # Given a complete binary tree, count the number of nodes.
 #
 # Note:
@@ -22,6 +29,46 @@
 # Output: 6
 
 
+# Time: O(log(n)^2)
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def _get_left_height(self, node):
+        height = 0
+
+        while node:
+            node = node.left
+            height += 1
+
+        return height
+
+    def _get_right_height(self, node):
+        height = 0
+
+        while node:
+            node = node.right
+            height += 1
+
+        return height
+
+    def countNodes(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        left_height = self._get_left_height(root)
+        right_height = self._get_right_height(root)
+
+        if left_height == right_height:
+            return (1 << left_height) - 1
+        else:
+            return 1 + self.countNodes(root.left) + self.countNodes(root.right)
+
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -29,7 +76,7 @@
 #         self.left = None
 #         self.right = None
 
-class Solution(object):
+class SolutionDeprecated(object):
     def _get_branch_status(self, node):
         if not node:
             return False, 0, 0
@@ -43,12 +90,14 @@ class Solution(object):
         l_has_ended, l_level_count, l_missing_count = self._get_branch_status(
             node.left)
 
-        return r_has_ended or l_has_ended or r_level_count != l_level_count,\
-               max(
+        return r_has_ended or l_has_ended or r_level_count != l_level_count, max(
             l_level_count,
-            r_level_count) + 1, r_missing_count + l_missing_count if \
-                   r_level_count == l_level_count else l_missing_count + 2 ** (
-                l_level_count - 1)
+            r_level_count
+        ) + 1, (
+            r_missing_count + l_missing_count
+            if r_level_count == l_level_count
+            else l_missing_count + 2 ** (l_level_count - 1)
+        )
 
     def countNodes(self, root):
         """

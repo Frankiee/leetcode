@@ -116,7 +116,8 @@ class UnionFind(object):
         i_root = self.find_root(i)
         j_root = self.find_root(j)
 
-        self.parents[i_root] = j_root
+        if i_root != j_root:
+            self.parents[i_root] = j_root
 
     def find_root(self, i):
         if i not in self.parents:

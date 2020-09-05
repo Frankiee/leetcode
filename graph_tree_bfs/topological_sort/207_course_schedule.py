@@ -3,7 +3,7 @@
 # 207. Course Schedule
 
 # History:
-# Facebook
+# Facebook, Google
 # 1.
 # Mar 8, 2020
 # 2.

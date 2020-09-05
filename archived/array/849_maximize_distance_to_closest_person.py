@@ -2,6 +2,11 @@
 # https://leetcode.com/problems/maximize-distance-to-closest-person/
 # 849. Maximize Distance to Closest Person
 
+# History:
+# Google
+# 1.
+# Aug 3, 2020
+
 # In a row of seats, 1 represents a person sitting in that seat,
 # and 0 represents that the seat is empty.
 #

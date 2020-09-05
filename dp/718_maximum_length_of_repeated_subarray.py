@@ -2,10 +2,13 @@
 # 718. Maximum Length of Repeated Subarray
 
 # History:
+# Google
 # 1.
 # March 17, 2019
 # 2.
 # Nov 23, 2019
+# 3.
+# Jun 23, 2020
 
 # Given two integer arrays A and B, return the maximum length of an subarray
 # that appears in both arrays.
@@ -29,15 +32,14 @@ class Solution(object):
         :type B: List[int]
         :rtype: int
         """
-        dp = [None] * (len(A) + 1)
-        for r in range(len(A) + 1):
-            dp[r] = [0] * (len(B) + 1)
+        dp = [[0] * (len(B) + 1) for _ in range(len(A) + 1)]
 
-        max_so_far = 0
-        for r in range(len(A) + 1):
-            for c in range(len(B) + 1):
-                if r > 0 and c > 0 and A[r - 1] == B[c - 1]:
-                    dp[r][c] = dp[r - 1][c - 1] + 1
-                    max_so_far = max(max_so_far, dp[r][c])
+        ret = 0
+        for a_i_plus_one in range(len(A) + 1):
+            for b_i_plus_one in range(len(A) + 1):
+                if (a_i_plus_one > 0 and b_i_plus_one > 0 and
+                        A[a_i_plus_one - 1] == B[b_i_plus_one - 1]):
+                    dp[a_i_plus_one][b_i_plus_one] = dp[a_i_plus_one - 1][b_i_plus_one - 1] + 1
+                    ret = max(ret, dp[a_i_plus_one][b_i_plus_one])
 
-        return max_so_far
+        return ret

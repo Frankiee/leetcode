@@ -8,7 +8,6 @@
 
 # https://leetcode.com/problems/evaluate-division/discuss/88175/9-lines-%22Floydu2013Warshall%22-in-Python   # noqa
 
-
 # Equations are given in the format A / B = k, where A and B are variables
 # represented as strings, and k is a real number (floating point number).
 # Given some queries, return the answers. If the answer does not exist,

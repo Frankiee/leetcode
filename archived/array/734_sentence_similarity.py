@@ -3,9 +3,11 @@
 # 734. Sentence Similarity
 
 # History:
-# Facebook
+# Facebook, Google
 # 1.
 # Apr 4, 2020
+# 2.
+# Aug 3, 2020
 
 # Given two sentences words1, words2 (each represented as an array of strings), and a list of
 # similar word pairs pairs, determine if two sentences are similar.

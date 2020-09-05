@@ -76,11 +76,9 @@
 * `Classic` `Rate-Limit` 362 - Design Hit Counter
 * `Last-Element-Replace` `Clasic` 380 - Insert Delete GetRandom O(1)
 * `Last-Element-Replace` `Clasic` 381 - Insert Delete GetRandom O(1) - Duplicates allowed
-* `Reservoir-Sampling` 382 - Linked List Random Node
 * 384 - Shuffle an Array
 * `Classic` 392 - Is Subsequence
 * `Classic` `2-Pointers-Sliding-Window` 395 - Longest Substring with At Least K Repeating Characters
-* `Reservoir-Sampling` `Classic` 398 - Random Pick Index
 * `Archived` 412 - Fizz Buzz
 * 414 - Third Maximum Number
 * 418 - Sentence Screen Fitting
@@ -144,6 +142,8 @@
 * `Archived` 1267 - Count Servers that Communicate
 * `Archived` 1304 - Find N Unique Integers Sum up to Zero
 * `Archived` 1313 - Decompress Run-Length Encoded List
+* `Prefix-Product` 1352 - Product of the Last K Numbers
+* `2-Pointers-Sliding-Window` 1423 - Maximum Points You Can Obtain from Cards
 * `Matrix` 1424 - Diagonal Traverse II
 * `In-Place-Negative` `Classic` XXX - Find Missing Numbers in an Array
 
@@ -184,6 +184,7 @@
 * `Bisect-Lower-Bound` 875 - Koko Eating Bananas
 * 744 - Find Smallest Letter Greater Than Target
 * 852 - Peak Index in a Mountain Array
+* `Bisect-Upper-Bound` 911 - Online Election
 * `Bisect-Upper-Bound` 981 - Time Based Key-Value Store
 *  `Bisect-Upper-Bound` `Classic` 1060 - Missing Element in Sorted Array
 * `Bisect-Lower-Bound` 1146 - Snapshot Array
@@ -222,7 +223,7 @@
 * `Classic` `String-Match` 10 - Regular Expression Matching
 * `Classic` `String-Match` 44 - Wildcard Matching
 * `Classic` 45 - Jump Game II
-* `DP-Array-Subarray` 53 - Maximum Subarray
+* `DP-Array-Subarray` `Kadanes-Algorithm` 53 - Maximum Subarray
 * 55 - Jump Game
 * 62 - Unique Paths
 * 63 - Unique Paths II
@@ -261,12 +262,14 @@
 * `DP-Array-Subsequence` `Classic` `Palindrome` 516 - Longest Palindromic Subsequence
 * `Classic` `Unlimited-Knapsack` `Knapsack` 518 - Coin Change 2
 * `DP-Array-Subarray` `Classic` 548 - Split Array with Equal Sum
+* `DP-Sequence-Action` `Classic` 552 - Student Attendance Record II
 * 560 - Subarray Sum Equals K
 * `2D-DP` 562 - Longest Line of Consecutive One in Matrix
 * 568 - Maximum Vacation Days
 * `DP-Sequence-Action-Groups` `Classic` 576 - Out of Boundary Paths
 * `Classic` `DP-Array-Subarray` 581 - Shortest Unsorted Continuous Subarray
 * `DP-Array-Subarray` `Classic` `Palindrome` 647 - Palindromic Substrings
+* `DP-Sequence-Action` `Classic` 656 - Coin Path
 * `DP-Array-Subsequence` 673 - Number of Longest Increasing Subsequence
 * `DP-Array-Subarray` 674 - Longest Continuous Increasing Subsequence
 * `DP-Array-Subarray` `Classic` 689. Maximum Sum of 3 Non-Overlapping Subarrays
@@ -299,6 +302,7 @@
 * `Classic` `DP-Array-Subsequence` 1262 - Greatest Sum Divisible by Three
 * `Classic` 1269 - Number of Ways to Stay in the Same Place After Some Steps
 * `2D-DP` `Classic` 1277 - Count Square Submatrices with All Ones
+* `Classic` `Palindrome` 1312 - Minimum Insertion Steps to Make a String Palindrome
 * `DP-Array-Subarray` XXX - Maximum Sum Rectangle in a 2D Matrix
 * `Classic` `0-1-Knapsack` `Knapsack` XXX - 0-1 Knapsack Problem
 * `DP-Array-Subsequence` XXX - Count Increasing Subsequences
@@ -406,6 +410,7 @@
 * 101 - Symmetric Tree
 * 102 - Binary Tree Level Order Traversal
 * 111 - Minimum Depth of Binary Tree
+* 113 - Path Sum II
 * 114 - Flatten Binary Tree to Linked List
 * 124 - Binary Tree Maximum Path Sum
 * 129 - Sum Root to Leaf Numbers
@@ -548,6 +553,7 @@
 * 292 - Nim Game
 * `Archived` 326 - Power of Three
 * 486 - Predict the Winner
+* `Classic` 843 - Guess the Word
 
 ## Multithreading
 * 1114 - Print in Order
@@ -571,6 +577,10 @@
 * `Classic` 324 - Wiggle Sort II
 * 973 - K Closest Points to Origin
 
+## Random
+* `Reservoir-Sampling` 382 - Linked List Random Node
+* `Reservoir-Sampling` `Classic` 398 - Random Pick Index
+
 ## Repeated Value
 * 389 - Find the Difference
 * 961 - N-Repeated Element in Size 2N Array
@@ -589,6 +599,7 @@
 * `Classic` 32 - Longest Valid Parentheses
 * 71 - Simplify Path
 * `Stack-Monotone` `Classic` 84 - Largest Rectangle in Histogram
+* `Stack-Monotone` `Classic` 85 - Maximal Rectangle
 * 155 - Min Stack
 * `Calculator` `Classic` 224 - Basic Calculator
 * 225 - Implement Stack using Queues
@@ -648,6 +659,7 @@
 * `Archived` 686 - Repeated String Match
 * `Archived` 791 - Custom Sort String
 * `Archived` 796 - Rotate String
+* 809 - Expressive Words
 * `Archived` 824 - Goat Latin
 * `Archived` 830 - Positions of Large Groups
 * `Classic` 844 - Backspace String Compare
@@ -689,6 +701,8 @@
 * `BST` 776 - Split BST
 * `BST` 938 - Range Sum of BST
 * `Array-Representation-Tree` 958 - Check Completeness of a Binary Tree
+* `Array-Representation-Tree` 1261 - Find Elements in a Contaminated Binary Tree
+* `BST` 1382 - Balance a Binary Search Tree
 * `Algorithm` `Segment-Tree` xxx - [Algorithm] Segment Tree
 
 ## Union Find

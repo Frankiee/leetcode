@@ -7,6 +7,8 @@
 # Mar 11, 2020
 # 2.
 # Apr 28, 2020
+# 3.
+# Jun 23, 2020
 
 # Given two sequences pushed and popped with distinct values, return true if and only if this
 # could have been the result of a sequence of push and pop operations on an initially empty stack.
@@ -35,7 +37,33 @@
 # pushed and popped have distinct values.
 
 
-class Solution(object):
+class SolutionConstantSpace(object):
+    def validateStackSequences(self, pushed, popped):
+        """
+        :type pushed: List[int]
+        :type popped: List[int]
+        :rtype: bool
+        """
+        stack_pt = -1
+
+        pop_pt = 0
+        for read_pt in range(len(pushed)):
+            stack_pt += 1
+            pushed[stack_pt] = pushed[read_pt]
+            while stack_pt >= 0 and pop_pt >= 0 and pushed[stack_pt] == popped[pop_pt]:
+                stack_pt -= 1
+                pop_pt += 1
+
+            if stack_pt == -1 and pop_pt == len(popped):
+                return True
+
+            if pop_pt == len(popped):
+                return False
+
+        return stack_pt == -1 and pop_pt == len(popped)
+
+
+class SolutionStack(object):
     def validateStackSequences(self, pushed, popped):
         """
         :type pushed: List[int]

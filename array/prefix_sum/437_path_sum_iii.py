@@ -45,7 +45,7 @@ from collections import defaultdict
 #         self.left = None
 #         self.right = None
 
-class Solution(object):
+class SolutionGlobalVariable(object):
     def _dfs(self, node, sum, curr, prefix_sum):
         if not node:
             return
@@ -72,3 +72,41 @@ class Solution(object):
         prefix_sum[0] += 1
         self._dfs(root, sum, 0, prefix_sum)
         return self.ret
+
+
+from collections import defaultdict
+
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class SolutionReturnResult(object):
+    def _dfs(self, node, sum, prefix_sum, prefix_sum_frequency):
+        if not node:
+            return 0
+
+        prefix_sum += node.val
+        expected = prefix_sum - sum
+
+        ret = prefix_sum_frequency[expected]
+
+        prefix_sum_frequency[prefix_sum] += 1
+        ret += self._dfs(node.left, sum, prefix_sum, prefix_sum_frequency)
+        ret += self._dfs(node.right, sum, prefix_sum, prefix_sum_frequency)
+        prefix_sum_frequency[prefix_sum] -= 1
+
+        return ret
+
+    def pathSum(self, root, sum):
+        """
+        :type root: TreeNode
+        :type sum: int
+        :rtype: int
+        """
+        prefix_sum_frequency = defaultdict(int)
+        prefix_sum_frequency[0] += 1
+
+        return self._dfs(root, sum, 0, prefix_sum_frequency)

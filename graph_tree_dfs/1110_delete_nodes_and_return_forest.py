@@ -1,3 +1,4 @@
+# [Classic]
 # https://leetcode.com/problems/delete-nodes-and-return-forest/
 # 1110. Delete Nodes And Return Forest
 
@@ -5,6 +6,8 @@
 # Google
 # 1.
 # Mar 9, 2020
+# 2.
+# July 31, 2020
 
 # Given the root of a binary tree, each node in the tree has a distinct value.
 #

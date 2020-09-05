@@ -3,7 +3,7 @@
 # 973. K Closest Points to Origin
 
 # History:
-# Facebook
+# Facebook, Google
 # 1.
 # Jun 14, 2019
 # 2.
@@ -14,6 +14,8 @@
 # Apr 22, 2020
 # 5.
 # May 12, 2020
+# 6.
+# Aug 1, 2020
 
 # We have a list of points on the plane.  Find the K closest points to the
 # origin (0, 0).

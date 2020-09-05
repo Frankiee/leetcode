@@ -3,7 +3,7 @@
 # 269. Alien Dictionary
 
 # History:
-# Facebook
+# Facebook, Google
 # 1.
 # Feb 02, 2020
 # 2.
@@ -12,6 +12,8 @@
 # Apr 11, 2020
 # 4.
 # May 4, 2020
+# 5.
+# Aug 1, 2020
 
 # There is a new alien language which uses the latin alphabet. However, the order among letters
 # are unknown to you. You receive a list of non-empty words from the dictionary, where words are
