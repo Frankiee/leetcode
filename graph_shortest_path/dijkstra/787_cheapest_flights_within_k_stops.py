@@ -1,14 +1,15 @@
-# [Dijkstra, Shortest-Path]
+# [Dijkstra, Shortest-Path, Classic]
 # https://leetcode.com/problems/cheapest-flights-within-k-stops/
 # 787. Cheapest Flights Within K Stops
 
 # History:
-# Facebook
+# Facebook, Airbnb
 # 1.
 # May 12, 2019
 # 2.
 # Jan 29, 2020
-
+# 3.
+# Oct 17, 2020
 
 # There are n cities connected by m flights. Each fight starts from city u
 # and arrives at v with a price w.
@@ -48,9 +49,7 @@
 # The price of each flight will be in the range [1, 10000].
 # k is in the range of [0, n - 1].
 # There will not be any duplicated flights or self cycles.
-import heapq
-from collections import defaultdict
-
+from heapq import heappop, heappush
 from collections import defaultdict
 
 
@@ -64,21 +63,21 @@ class Solution(object):
         :type K: int
         :rtype: int
         """
-        dep_graph = defaultdict(dict)
+        flight_route_prices = defaultdict(dict)
 
         for frm, to, price in flights:
-            dep_graph[frm][to] = price
+            flight_route_prices[frm][to] = price
 
-        heap = [[0, src, K]]
+        hp = [[0, src, K]]
 
-        while heap:
-            price, node, k = heapq.heappop(heap)
+        while hp:
+            cost, city, k_left = heappop(hp)
 
-            if node == dst:
-                return price
+            if city == dst:
+                return cost
 
-            if k >= 0:
-                for nxt, nxt_price in dep_graph[node].iteritems():
-                    heapq.heappush(heap, [price + nxt_price, nxt, k - 1])
+            if k_left >= 0:
+                for nxt_city, price in flight_route_prices[city].iteritems():
+                    heappush(hp, [cost + price, nxt_city, k_left - 1])
 
         return -1

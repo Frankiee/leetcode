@@ -107,6 +107,7 @@
 * `Prefix-Sum` 724 - Find Pivot Index
 * 731 - My Calendar II
 * `Archived` 734 - Sentence Similarity
+* `Classic` `Trap-Water` 755 - Pour Water
 * 766 - Toeplitz Matrix
 * 771 - Jewels and Stones
 * `Classic` 792 - Number of Matching Subsequences
@@ -325,12 +326,12 @@
 ### Bellman-Ford
 * `Classic` `Bellman-Ford` `Shortest-Path` 505 - The Maze II
 * `Classic` `Bellman-Ford` `Shortest-Path` 743 - Network Delay Time
-* `Bellman-Ford` `Shortest-Path` 787 - Cheapest Flights Within K Stops
+* `Bellman-Ford` `Shortest-Path` `Classic` 787 - Cheapest Flights Within K Stops
 
 ### Dijkstra
 * `Classic`, `Dijkstra`, `Shortest-Path` 505 - The Maze II
 * `Classic`, `Dijkstra`, `Shortest-Path` 743 - Network Delay Time
-* `Dijkstra` `Shortest-Path` 787 - Cheapest Flights Within K Stops
+* `Dijkstra` `Shortest-Path` `Classic` 787 - Cheapest Flights Within K Stops
 * `Classic`, `Dijkstra`, `Shortest-Path` 1066 - Campus Bikes II
 
 ### Floyd-Warshall
@@ -463,6 +464,7 @@
 * `Classic` 1197 - Minimum Knight Moves
 * 1219 - Path with Maximum Gold
 * `Classic` `DFS-Parent-Child` 1245 - Tree Diameter
+* 1257 - Smallest Common Region
 * 1265 - Print Immutable Linked List in Reverse
 * `DFS-Stack` 1305 - All Elements in Two Binary Search Trees
 * 1373 - Maximum Sum BST in Binary Tree
@@ -493,10 +495,12 @@
 * `Hash` 49 - Group Anagrams
 * 205 - Isomorphic Strings
 * 290 - Word Pattern
+* `Classic` `Pair-To-Fixed-Time` `Palindrome` 336 - Palindrome Pairs
 * `Archived` 609 - Find Duplicate File in System
 * `Classic` 676 - Implement Magic Dictionary
 * `Classic` `Hash` 705 - Design HashSet
 * `Classic` `Hash` 706 - Design HashMap
+* `Archived` 1166 - Design File System
 
 ## Linked List
 * `Archived` 2 - Add Two Numbers

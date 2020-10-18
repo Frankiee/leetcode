@@ -1,6 +1,11 @@
-# [Bellman-Ford, Shortest-Path]
+# [Bellman-Ford, Shortest-Path, Classic]
 # https://leetcode.com/problems/cheapest-flights-within-k-stops/
 # 787. Cheapest Flights Within K Stops
+
+# History:
+# Facebook, Airbnb
+# 1.
+# May 12, 2019
 
 # There are n cities connected by m flights. Each fight starts from city u
 # and arrives at v with a price w.
