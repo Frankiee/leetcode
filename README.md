@@ -204,6 +204,7 @@
 * `XOR` 389 - Find the Difference
 * 476 - Number Complement
 * 693 - Binary Number with Alternating Bits
+* `Classic` 751 - IP to CIDR
 * `XOR` 1310 - XOR Queries of a Subarray
 
 ## Brainteaser
