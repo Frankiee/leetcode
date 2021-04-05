@@ -31,8 +31,59 @@
 # 1 <= A.length = A[0].length <= 100
 # A[i][j] == 0 or A[i][j] == 1
 
+# BFS
+class SolutionBFS(object):
+    def _expand_first_island_mark(self, A, r, c, to_do):
+        if A[r][c] != 1:
+            return
 
-class Solution(object):
+        A[r][c] = 2
+
+        for d_r, d_c in [[1, 0], [-1, 0], [0, 1], [0, -1]]:
+            new_r = r + d_r
+            new_c = c + d_c
+            if 0 <= new_r < len(A) and 0 <= new_c < len(A[0]):
+                if A[new_r][new_c] == 0:
+                    to_do.add((new_r, new_c))
+                elif A[new_r][new_c] == 1:
+                    self._expand_first_island_mark(A, new_r, new_c, to_do)
+
+    def _find_first_island_mark(self, A, to_do):
+        for r in range(len(A)):
+            for c in range(len(A[0])):
+                if A[r][c] == 1:
+                    self._expand_first_island_mark(A, r, c, to_do)
+                    return
+
+    def shortestBridge(self, A):
+        """
+        :type A: List[List[int]]
+        :rtype: int
+        """
+        to_do = set()
+        self._find_first_island_mark(A, to_do)
+
+        round = 0
+        new_do_do = set()
+        while to_do:
+            for r, c in to_do:
+                if A[r][c] == 1:
+                    return round
+                A[r][c] = 2
+                for d_r, d_c in [[1, 0], [-1, 0], [0, 1], [0, -1]]:
+                    new_r = r + d_r
+                    new_c = c + d_c
+                    if 0 <= new_r < len(A) and 0 <= new_c < len(A[0]):
+                        if A[new_r][new_c] in [0, 1]:
+                            new_do_do.add((new_r, new_c))
+
+            to_do = new_do_do
+            round += 1
+            new_do_do = set()
+
+
+# DFS
+class SolutionDFS(object):
     def _find_first_island(self, A, row_count, column_count):
         # find first island
         for r in range(row_count):

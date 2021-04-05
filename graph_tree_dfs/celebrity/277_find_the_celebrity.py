@@ -3,13 +3,15 @@
 # 277. Find the Celebrity
 
 # History:
-# Facebook
+# Facebook, Snapchat
 # 1.
 # Feb 21, 2020
 # 2.
 # Apr 13, 2020
 # 3.
 # May 12, 2020
+# 4.
+# Apr 4, 2021
 
 # Suppose you are at a party with n people (labeled from 0 to n - 1) and among them, there may
 # exist one celebrity. The definition of a celebrity is that all the other n - 1 people know
