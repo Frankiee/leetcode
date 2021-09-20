@@ -10,6 +10,8 @@
 # Jan 4, 2020
 # 3.
 # May 12, 2020
+# 4.
+# Jul 21, 2021
 
 # Given a string s, find the longest palindromic substring in s. You may assume that the maximum
 # length of s is 1000.
@@ -38,9 +40,7 @@ class Solution(object):
 
         to_check = []
         for i in range(len(s)):
-            nxt_to_check = []
-
-            nxt_to_check.append(i)
+            nxt_to_check = [i]
             if i - 1 >= 0:
                 nxt_to_check.append(i - 1)
 

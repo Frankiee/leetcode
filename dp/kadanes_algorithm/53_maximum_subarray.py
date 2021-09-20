@@ -10,6 +10,8 @@
 # 3.
 # Nov 24, 2019
 # Daily Interview Pro - Twitter
+# 4.
+# Sep 18, 2021
 
 # Related:
 # 1186. Maximum Subarray Sum with One Deletion
@@ -34,8 +36,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        ret = float('-inf')
-        max_with_last = float('-inf')
+        ret = max_with_last = float('-inf')
 
         for n in nums:
             max_with_last = max(

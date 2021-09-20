@@ -6,6 +6,8 @@
 # Google
 # 1.
 # Jun 14, 2020
+# 2.
+# Sep 19, 2021
 
 # We are given a list nums of integers representing a list compressed with run-length encoding.
 #

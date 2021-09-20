@@ -141,11 +141,29 @@
 * `Archived` 1184 - Distance Between Bus Stops
 * 1221 - Split a String in Balanced Strings
 * `Archived` 1267 - Count Servers that Communicate
+* `Matrix` 1275 - Find Winner on a Tic Tac Toe Game
 * `Archived` 1304 - Find N Unique Integers Sum up to Zero
 * `Archived` 1313 - Decompress Run-Length Encoded List
 * `Prefix-Product` 1352 - Product of the Last K Numbers
 * `2-Pointers-Sliding-Window` 1423 - Maximum Points You Can Obtain from Cards
 * `Matrix` 1424 - Diagonal Traverse II
+* `Archived` 1480 - Running Sum of 1d Array
+* `Archived` 1534 - Count Good Triplets
+* `Archived` 1603 - Design Parking System
+* `Archived` 1636 - Sort Array by Increasing Frequency
+* `Archived` 1672 - Richest Customer Wealth
+* `Archived` 1678 - Goal Parser Interpretation
+* `Archived` 1684 - Count the Number of Consistent Strings
+* `Archived` 1732 - Find the Highest Altitude
+* `Archived` 1752 - Check if Array Is Sorted and Rotated
+* `Archived` 1773 - Count Items Matching a Rule
+* `Archived` 1779 - Find Nearest Point That Has the Same X or Y Coordinate
+* `Archived` 1796 - Second Largest Digit in a String
+* `Archived` 1800 - Maximum Ascending Subarray Sum
+* `Archived` 1822 - Sign of the Product of an Array
+* `Delta-Sweep` 1854 - Maximum Population Year
+* `Prefix-Sum` 1893 - Check if All the Integers in a Range Are Covered
+* `2-Pointers-Sliding-Window` 1876 - Substrings of Size Three with Distinct Characters
 * `In-Place-Negative` `Classic` XXX - Find Missing Numbers in an Array
 
 ## Base Convert
@@ -174,6 +192,7 @@
 * `Bisect-Lower-Bound` `Classic` 352 - Data Stream as Disjoint Intervals
 * 374 - Guess Number Higher or Lower
 * `Bisect-Lower-Bound` `Classic `378 - Kth Smallest Element in a Sorted Matrix
+* 441 - Arranging Coins
 * `Bisect-Lower-Bound` 480 - Sliding Window Median
 * 528 - Random Pick with Weight
 * `Classic` 540 - Single Element in a Sorted Array
@@ -181,16 +200,18 @@
 * 704 - Binary Search
 * `Classic` 719 - Find K-th Smallest Pair Distance
 * `Bisect-Lower-Bound` 729 - My Calendar I
+* `Bisect-Lower-Bound` 744 - Find Smallest Letter Greater Than Target
 * `Bisect-Lower-Bound` `Classic` 855 - Exam Room
 * `Bisect-Lower-Bound` 875 - Koko Eating Bananas
-* 744 - Find Smallest Letter Greater Than Target
 * 852 - Peak Index in a Mountain Array
 * `Bisect-Upper-Bound` 911 - Online Election
 * `Bisect-Upper-Bound` 981 - Time Based Key-Value Store
-*  `Bisect-Upper-Bound` `Classic` 1060 - Missing Element in Sorted Array
+* `Bisect-Upper-Bound` `Classic` 1060 - Missing Element in Sorted Array
 * `Bisect-Lower-Bound` 1146 - Snapshot Array
 * `Bisect-Lower-Bound` 1201 - Ugly Number III
 * `Bisect-Upper-Bound` `Classic` 1235 - Maximum Profit in Job Scheduling
+* `Classic` `Decreasing-Array` 1351 - Count Negative Numbers in a Sorted Matrix
+* `Bisect-Upper-Bound` 1385 - Find the Distance Value Between Two Arrays
 * `Bisect-Lower-Bound` 1428 - Leftmost Column with at Least a One
 
 ## Bitwise
@@ -215,9 +236,12 @@
 ## Deque
 * 239 - Sliding Window Maximum
 * 346 - Moving Average from Data Stream
+* 933 - Number of Recent Calls
+* `Classic` 1499 - Max Value of Equation
 
 ## Divide and Conquer
 * 241 - Different Ways to Add Parentheses
+* 1763 - Longest Nice Substring
 
 ## DP
 * `Classic` `DP-Array-Subarray` 3 - Longest Substring Without Repeating Characters
@@ -436,7 +460,7 @@
 * `Classic` 425 - Word Squares
 * 426 - Convert Binary Search Tree to Sorted Doubly Linked List
 * 445 - Add Two Numbers II
-* 538 - Convert BST to Greater Tree
+* `Reverse-Inorder` 538 - Convert BST to Greater Tree
 * `Edge-To-Node-Conversion` `Classic`543 - Diameter of Binary Tree
 * 545 - Boundary of Binary Tree
 * `Classic` 549 - Binary Tree Longest Consecutive Sequence II
@@ -458,6 +482,7 @@
 * `Classic` `Celebrity` 997 - Find the Town Judge
 * `Stream` `DFS-Stack` `Classic` 1008 - Construct Binary Search Tree from Preorder Traversal
 * 1026 - Maximum Difference Between Node and Ancestor
+* `Reverse-Inorder` 1038 - Binary Search Tree to Greater Sum Tree
 * 1087 - Brace Expansion
 * 1110 - Delete Nodes And Return Forest
 * 1123 - Lowest Common Ancestor of Deepest Leaves
@@ -469,7 +494,8 @@
 * 1265 - Print Immutable Linked List in Reverse
 * `DFS-Stack` 1305 - All Elements in Two Binary Search Trees
 * 1373 - Maximum Sum BST in Binary Tree
-* `Facebook` xxx - Reverse a Directed Graph
+* `Archive` 1469 - Find All The Lonely Nodes
+* `Facebook` XXX - Reverse a Directed Graph
 * `Cycle-Detection` `Classic` XXX - Detect cycle in an undirected graph
 * `Cycle-Detection` `Classic` XXX - Detect Cycle in a Directed Graph
 * `Backtracking` `Classic` XXX - Pattern Matching
@@ -490,10 +516,12 @@
 * `Greedy` `Classic` 860 - Lemonade Change
 * `Greedy` `Classic` `Stack` 1081 - Smallest Subsequence of Distinct Characters
 * `Greedy` `Classic` 1414 - Find the Minimum Number of Fibonacci Numbers Whose Sum Is K
+* `Greedy` `Archived` 1710 - Maximum Units on a Truck
 * `Greedy` XXX - Deliveries on a One Way Street
 
 ## HashMap/HashSet
 * `Hash` 49 - Group Anagrams
+* 170 - Two Sum III - Data structure design
 * 205 - Isomorphic Strings
 * 290 - Word Pattern
 * `Classic` `Pair-To-Fixed-Time` `Palindrome` 336 - Palindrome Pairs
@@ -502,6 +530,9 @@
 * `Classic` `Hash` 705 - Design HashSet
 * `Classic` `Hash` 706 - Design HashMap
 * `Archived` 1166 - Design File System
+* 1512 - Number of Good Pairs
+* 1865 - Finding Pairs With a Certain Sum
+* `Archived` 1640 - Check Array Formation Through Concatenation
 
 ## Linked List
 * `Archived` 2 - Add Two Numbers
@@ -541,6 +572,7 @@
 * `Archived` 970 - Powerful Integers
 * `Combination` 1180 - Count Substrings with Only One Distinct Letter
 * 1360 - Number of Days Between Two Dates
+* `Archived` 1688 - Count of Matches in Tournament
 
 ## Min Heap
 * 23 - Merge k Sorted Lists
@@ -553,6 +585,7 @@
 * `Classic` 759 - Employee Free Time
 * 1046 - Last Stone Weight
 * `Classic` 1057 - Campus Bikes
+* 1792 - Maximum Average Pass Ratio
 
 ## Minimax
 * 292 - Nim Game
@@ -630,6 +663,8 @@
 * 1190 - Reverse Substrings Between Each Pair of Parentheses
 * 1209 - Remove All Adjacent Duplicates in String II
 * 1249 - Minimum Remove to Make Valid Parentheses
+* 1566 - Detect Pattern of Length M Repeated K or More Times
+* `Stack-Monotone` 1762 - Buildings With an Ocean View
 
 ## Stream
 * `Stream` `Classic` 109 - Convert Sorted List to Binary Search Tree
@@ -677,8 +712,20 @@
 * `Archived` 1108 - Defanging an IP Address
 * `Rolling-Hash` `Classic` 1147 - Longest Chunked Palindrome Decomposition
 * 1156 - Swap For Longest Repeated Character Substring
+* `Archived` 1160 - Find Words That Can Be Formed by Characters
 * `Archived` 1189 - Maximum Number of Balloons
 * `Archived` 1281 - Subtract the Product and Sum of Digits of an Integer
+* `Archived` 1614 - Maximum Nesting Depth of the Parentheses
+* `Archived` 1694 - Reformat Phone Number
+* `Archived` 1758 - Minimum Changes To Make Alternating Binary String
+* `Archived` 1768 - Merge Strings Alternately
+* `Archived` 1784 - Check if Binary String Has at Most One Segment of Ones
+* `Archived` 1790 - Check if One String Swap Can Make Strings Equal
+* `Archived` 1805 - Number of Different Integers in a String
+* `Archived` 1812 - Determine Color of a Chessboard Square
+* `Archived` 1816 - Truncate Sentence
+* `Archived` 1880 - Check if Word Equals Summation of Two Words
+* `Archived` 1909 - Remove One Element to Make the Array Strictly Increasing
 * `Archived` xxx - Perform String Shifts
 
 ## Trie

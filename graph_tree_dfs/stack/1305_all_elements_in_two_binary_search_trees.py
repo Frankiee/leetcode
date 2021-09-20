@@ -6,6 +6,8 @@
 # Facebook
 # 1.
 # May 30, 2020
+# 2.
+# Apr 11, 2021
 
 # Given two binary search trees root1 and root2.
 #
@@ -42,7 +44,6 @@
 # Each tree has at most 5000 nodes.
 # Each node's value is between [-10^5, 10^5].
 
-
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, val=0, left=None, right=None):
@@ -56,37 +57,27 @@ class Solution(object):
         :type root2: TreeNode
         :rtype: List[int]
         """
-        ret = []
-        tree1_stack, tree2_stack = [], []
+        ret, root1_stack, root2_stack = [], [], []
 
         while True:
             while root1:
-                tree1_stack.append(root1)
+                root1_stack.append(root1)
                 root1 = root1.left
+
             while root2:
-                tree2_stack.append(root2)
+                root2_stack.append(root2)
                 root2 = root2.left
 
-            if tree1_stack and tree2_stack:
-                if tree1_stack[-1].val <= tree2_stack[-1].val:
-                    root1 = tree1_stack.pop(-1)
-                    ret.append(root1.val)
-
-                    root1 = root1.right
-                else:
-                    root2 = tree2_stack.pop(-1)
-                    ret.append(root2.val)
-
-                    root2 = root2.right
-            elif tree1_stack:
-                root1 = tree1_stack.pop(-1)
-                ret.append(root1.val)
-
-                root1 = root1.right
-            elif tree2_stack:
-                root2 = tree2_stack.pop(-1)
-                ret.append(root2.val)
-
-                root2 = root2.right
-            else:
+            if not root1_stack and not root2_stack:
                 return ret
+
+            if not root1_stack or (root1_stack and root2_stack and root2_stack[-1].val <= root1_stack[-1].val):
+                nxt = root2_stack.pop()
+                ret.append(nxt.val)
+                root2 = nxt.right
+            elif not root2_stack or (root1_stack and root2_stack and root1_stack[-1].val < root2_stack[-1].val):
+                nxt = root1_stack.pop()
+                ret.append(nxt.val)
+                root1 = nxt.right
+
+        return ret

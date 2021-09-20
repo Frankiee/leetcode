@@ -1,3 +1,4 @@
+# [Reverse-Inorder]
 # https://leetcode.com/problems/convert-bst-to-greater-tree/
 # 538. Convert BST to Greater Tree
 
@@ -52,7 +53,5 @@ class Solution(object):
 
         self.total = 0
         self._reverse_inorder(root, values)
-
-        print values
 
         return root

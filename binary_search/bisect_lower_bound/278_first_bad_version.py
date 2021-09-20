@@ -14,6 +14,8 @@
 # Apr 2, 2020
 # 5.
 # Apr 22, 2020
+# 6.
+# Apr 11, 2021
 
 # You are a product manager and currently leading a team to develop a new
 # product. Unfortunately, the latest version of your product fails the

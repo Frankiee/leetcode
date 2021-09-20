@@ -10,6 +10,8 @@
 # Apr 3, 2020
 # 4.
 # Apr 22, 2020
+# 5.
+# Sep 18, 2021
 
 # Given a string containing just the characters '(', ')', '{', '}', '[' and
 # ']', determine if the input string is valid.

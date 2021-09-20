@@ -6,6 +6,8 @@
 # Apple
 # 1.
 # May 8, 2020
+# 2.
+# Sep 18, 2021
 
 # Write a function to find the longest common prefix string amongst an array of strings.
 #
@@ -31,9 +33,6 @@ class Solution(object):
         :type strs: List[str]
         :rtype: str
         """
-        if not strs:
-            return ""
-
         longest_i = 0
         while True:
             for i, s in enumerate(strs):

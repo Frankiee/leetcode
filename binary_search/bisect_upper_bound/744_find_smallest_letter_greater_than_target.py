@@ -7,6 +7,8 @@
 # May 5, 2019
 # 2.
 # Feb 20, 2020
+# 3.
+# Apr 11, 2021
 
 # Given a list of sorted characters letters containing only lowercase
 # letters, and given a target letter target, find the smallest element in
@@ -64,12 +66,9 @@ class Solution(object):
         while l < r:
             m = (r - l) / 2 + l
 
-            if letters[m] <= target:
-                l = m + 1
-            else:
+            if letters[m] > target:
                 r = m
+            else:
+                l = m + 1
 
-        if l > len(letters) - 1:
-            return letters[0]
-        else:
-            return letters[l]
+        return letters[l] if l < len(letters) else letters[0]

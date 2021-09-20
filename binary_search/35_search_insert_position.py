@@ -7,6 +7,8 @@
 # Mar 28, 2019
 # 2.
 # Feb 19, 2020
+# 3.
+# Apr 11, 2021
 
 # Given a sorted array and a target value, return the index if the target is
 # found. If not, return the index where it would be if it were inserted in
@@ -39,9 +41,6 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-        if not nums:
-            return 0
-
         l, r = 0, len(nums)
 
         while l < r:

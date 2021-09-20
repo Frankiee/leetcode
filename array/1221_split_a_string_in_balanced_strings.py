@@ -5,6 +5,8 @@
 # Facebook
 # 1.
 # Mar 19, 2020
+# 2.
+# Sep 18, 2021
 
 # Balanced strings are those who have equal quantity of 'L' and 'R' characters.
 #

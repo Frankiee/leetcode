@@ -33,53 +33,42 @@
 
 # BFS
 class SolutionBFS(object):
-    def _expand_first_island_mark(self, A, r, c, to_do):
-        if A[r][c] != 1:
-            return
-
-        A[r][c] = 2
-
-        for d_r, d_c in [[1, 0], [-1, 0], [0, 1], [0, -1]]:
-            new_r = r + d_r
-            new_c = c + d_c
-            if 0 <= new_r < len(A) and 0 <= new_c < len(A[0]):
-                if A[new_r][new_c] == 0:
-                    to_do.add((new_r, new_c))
-                elif A[new_r][new_c] == 1:
-                    self._expand_first_island_mark(A, new_r, new_c, to_do)
-
-    def _find_first_island_mark(self, A, to_do):
+    def _find_first(self, A):
         for r in range(len(A)):
             for c in range(len(A[0])):
                 if A[r][c] == 1:
-                    self._expand_first_island_mark(A, r, c, to_do)
-                    return
+                    return r, c
+
+    def _dfs_first(self, bfs_layer, A, r, c):
+        A[r][c] = -1
+        bfs_layer.append((r, c))
+
+        for n_r, n_c in [[r + 1, c], [r - 1, c], [r, c + 1], [r, c - 1]]:
+            if 0 <= n_r < len(A) and 0 <= n_c < len(A[0]) and A[n_r][n_c] == 1:
+                self._dfs_first(bfs_layer, A, n_r, n_c)
 
     def shortestBridge(self, A):
         """
         :type A: List[List[int]]
         :rtype: int
         """
-        to_do = set()
-        self._find_first_island_mark(A, to_do)
+        step, bfs_layer = 0, []
+        self._dfs_first(bfs_layer, A, *self._find_first(A))
 
-        round = 0
-        new_do_do = set()
-        while to_do:
-            for r, c in to_do:
-                if A[r][c] == 1:
-                    return round
-                A[r][c] = 2
-                for d_r, d_c in [[1, 0], [-1, 0], [0, 1], [0, -1]]:
-                    new_r = r + d_r
-                    new_c = c + d_c
-                    if 0 <= new_r < len(A) and 0 <= new_c < len(A[0]):
-                        if A[new_r][new_c] in [0, 1]:
-                            new_do_do.add((new_r, new_c))
+        while bfs_layer:
+            next_layer = []
 
-            to_do = new_do_do
-            round += 1
-            new_do_do = set()
+            for r, c in bfs_layer:
+                for n_r, n_c in [[r + 1, c], [r - 1, c], [r, c + 1], [r, c - 1]]:
+                    if 0 <= n_r < len(A) and 0 <= n_c < len(A[0]):
+                        if A[n_r][n_c] == 1:
+                            return step
+                        elif A[n_r][n_c] == 0:
+                            A[n_r][n_c] = -1
+                            next_layer.append((n_r, n_c))
+
+            bfs_layer = next_layer
+            step += 1
 
 
 # DFS

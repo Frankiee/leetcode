@@ -8,6 +8,8 @@
 # Nov 24, 2019
 # 3.
 # May 5, 2020
+# 4.
+# Sep 18, 2021
 
 # Design a stack that supports push, pop, top, and retrieving the minimum
 # element in constant time.
@@ -34,38 +36,49 @@ class MinStack1(object):
         initialize your data structure here.
         """
         self.stack = []
-        self.min_stack = []
+        self.min_stack_pos = []
 
-    def push(self, x):
+    def push(self, val):
         """
-        :type x: int
+        :type val: int
         :rtype: None
         """
-        self.stack.append(x)
-        if not self.min_stack or x < self.stack[self.min_stack[-1]]:
-            self.min_stack.append(len(self.stack) - 1)
+        if not self.stack:
+            self.min_stack_pos.append(0)
+        elif val < self.stack[self.min_stack_pos[-1]]:
+            self.min_stack_pos.append(len(self.stack))
+
+        self.stack.append(val)
 
     def pop(self):
         """
         :rtype: None
         """
-        ret = self.stack.pop(-1)
-        if self.min_stack and self.min_stack[-1] > len(self.stack) - 1:
-            self.min_stack.pop(-1)
+        if not self.stack:
+            return None
 
-        return ret
+        if self.min_stack_pos and self.min_stack_pos[-1] == len(self.stack) - 1:
+            self.min_stack_pos.pop()
+
+        self.stack.pop()
 
     def top(self):
         """
         :rtype: int
         """
+        if not self.stack:
+            return None
+
         return self.stack[-1]
 
     def getMin(self):
         """
         :rtype: int
         """
-        return self.stack[self.min_stack[-1]]
+        if not self.stack:
+            return None
+
+        return self.stack[self.min_stack_pos[-1]]
 
 
 # Your MinStack object will be instantiated and called as such:

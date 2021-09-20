@@ -9,6 +9,8 @@
 # Mar 29, 2020
 # 3.
 # Apr 28, 2020
+# 4.
+# Sep 18, 2021
 
 # Write a function that takes an unsigned integer and return the number of
 # '1' bits it has (also known as the Hamming weight).
@@ -44,6 +46,7 @@
 # integer -3.
 
 
+# n & (n - 1) drops the lowest set bit. It's a neat little bit trick
 class SolutionNNminusOne(object):
     def hammingWeight(self, n):
         """

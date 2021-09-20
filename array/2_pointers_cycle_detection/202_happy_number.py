@@ -6,6 +6,8 @@
 # Apple
 # 1.
 # Mar 21, 2020
+# 2.
+# Jul 23, 2021
 
 # Write an algorithm to determine if a number is "happy".
 #

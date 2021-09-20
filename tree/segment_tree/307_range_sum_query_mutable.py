@@ -8,6 +8,8 @@
 # Apr 27, 2019
 # 2.
 # Jun 22, 2020
+# 3.
+# Jul 24, 2021
 
 # Given an integer array nums, find the sum of the elements between indices
 # i and j (i <= j), inclusive.

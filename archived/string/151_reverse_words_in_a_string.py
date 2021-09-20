@@ -50,7 +50,7 @@ class Solution1(object):
         s = " " + s + " "
         ret = []
 
-        end = start = None
+        end = None
         for i in range(len(s) - 2, 0, -1):
             if s[i] != ' ' and s[i + 1] == ' ':
                 end = i + 1

@@ -58,6 +58,7 @@ lower_bound(A, 2) = 1, lower_bound(A, 3) = 4 (does not exist)
 upper_bound(A, 2) = 4, upper_bound(A, 5) = 7 (does not exist)
 
 ```python
+# tips: m >= r m
 def lower_bound(A, val, l, r):
     while l < r:
         m = l + (r - l) / 2
@@ -69,6 +70,7 @@ def lower_bound(A, val, l, r):
 ```
 
 ```python
+# tips: m > r m
 def upper_bound(A, val, l, r):
     while l < r:
         m = l + (r - l) / 2
