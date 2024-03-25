@@ -41,6 +41,7 @@
 * `Classic` 179 - Largest Number
 * `Classic` 189 - Rotate Array
 * `2-Pointers-Cycle-Detection` 202 - Happy Number
+* `2-Pointers-Sliding-Window` 209 - Minimum Size Subarray Sum
 * `Archived` 217 - Contains Duplicate
 * `Classic` `Time-Series` 218 - The Skyline Problem
 * `Archived` 219 - Contains Duplicate II
@@ -94,8 +95,7 @@
 * `Matrix` 498 - Diagonal Traverse
 * `Prefix-Sum` 523 - Continuous Subarray Sum
 * 525 - Contiguous Array
-* `2-Pointers-Sliding-Window` 209 - Minimum Size Subarray Sum
-* 448 - Find All Numbers Disappeared in an Array
+* `Archived` 566 - Reshape the Matrix
 * 567 - Permutation in String
 * `Archived` 605 - Can Place Flowers
 * `2-Pointers-Opposite` `Classic` 611 - Valid Triangle Number
@@ -208,6 +208,7 @@
 * `Bisect-Upper-Bound` 981 - Time Based Key-Value Store
 * `Bisect-Upper-Bound` `Classic` 1060 - Missing Element in Sorted Array
 * `Bisect-Lower-Bound` 1146 - Snapshot Array
+* `Bisect-Lower-Bound` 1150 - Check If a Number Is Majority Element in a Sorted Array
 * `Bisect-Lower-Bound` 1201 - Ugly Number III
 * `Bisect-Upper-Bound` `Classic` 1235 - Maximum Profit in Job Scheduling
 * `Classic` `Decreasing-Array` 1351 - Count Negative Numbers in a Sorted Matrix
@@ -477,6 +478,7 @@
 * `Classic` `Coloring-Bipartition` 886 - Possible Bipartition
 * 897 - Increasing Order Search Tree
 * 951 - Flip Equivalent Binary Trees
+* `Archive` 965 - Univalued Binary Tree
 * 979 - Distribute Coins in Binary Tree
 * `Classic` 987 - Vertical Order Traversal of a Binary Tree
 * `Classic` `Celebrity` 997 - Find the Town Judge
@@ -533,6 +535,7 @@
 * 1512 - Number of Good Pairs
 * 1865 - Finding Pairs With a Certain Sum
 * `Archived` 1640 - Check Array Formation Through Concatenation
+* `Archived` 1742 - Maximum Number of Balls in a Box
 
 ## Linked List
 * `Archived` 2 - Add Two Numbers
@@ -663,6 +666,7 @@
 * 1190 - Reverse Substrings Between Each Pair of Parentheses
 * 1209 - Remove All Adjacent Duplicates in String II
 * 1249 - Minimum Remove to Make Valid Parentheses
+* `Stack-Monotone` 1475 - Final Prices With a Special Discount in a Shop
 * 1566 - Detect Pattern of Length M Repeated K or More Times
 * `Stack-Monotone` 1762 - Buildings With an Ocean View
 
@@ -693,6 +697,7 @@
 * 468 - Validate IP Address
 * 482 - License Key Formatting
 * `Archived` 551 - Student Attendance Record I
+* `Archived` 557 - Reverse Words in a String III
 * 616 - Add Bold Tag in String
 * `Classic` 678 - Valid Parenthesis String
 * `Classic` `Boolean-Array` 680 - Valid Palindrome II
@@ -715,6 +720,10 @@
 * `Archived` 1160 - Find Words That Can Be Formed by Characters
 * `Archived` 1189 - Maximum Number of Balloons
 * `Archived` 1281 - Subtract the Product and Sum of Digits of an Integer
+* `Archived` 1295 - Find Numbers with Even Number of Digits
+* `Archived` 1317 - Convert Integer to the Sum of Two No-Zero Integers
+* `Archived` 1446 - Consecutive Characters
+* `Archived` 1455 - Check If a Word Occurs As a Prefix of Any Word in a Sentence
 * `Archived` 1614 - Maximum Nesting Depth of the Parentheses
 * `Archived` 1694 - Reformat Phone Number
 * `Archived` 1758 - Minimum Changes To Make Alternating Binary String
